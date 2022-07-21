@@ -19453,6 +19453,8 @@ with pkgs;
 
   lenmus = callPackage ../applications/misc/lenmus { };
 
+  lensm = callPackage ../development/tools/lensm { };
+
   lightningcss = callPackage ../development/tools/lightningcss { };
 
   libtool = libtool_2;
