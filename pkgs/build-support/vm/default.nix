@@ -762,25 +762,12 @@ rec {
 
   rpmDistros = {
 
-    # Note: no i386 release for Fedora >= 26
-    fedora26x86_64 =
-      let version = "26";
-      in {
-        name = "fedora-${version}-x86_64";
-        fullName = "Fedora ${version} (x86_64)";
-        packagesList = fetchurl rec {
-          url = "mirror://fedora/linux/releases/${version}/Everything/x86_64/os/repodata/${sha256}-primary.xml.gz";
-          sha256 = "880055a50c05b20641530d09b23f64501a000b2f92fe252417c530178730a95e";
-        };
-        urlPrefix = "mirror://fedora/linux/releases/${version}/Everything/x86_64/os";
-        archs = ["noarch" "x86_64"];
-        packages = commonFedoraPackages ++ [ "cronie" "util-linux" ];
-        unifiedSystemDir = true;
-      };
+    fedora26x86_64 = throw "Fedora 26 is end-of-life since 2018-05-29, was broken and removed";
 
     fedora27x86_64 =
       let version = "27";
-      in {
+      in 
+      lib.warn "Fedora 27 is end-of-life since 2018-11-30" {
         name = "fedora-${version}-x86_64";
         fullName = "Fedora ${version} (x86_64)";
         packagesList = fetchurl rec {
