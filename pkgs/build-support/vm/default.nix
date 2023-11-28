@@ -780,6 +780,35 @@ rec {
         unifiedSystemDir = true;
       };
 
+    fedora37x86_64 =
+      let version = "37";
+      in rec {
+        name = "fedora-${version}-x86_64";
+        fullName = "Fedora ${version} (x86_64)";
+        packagesLists = [
+          (fetchurl rec {
+            url = "mirror://fedora/linux/releases/${version}/Everything/x86_64/os/repodata/${sha256}-primary.xml.gz";
+            sha256 = "54bbae6e9d4cd4865a55f7558daef86574cddc5f2a4f8a0d9c74f946e1a45dd3";
+          })
+          (fetchurl rec {
+            url = "mirror://fedora/linux/releases/${version}/Everything/x86_64/debug/tree/repodata/${sha256}-primary.xml.gz";
+            sha256 = "797dbd7ea6ceeefbcc8efb45e77a53194604b4191dab1eb02440ef84cfcf5f9f";
+          })
+          (fetchurl rec {
+            url = "mirror://fedora/linux/releases/${version}/Everything/source/tree/repodata/${sha256}-primary.xml.gz";
+            sha256 = "da359884bc08987f2fcf6fbe5227eb8ab975bd99bbed9c2a7aeb808c91d1c608";
+          })
+        ];
+        urlPrefixes = [
+          "mirror://fedora/linux/releases/${version}/Everything/x86_64/os"
+          "mirror://fedora/linux/releases/${version}/Everything/x86_64/debug/tree"
+          "mirror://fedora/linux/releases/${version}/Everything/source/tree"
+        ];
+        archs = ["noarch" "x86_64"];
+        packages = commonFedoraPackages ++ [ "util-linux" ];
+        unifiedSystemDir = true;
+      };
+
     centos6i386 =
       let version = "6.9";
       in rec {
