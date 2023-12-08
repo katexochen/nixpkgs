@@ -4,6 +4,9 @@
 , nix-update-script
 , testers
 , pint
+, curl
+, perl
+, git
 }:
 
 buildGoModule rec {
@@ -17,6 +20,15 @@ buildGoModule rec {
     hash = "sha256-d3KZPPeQJBqdrr81YLusYHc5jLChC1Rf5SYeP/QMeo8=";
   };
 
+  postPatch = ''
+    substituteInPlace internal/git/git.go \
+      --replace '.Command("git"' '.Command("${lib.getExe git}"'
+    substituteInPlace cmd/pint/tests/* \
+	--replace 'curl ' '${lib.getExe curl} ' \
+	--replace 'perl' '${lib.getExe perl}' \
+	--replace 'exec git' 'exec ${lib.getExe git}'
+  '';
+
   vendorHash = "sha256-9tJL33Qtu0xAmRnAP0BwM6CIfGs+GEG864e89XrpfLM=";
 
   subPackages = [ "cmd/pint" ];
@@ -27,8 +39,6 @@ buildGoModule rec {
     "-X=main.version=${version}"
     "-X=main.commit=${src.rev}"
   ];
-
-  doCheck = false;
 
   passthru = {
     updateScript = nix-update-script { };
