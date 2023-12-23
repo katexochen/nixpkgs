@@ -17,16 +17,16 @@
 
 buildGoModule rec {
   pname = "lensm";
-  version = "0.0.2";
+  version = "0.0.3";
 
   src = fetchFromGitHub {
     owner = "loov";
     repo = "lensm";
     rev = "v${version}";
-    sha256 = "sha256-v4C2ZCJUUKRfnaFoL9wu9hzZk84NIPjRo3DAL7kM2Bw=";
+    hash = "sha256-kkthT77OhlWlnoHf0k+I5mb+oDfSdMD/x0C7UHoi3G8=";
   };
 
-  vendorSha256 = "sha256-TMvIh+iBW22Xt+y6S92Cdvk3cMLEE6TXyBgxwEbEros=";
+  vendorHash = "sha256-C6aFVS0NizDVSoCkiYKT0hFqljs0V1mYpHaEzKBwfks=";
 
   tags = lib.optionals (!x11Support) [ "nox11" ] ++ lib.optionals (!waylandSupport) [ "nowayland" ];
 
