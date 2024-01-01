@@ -279,5 +279,5 @@ let
   });
 in
 lib.warnIf (buildFlags != "" || buildFlagsArray != "")
-  "Use the `ldflags` and/or `tags` attributes instead of `buildFlags`/`buildFlagsArray`"
+  "`buildFlags`/`buildFlagsArray` are deprecated and will be removed in the 24.11 release. Use the `ldflags` and/or `tags` attributes instead"
   package
