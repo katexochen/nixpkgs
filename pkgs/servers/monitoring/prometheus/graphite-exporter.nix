@@ -23,7 +23,7 @@ buildGoModule rec {
         "TestIssue90"
       ];
     in
-    [ "-skip=^(${builtins.concatStringsSep "|" skippedTests})" ];
+    [ "-skip=${builtins.concatStringsSep "|" skippedTests}" ];
 
   passthru.tests = { inherit (nixosTests.prometheus-exporters) graphite; };
 

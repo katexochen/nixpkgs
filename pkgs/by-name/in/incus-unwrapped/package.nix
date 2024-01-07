@@ -74,14 +74,16 @@ buildGoModule rec {
 
   # Disable tests requiring local operations
   checkFlags =
-    let skippedTests = [
-      "TestValidateConfig"
-      "TestConvertNetworkConfig"
-      "TestConvertStorageConfig"
-      "TestSnapshotCommon"
-      "TestContainerTestSuite"
-    ]; in
-    "-skip=^(${builtins.concatStringsSep "|" skippedTests})";
+    let
+      skippedTests = [
+        "TestValidateConfig"
+        "TestConvertNetworkConfig"
+        "TestConvertStorageConfig"
+        "TestSnapshotCommon"
+        "TestContainerTestSuite"
+      ];
+    in
+    [ "-skip=${builtins.concatStringsSep "|" skippedTests}" ];
 
   postInstall = ''
     # use custom bash completion as it has extra logic for e.g. instance names

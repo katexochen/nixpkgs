@@ -25,7 +25,7 @@ buildGoModule rec {
     # Related: https://github.com/onsi/ginkgo/issues/602
     #
     # Disable integration tests.
-    "-skip=^TestIntegration"
+    "-skip=TestIntegration"
   ];
 
   meta = with lib; {

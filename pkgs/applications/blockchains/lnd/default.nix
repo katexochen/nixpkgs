@@ -22,15 +22,6 @@ buildGoModule rec {
 
   inherit tags;
 
-  ldflags =
-    let
-      buildVars = {
-        RawTags = lib.concatStringsSep "," tags;
-        GoVersion = "go${go.version}";
-      };
-    in
-    (lib.mapAttrsToList (k: v: "-X github.com/lightningnetwork/lnd/build.${k}=${v}") buildVars);
-
   meta = with lib; {
     description = "Lightning Network Daemon";
     homepage = "https://github.com/lightningnetwork/lnd";

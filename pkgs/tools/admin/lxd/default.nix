@@ -69,7 +69,7 @@ buildGoModule rec {
         "TestContainerTestSuite"
       ];
     in
-    [ "-skip=^(${builtins.concatStringsSep "|" skippedTests})" ];
+    [ "-skip=${builtins.concatStringsSep "|" skippedTests}" ];
 
   postInstall = ''
     installShellCompletion --bash --name lxd ./scripts/bash/lxd-client

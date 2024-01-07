@@ -25,7 +25,7 @@ buildGoModule rec {
 
   checkFlags = [
     # Disable tests requiring network access to gitlab.com
-    "-skip=^(Test(Run|Start|(Fetch|Pull)With(Go|)Git))"
+    "-skip=Test(Run|Start|(Fetch|Pull)With(Go|)Git)"
   ];
 
   meta = with lib; {

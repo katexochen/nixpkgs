@@ -27,7 +27,7 @@ buildGoModule rec {
 
   checkFlags = [
     # Disable flaky tests
-    "-skip=^TestDialogs"
+    "-skip=TestDialogs"
   ];
 
   passthru.tests.version = testers.testVersion {

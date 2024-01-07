@@ -60,7 +60,7 @@ buildGoModule rec {
         "TestNewSimpleEvent" # Blocking
       ];
     in
-    [ "-skip=^(${builtins.concatStringsSep "|" skippedTests})" ];
+    [ "-skip=${builtins.concatStringsSep "|" skippedTests}" ];
 
   meta = {
     description = "Utilities for handling monitors, resolutions, and (timed) wallpapers";

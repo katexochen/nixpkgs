@@ -38,13 +38,12 @@ buildGoModule rec {
       # Disable tests requiring local operations
       skippedTests = [
         "TestGodog"
-        "TestRunner_CreateChildFeatureBranch"
-        "TestShellRunner_RunStringWith_Dir"
-        "TestMockingShell_MockCommand"
-        "TestShellRunner_RunStringWith_Input"
+        "TestMockingRunner/MockCommand"
+        "TestMockingRunner/QueryWith"
+        "TestTestCommands/CreateChildFeatureBranch"
       ];
     in
-    [ "-skip=^(${builtins.concatStringsSep "|" skippedTests})" ];
+    [ "-skip=${builtins.concatStringsSep "|" skippedTests}" ];
 
   postInstall = ''
     installShellCompletion --cmd git-town \

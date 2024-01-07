@@ -28,7 +28,7 @@ buildGoModule rec {
         "TestFlags"
       ];
     in
-    [ "-skip=^(${builtins.concatStringsSep "|" skippedTests})" ];
+    [ "-skip=${builtins.concatStringsSep "|" skippedTests}" ];
 
   postInstall = ''
     ln -s $out/bin/mount_gcsfuse $out/bin/mount.gcsfuse

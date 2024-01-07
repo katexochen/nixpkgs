@@ -23,7 +23,7 @@ buildGoModule rec {
   ];
 
   # skips tests with external dependencies, e.g. on mysqld
-  GOFLAGS = [
+  checkFlags = [
     "-short"
   ];
 

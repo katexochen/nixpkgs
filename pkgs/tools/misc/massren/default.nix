@@ -31,7 +31,7 @@ buildGoModule rec {
         "Test_processFileActions"
       ];
     in
-    [ "-skip=^(${builtins.concatStringsSep "|" skippedTests})" ];
+    [ "-skip=${builtins.concatStringsSep "|" skippedTests}" ];
 
   meta = with lib; {
     description = "Easily rename multiple files using your text editor";

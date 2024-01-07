@@ -35,14 +35,14 @@ buildGoModule rec {
       skippedTests = [
         # Tests requiring network access to gitlab.com
         "TestDirRelPath"
-        "TestParseDirSymlinks"
+        "TestParseDir"
 
         # Flaky tests
         "TestCommandTimeout"
         "TestShellOutTimeout"
       ];
     in
-    [ "-skip=^(${builtins.concatStringsSep "|" skippedTests})" ];
+    [ "-skip=${builtins.concatStringsSep "|" skippedTests}" ];
 
   passthru.tests.version = testers.testVersion {
     package = skeema;
