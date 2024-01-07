@@ -41,8 +41,8 @@ buildGoModule rec {
 
   # ldflags based on metadata from git and source
   preBuild = ''
-    ldflags+=" -X main.commit=$(cat COMMIT)"
-    ldflags+=" -X main.date=$(cat SOURCE_DATE)"
+    ldflags+=("-X main.commit=$(cat COMMIT)")
+    ldflags+=("-X main.date=$(cat SOURCE_DATE)")
   '';
 
 

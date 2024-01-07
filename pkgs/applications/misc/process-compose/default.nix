@@ -29,8 +29,8 @@ buildGoModule rec {
 
   # ldflags based on metadata from git and source
   preBuild = ''
-    ldflags+=" -X ${config-module}.Commit=$(cat COMMIT)"
-    ldflags+=" -X ${config-module}.Date=$(cat SOURCE_DATE_EPOCH)"
+    ldflags+=("-X ${config-module}.Commit=$(cat COMMIT)")
+    ldflags+=("-X ${config-module}.Date=$(cat SOURCE_DATE_EPOCH)")
   '';
 
   ldflags = [

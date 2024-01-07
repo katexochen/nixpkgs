@@ -31,7 +31,7 @@ buildGoModule rec {
 
   # ldflags based on metadata from git and source
   preBuild = ''
-    ldflags+=" -X github.com/cirruslabs/orchard/internal/version.Commit=$(cat COMMIT)"
+    ldflags+=("-X github.com/cirruslabs/orchard/internal/version.Commit=$(cat COMMIT)")
   '';
 
   subPackages = [ "cmd/orchard" ];
