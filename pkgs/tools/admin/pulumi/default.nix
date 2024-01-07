@@ -93,11 +93,13 @@ buildGoModule rec {
     rm codegen/{docs,dotnet,go,nodejs,python,schema}/*_test.go
     rm -R codegen/{dotnet,go,nodejs,python}/gen_program_test
 
-    # Only run tests not marked as disabled
-    buildFlagsArray+=("-run" "[^(${lib.concatStringsSep "|" disabledTests})]")
   '' + lib.optionalString stdenv.isDarwin ''
     export PULUMI_HOME=$(mktemp -d)
   '';
+
+  checkFlags = [
+    "-run=^(${lib.concatStringsSep "|" disabledTests})"
+  ];
 
   # Allow tests that bind or connect to localhost on macOS.
   __darwinAllowLocalNetworking = true;

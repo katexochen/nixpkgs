@@ -54,7 +54,7 @@ buildGoModule rec{
 
   preBuild = ''
     patchShebangs ./hack/ldflags.sh
-    export buildFlagsArray+=("-ldflags=$(./hack/ldflags.sh)")
+    export ldflags+="$(./hack/ldflags.sh)"
   '';
 
   postInstall = ''
