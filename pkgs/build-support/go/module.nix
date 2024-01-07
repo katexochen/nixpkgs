@@ -200,7 +200,7 @@ let
         declare -a flags
         flags+=($buildFlags "''${buildFlagsArray[@]}")
         flags+=(''${tags:+-tags=''${tags// /,}})
-        flags+=(''${ldflags:+-ldflags="$ldflags"})
+        flags+=(''${ldflags:+-ldflags="''${ldflags[*]}"})
         flags+=("-p" "$NIX_BUILD_CORES")
 
         if [ "$cmd" = "test" ]; then
