@@ -162,10 +162,14 @@ let
     configurePhase = args.configurePhase or (''
       runHook preConfigure
 
+      if [ -z "$enableParallelBuilding" ]; then
+          export NIX_BUILD_CORES=1
+      fi
       export GOCACHE=$TMPDIR/go-cache
       export GOPATH="$TMPDIR/go"
       export GOPROXY=off
       export GOSUMDB=off
+      export GOMAXPROCS=$NIX_BUILD_CORES
       cd "$modRoot"
     '' + lib.optionalString (vendorHash != null) ''
       ${if proxyVendor then ''
@@ -206,7 +210,6 @@ let
         flags+=($buildFlags "''${buildFlagsArray[@]}")
         flags+=(''${tags:+-tags=''${tags// /,}})
         flags+=(''${ldflags:+-ldflags="$ldflags"})
-        flags+=("-p" "$NIX_BUILD_CORES")
 
         if [ "$cmd" = "test" ]; then
           flags+=(-vet=off)
@@ -245,9 +248,7 @@ let
       else
         touch $TMPDIR/buildFlagsArray
       fi
-      if [ -z "$enableParallelBuilding" ]; then
-          export NIX_BUILD_CORES=1
-      fi
+      
       for pkg in $(getGoDirs ""); do
         echo "Building subPackage $pkg"
         buildGoDir install "$pkg"
