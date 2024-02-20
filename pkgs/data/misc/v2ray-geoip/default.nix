@@ -8,7 +8,7 @@
 }:
 
 let
-  generator = pkgsBuildBuild.buildGo120Module {
+  generator = pkgsBuildBuild.buildGoModule {
     pname = "v2ray-geoip";
     version = "unstable-2023-10-11";
 

@@ -1734,7 +1734,7 @@ with pkgs;
 
   butler = callPackage ../games/itch/butler.nix {
     inherit (darwin.apple_sdk.frameworks) Cocoa;
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   carbon-now-cli = callPackage ../tools/typesetting/carbon-now-cli { };
@@ -2551,7 +2551,7 @@ with pkgs;
   lab = callPackage ../applications/version-management/lab { };
 
   labctl = callPackage ../tools/networking/labctl {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   legit = callPackage ../applications/version-management/legit { };
@@ -6000,7 +6000,7 @@ with pkgs;
   mmctl = callPackage ../tools/misc/mmctl {
     # mmctl tests currently fail with go1.21. See
     # https://mattermost.atlassian.net/browse/MM-55465
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   moar = callPackage ../tools/misc/moar { };
@@ -8551,7 +8551,7 @@ with pkgs;
   gitlab-pages = callPackage ../applications/version-management/gitlab/gitlab-pages { };
 
   gitlab-runner = callPackage ../development/tools/continuous-integration/gitlab-runner {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   gitlab-shell = callPackage ../applications/version-management/gitlab/gitlab-shell { };
@@ -8774,7 +8774,7 @@ with pkgs;
   goreplay = callPackage ../tools/networking/goreplay { };
 
   gost = callPackage ../tools/networking/gost {
-    buildGoModule = buildGo120Module; # go 1.21 build failure
+    buildGoModule = buildGoModule; # go 1.21 build failure
   };
 
   gource = callPackage ../applications/version-management/gource { };
@@ -9851,7 +9851,7 @@ with pkgs;
   kdiff3 = libsForQt5.callPackage ../tools/text/kdiff3 { };
 
   kube-router = callPackage ../applications/networking/cluster/kube-router {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   kubedock = callPackage ../development/tools/kubedock { };
@@ -14004,7 +14004,7 @@ with pkgs;
 
   trezord = callPackage ../servers/trezord {
     inherit (darwin.apple_sdk.frameworks) AppKit;
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   trezor-agent = with python3Packages; toPythonApplication trezor-agent;
@@ -15194,7 +15194,7 @@ with pkgs;
   zip = callPackage ../tools/archivers/zip { };
 
   zincsearch = callPackage ../servers/search/zincsearch {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   zkfuse = callPackage ../tools/filesystems/zkfuse { };
@@ -28225,7 +28225,7 @@ with pkgs;
   goconst = callPackage ../development/tools/goconst { };
 
   goconvey = callPackage ../development/tools/goconvey {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   go-callvis = callPackage ../development/tools/go-callvis { };
@@ -28281,7 +28281,7 @@ with pkgs;
   go-mod-graph-chart = callPackage ../development/tools/go-mod-graph-chart { };
 
   gomacro = callPackage ../development/tools/gomacro {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   gomodifytags = callPackage ../development/tools/gomodifytags { };
@@ -31242,7 +31242,7 @@ with pkgs;
   gigalixir = callPackage ../tools/misc/gigalixir { };
 
   go-libp2p-daemon = callPackage ../servers/go-libp2p-daemon {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   go-motion = callPackage ../development/tools/go-motion { };
@@ -32789,13 +32789,13 @@ with pkgs;
   jwm-settings-manager = callPackage ../applications/window-managers/jwm/jwm-settings-manager.nix { };
 
   k3s_1_24 = callPackage ../applications/networking/cluster/k3s/1_24 {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
   k3s_1_25 = callPackage ../applications/networking/cluster/k3s/1_25 {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
   inherit (callPackage ../applications/networking/cluster/k3s {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   }) k3s_1_26 k3s_1_27 k3s_1_28;
   inherit (callPackage ../applications/networking/cluster/k3s { }) k3s_1_29;
 
@@ -33361,7 +33361,7 @@ with pkgs;
   markscribe = callPackage ../tools/text/markscribe { };
 
   magnetico = callPackage ../applications/networking/p2p/magnetico {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   mastodon-bot = nodePackages.mastodon-bot;
@@ -33718,7 +33718,7 @@ with pkgs;
   norouter = callPackage ../tools/networking/norouter {
     # doesn't build with go 1.21
     # https://github.com/norouter/norouter/issues/165
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   nqptp = callPackage ../tools/networking/nqptp { };
@@ -36829,7 +36829,7 @@ with pkgs;
   dcrctl = callPackage ../applications/blockchains/dcrctl { };
   dcrd = callPackage ../applications/blockchains/dcrd { };
   dcrwallet = callPackage ../applications/blockchains/dcrwallet {
-    buildGoModule = buildGo120Module;
+    buildGoModule = buildGoModule;
   };
 
   dogecoin  = libsForQt5.callPackage ../applications/blockchains/dogecoin {
