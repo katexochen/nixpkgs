@@ -72,15 +72,23 @@ in
             SizeMinBytes = if config.nixpkgs.hostPlatform.isx86_64 then "64M" else "96M";
           };
         };
-        "root" = {
-          storePaths = [ config.system.build.toplevel ];
-          repartConfig = {
-            Type = "root";
-            Format = config.fileSystems."/".fsType;
-            Label = rootPartitionLabel;
-            Minimize = "guess";
+        "root" =
+          let
+            foo = pkgs.runCommand "foo" { nativeBuildInputs = [ config.system.build.toplevel ]; } ''
+              ls -la ${config.system.build.toplevel}
+              ls -lda /nix/store/0i8hhak73jnlilfgfsh1wh0fd53pb0r9-audit-3.1.2
+              touch $out
+            '';
+          in
+          {
+            storePaths = [ config.system.build.toplevel foo ];
+            repartConfig = {
+              Type = "root";
+              Format = config.fileSystems."/".fsType;
+              Label = rootPartitionLabel;
+              Minimize = "guess";
+            };
           };
-        };
       };
     };
   };

@@ -11,6 +11,7 @@
 , systemd
 , fakeroot
 , util-linux
+, strace
 
   # filesystem tools
 , dosfstools
@@ -36,7 +37,7 @@
 , seed
 , definitionsDirectory
 , sectorSize
-, mkfsEnv ? {}
+, mkfsEnv ? { }
 , createEmpty ? true
 }:
 
@@ -76,17 +77,18 @@ let
     "xz" = "xz --keep --verbose --threads=0 -${toString compression.level}";
   }."${compression.algorithm}";
 in
-  stdenvNoCC.mkDerivation (finalAttrs:
-  (if (version != null)
-  then { pname = name; inherit version; }
-  else { inherit name;  }
-  ) // {
+stdenvNoCC.mkDerivation (finalAttrs:
+(if (version != null)
+then { pname = name; inherit version; }
+else { inherit name; }
+) // {
   __structuredAttrs = true;
 
   nativeBuildInputs = [
     systemd
     fakeroot
     util-linux
+    strace
   ] ++ lib.optionals (compression.enable) [
     compressionPkg
   ] ++ fileSystemTools;
@@ -128,7 +130,7 @@ in
     runHook preBuild
 
     echo "Building image with systemd-repart..."
-    unshare --map-root-user fakeroot systemd-repart \
+    unshare --map-root-user fakeroot env E2FSPROGS_FAKE_TIME=1 strace -f -v -e trace=fstat,open,openat systemd-repart \
       ''${systemdRepartFlags[@]} \
       ${imageFileBasename}.raw \
       | tee repart-output.json
@@ -145,13 +147,13 @@ in
   # separate derivation to allow users to save disk space. Disk images are
   # already very space intensive so we want to allow users to mitigate this.
   + lib.optionalString compression.enable
-  ''
-    for f in ${imageFileBasename}*; do
-      echo "Compressing $f with ${compression.algorithm}..."
-      # Keep the original file when compressing and only delete it afterwards
-      ${compressionCommand} $f && rm $f
-    done
-  '' + ''
+    ''
+      for f in ${imageFileBasename}*; do
+        echo "Compressing $f with ${compression.algorithm}..."
+        # Keep the original file when compressing and only delete it afterwards
+        ${compressionCommand} $f && rm $f
+      done
+    '' + ''
     mv -v repart-output.json ${imageFileBasename}* $out
 
     runHook postInstall
