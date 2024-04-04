@@ -130,7 +130,7 @@ else { inherit name; }
     runHook preBuild
 
     echo "Building image with systemd-repart..."
-    unshare --map-root-user fakeroot env E2FSPROGS_FAKE_TIME=1 strace -f -v -e trace=fstat,open,openat systemd-repart \
+    unshare --map-root-user fakeroot env E2FSPROGS_FAKE_TIME=1 systemd-repart \
       ''${systemdRepartFlags[@]} \
       ${imageFileBasename}.raw \
       | tee repart-output.json

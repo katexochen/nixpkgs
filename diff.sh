@@ -24,9 +24,15 @@ for part in "root" "efi"; do
     extract ${part} "build-b/${imgName}" "build-b/${part}"
 done
 
+# shellcheck disable=SC2024
+sudo env PATH="$PATH" systemd-dissect --mtree build-a/root > build-a/mtree
+# shellcheck disable=SC2024
+sudo env PATH="$PATH" systemd-dissect --mtree build-b/root > build-b/mtree
+
 sumsA=$(sha256sum build-a/* | rev | sort | rev)
 sumsB=$(sha256sum build-b/* | rev | sort | rev)
 
+exitcode=0
 echo
 while IFS= read -r new && IFS= read -r old <&3; do
   sumA=$(echo "${old}" | cut -d' ' -f1)

@@ -42,6 +42,9 @@ in
       name = "appliance-gpt-image";
       # OVMF does not work with the default repart sector size of 4096
       sectorSize = 512;
+      mkfsOptions = {
+        ext4 = [ "-E hash_seed=440aa176-97fa-475a-8209-d96eff4a0c90" ];
+      };
       partitions = {
         "esp" = {
           contents =
