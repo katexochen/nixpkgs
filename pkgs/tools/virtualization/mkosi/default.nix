@@ -57,6 +57,13 @@ buildPythonApplication rec {
     hash = "sha256-Zom1GlyhqgpTKfjcBOUEJMlubSn+TQsk97js1/UfDHY=";
   };
 
+  patches = [
+    (fetchpatch {
+      url = "https://github.com/systemd/mkosi/commit/f9c9743d02b0b42b6875a9df7803594ef6a9a875.patch";
+      hash = "sha256-/4DRh9X7DOZISdy9e1qxnt14FM2mnlSPoSltZSr4Dgw=";
+    })
+  ];
+
   # Fix ctypes finding library
   # https://github.com/NixOS/nixpkgs/issues/7307
   postPatch = lib.optionalString stdenv.isLinux ''
