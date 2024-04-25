@@ -13,6 +13,7 @@
 , bash
 , coreutils
 , btrfs-progs
+, zstd
 
   # Python packages
 , setuptools
@@ -93,6 +94,7 @@ buildPythonApplication rec {
     kmod
     systemdForMkosi
     util-linux
+    zstd
   ] ++ lib.optional withQemu [
     qemu
   ];
