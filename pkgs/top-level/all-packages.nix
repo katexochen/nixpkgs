@@ -1967,7 +1967,9 @@ with pkgs;
 
   mgmt = callPackage ../applications/system/mgmt { };
 
-  mkosi = python3Packages.callPackage ../tools/virtualization/mkosi { inherit systemd; };
+  mkosi = python3Packages.callPackage ../tools/virtualization/mkosi {
+    inherit systemd qemu;
+  };
 
   mkosi-full = mkosi.override { withQemu = true; };
 
