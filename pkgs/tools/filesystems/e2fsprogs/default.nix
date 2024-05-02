@@ -6,11 +6,11 @@
 
 stdenv.mkDerivation rec {
   pname = "e2fsprogs";
-  version = "1.47.0";
+  version = "v1.47.1-rc2";
 
   src = fetchurl {
-    url = "mirror://sourceforge/${pname}/${pname}-${version}.tar.gz";
-    hash = "sha256-Zmev3lbu8MavJmhJdEAOTSKI6knpRBv15iKRldUaNXg=";
+    url = "https://git.kernel.org/pub/scm/fs/ext2/e2fsprogs.git/snapshot/e2fsprogs-1.47.1-rc2.tar.gz";
+    hash = "sha256-/vc7UNNbdNXh5hHgYygNmsV8HBOK/p5wdg2STVuz4Cw=";
   };
 
   # fuse2fs adds 14mb of dependencies
@@ -36,10 +36,6 @@ stdenv.mkDerivation rec {
       url = "https://git.kernel.org/pub/scm/fs/ext2/e2fsprogs.git/plain/debian/patches/disable-metadata_csum_seed-and-orphan_file-by-default?h=debian/master&id=3fb3d18baba90e5d48d94f4c0b79b2d271b0c913";
       hash = "sha256-YD11K4s2bqv0rvzrxtaiodzLp3ztULlOlPUf1XcpxRY=";
     })
-    (fetchurl {
-      url = "https://github.com/tytso/e2fsprogs/commit/ace4883f48f682e5d849081c5eb0274f080e085a.patch";
-      hash = "sha256-JeiL5e+MYhfukdVfy9bxK+hZK0iHlmQh72gBi18cKMg=";
-    })
   ];
 
   configureFlags =
@@ -58,6 +54,11 @@ stdenv.mkDerivation rec {
     ] else [
       "--enable-libuuid --disable-e2initrd-helper"
     ];
+
+  NIX_CFLAGS_COMPILE = [
+    # error Please add -D_FILE_OFFSET_BITS=64 to your compile flags!
+    "-D_FILE_OFFSET_BITS=64"
+  ];
 
   nativeCheckInputs = [ buildPackages.perl ];
   doCheck = true;
