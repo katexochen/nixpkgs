@@ -234,8 +234,19 @@ in
       GOTOOLCHAIN
       ;
 
-    # If not set to an explicit value, set the buildid empty for reproducibility.
-    ldflags = ldflags ++ lib.optional (!lib.any (lib.hasPrefix "-buildid=") ldflags) "-buildid=";
+    ldflags =
+      # If not set to an explicit value, set the buildid empty for reproducibility.
+      lib.optional (!lib.any (lib.hasPrefix "-buildid=") ldflags) "-buildid="
+      ++
+        # Strip using Go's linker flag for stripping, but respect `dontStrip`.
+        lib.warnIf (builtins.elem "-s" ldflags)
+          "don't add `-s` to ldflags, stripping of buildGoModule is controlled via `dontStrip`"
+          (lib.optional (finalAttrs ? dontStrip && !finalAttrs.dontStrip) "-s")
+      ++
+        # The `-w` flag is implied by `-s` and is not needed.
+        lib.warnIf (builtins.elem "-w" ldflags)
+          "don't add `-w` to ldflags, stripping of buildGoModule is controlled via `dontStrip`"
+          ldflags; # ldflags must be last, so it can override previous flags.
 
     configurePhase =
       args.configurePhase or (
