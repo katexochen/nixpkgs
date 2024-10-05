@@ -16,7 +16,7 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" "-X main.Version=${version}" "-X main.GitCommit=${src.rev}" ];
+  ldflags = [ "-X main.Version=${version}" "-X main.GitCommit=${src.rev}" ];
 
   meta = with lib; {
     description = "Language Server Protocol for Terraform";

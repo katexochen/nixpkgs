@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-H5qljaA77AQrUjFsVSWha5pzt4qS9XKagG4GoNRVn88=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Terminal assistant, powered by Generative AI";
     homepage = "https://github.com/micr0-dev/lexido";

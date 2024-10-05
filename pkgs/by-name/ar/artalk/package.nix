@@ -29,8 +29,6 @@ buildGoModule rec {
   vendorHash = "sha256-edqmv/Q99pgnScJqCmLwjHd7uKMNPGfCSujNTUQtpLc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ArtalkJS/Artalk/internal/config.Version=${version}"
     "-X github.com/ArtalkJS/Artalk/internal/config.CommitHash=${version}"
   ];

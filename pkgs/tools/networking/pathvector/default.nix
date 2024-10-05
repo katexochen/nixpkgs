@@ -15,7 +15,7 @@ buildGoModule rec {
 
   CGO_ENABLED = 0;
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" "-X main.commit=${src.rev}" "-X main.date=unknown" ];
+  ldflags = [ "-X main.version=${version}" "-X main.commit=${src.rev}" "-X main.date=unknown" ];
 
   doCheck = false;
 

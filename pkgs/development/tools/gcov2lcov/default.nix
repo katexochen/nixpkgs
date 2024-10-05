@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-/2OIBWXbNch6lmw0C1jkyJfNefJXOVG9/jNW8CYHTsc=";
 
-  ldflags = [ "-s" "-w" ];
-
   # Some checks depend on looking up vcs root
   checkPhase = false;
 

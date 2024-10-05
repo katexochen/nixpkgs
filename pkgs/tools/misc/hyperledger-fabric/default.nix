@@ -35,8 +35,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/hyperledger/fabric/common/metadata.Version=${version}"
     "-X github.com/hyperledger/fabric/common/metadata.CommitSha=${src.rev}"
   ];

@@ -61,8 +61,6 @@ buildGoModule rec {
   subPackages = lib.attrNames modules;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/netbirdio/netbird/version.version=${version}"
     "-X main.builtBy=nix"
   ];

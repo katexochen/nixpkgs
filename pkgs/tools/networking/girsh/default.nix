@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-8NPFohguMX/X1khEPF+noLBNe/MUoPpXS2PN6SiotL8=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postInstall = ''
     mv $out/bin/src $out/bin/$pname
   '';

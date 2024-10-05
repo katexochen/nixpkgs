@@ -24,8 +24,6 @@ buildGoModule rec {
   tags = [ "netgo" "release" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/weaveworks/eksctl/pkg/version.gitCommit=${src.rev}"
     "-X github.com/weaveworks/eksctl/pkg/version.buildDate=19700101-00:00:00"
   ];

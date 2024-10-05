@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-gBb+qpNFSFhCOYLxXkz3xmyx+3PvyOwLNqjT9zZQuc8=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/drakkan/sftpgo/v2/internal/version.commit=${src.rev}"
     "-X github.com/drakkan/sftpgo/v2/internal/version.date=1970-01-01T00:00:00Z"
   ];

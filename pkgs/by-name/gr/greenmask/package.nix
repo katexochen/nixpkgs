@@ -21,8 +21,6 @@ buildGoModule rec {
   subPackages = [ "cmd/greenmask/" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/greenmaskio/greenmask/cmd/greenmask/cmd.Version=${version}"
   ];
 

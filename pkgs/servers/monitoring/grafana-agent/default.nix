@@ -37,7 +37,6 @@ buildGo122Module rec {
   ldflags = let
     prefix = "github.com/grafana/agent/internal/build";
   in [
-    "-s" "-w"
     # https://github.com/grafana/agent/blob/v0.41.0/Makefile#L132-L137
     "-X ${prefix}.Version=${version}"
     "-X ${prefix}.Branch=v${version}"

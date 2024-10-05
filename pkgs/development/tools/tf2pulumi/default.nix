@@ -14,7 +14,7 @@ buildGoModule rec {
   vendorHash = "sha256-x7GAkbvhML2VUQ9/zitrTBBiy9lISb3iTx6yn5WbEig=";
 
   ldflags = [
-    "-s" "-w" "-X=github.com/pulumi/tf2pulumi/version.Version=${src.rev}"
+    "-X=github.com/pulumi/tf2pulumi/version.Version=${src.rev}"
   ];
 
   subPackages = [ "." ];

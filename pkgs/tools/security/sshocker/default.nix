@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-kee5D80RjCVosts/Jd6WuvtiK/J5+79HsM5ITHs15xc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/lima-vm/sshocker/pkg/version.Version=${version}"
   ];
 

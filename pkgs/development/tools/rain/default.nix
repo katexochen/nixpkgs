@@ -20,8 +20,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/rain" ];
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.tests.version = testers.testVersion {
     package = rain;
     command = "rain --version";

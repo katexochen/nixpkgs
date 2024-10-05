@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" "-X main.Version=${version}" ];
+  ldflags = [ "-X main.Version=${version}" ];
 
   meta = with lib; {
     description = "Jsonnet package manager";

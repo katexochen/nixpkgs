@@ -19,12 +19,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/cdncheck/" ];
 
-
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   preCheck = ''
     # Tests require network access
     substituteInPlace other_test.go \

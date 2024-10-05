@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-V5azvQ8vMkgF2Myt6h5Gw09b+Xwg1XLyTImG52qQ+20=";
 
-  ldflags = [ "-s" "-w" "-X=main.Version=${version}" ];
+  ldflags = [ "-X=main.Version=${version}" ];
 
   meta = with lib; {
     description = "Manage your charm account on the CLI";

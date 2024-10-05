@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-GMnTIEnkOt0cRN9pZzEuqqtWmO27uVja9VG5UNeCHJo=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool to handle Nuclei community templates";
     homepage = "https://github.com/xm1k3/cent";

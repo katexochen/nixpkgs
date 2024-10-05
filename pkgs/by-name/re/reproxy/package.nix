@@ -14,7 +14,7 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-s" "-w" "-X main.revision=${version}"
+    "-X main.revision=${version}"
   ];
 
   checkFlags = [

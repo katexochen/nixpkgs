@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-oLtKpBvTsM5TbzfWIDfqgb7DL5D3Mldu0oimVeiUeSc=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Top for /proc/pressure";
     homepage = "https://github.com/jamespwilliams/psitop";

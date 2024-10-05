@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-x3fzs/TNGRo+u+RufXzzjDCeQayEZIKlgokdEQJRNaI=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Vulnerability scanner for the Terrapin attack";
     homepage = "https://github.com/RUB-NDS/Terrapin-Scanner";

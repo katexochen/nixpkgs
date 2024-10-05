@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-MQ1yoJjAWNx95Eafcarp/JNYq06xu9P05sF2QTW03NY=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   # Some tests are failing because of wrong filename/path
   doCheck = false;
 

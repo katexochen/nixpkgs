@@ -16,8 +16,6 @@ buildGoModule {
 
   vendorHash = "sha256-t4zim6WhqGAf1zHmmbJbpVvQcE/aoNL7ZLdjU7f3rp8=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Typing test in your terminal";
     homepage = "https://github.com/maaslalani/typer";

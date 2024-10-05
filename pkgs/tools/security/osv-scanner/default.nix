@@ -23,8 +23,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/google/osv-scanner/internal/version.OSVVersion=${version}"
     "-X=main.commit=n/a"
     "-X=main.date=1970-01-01T00:00:00Z"

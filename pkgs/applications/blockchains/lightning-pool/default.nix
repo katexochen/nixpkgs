@@ -18,8 +18,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/pool" "cmd/poold" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Lightning Pool Client";
     homepage = "https://github.com/lightninglabs/pool";

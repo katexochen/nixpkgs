@@ -21,7 +21,6 @@ buildGoModule rec {
   subPackages = [ "cmd/doggo" ];
 
   ldflags = [
-    "-s"
     "-X main.buildVersion=v${version}"
   ];
 

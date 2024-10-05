@@ -28,7 +28,6 @@ in buildGoModule {
   '';
   subPackages = [ "cmd/gg" ];
   ldflags = [
-    "-s" "-w"
     "-X" "main.versionInfo=${version}"
     "-X" "main.buildCommit=${commit}"
   ];

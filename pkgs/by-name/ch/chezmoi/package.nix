@@ -24,8 +24,6 @@ let
     ];
 
     ldflags = [
-      "-s"
-      "-w"
       "-X main.version=${argset.version}"
       "-X main.builtBy=nixpkgs"
     ];

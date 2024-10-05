@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-ehxeupO8CrKqkqK11ig7Pj4XTh61VOE4rT2T2SsChxw=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/hashicorp/envconsul/version.Name=envconsul"
   ];
 

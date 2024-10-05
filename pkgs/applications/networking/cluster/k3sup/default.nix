@@ -30,7 +30,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/alexellis/k3sup/cmd.GitCommit=ref/tags/${version}"
     "-X github.com/alexellis/k3sup/cmd.Version=${version}"
   ];

@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-j/R+1PWfX+lmm99cHWSuo+v8RxKg089Bvb4rFHpmpfE=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Pipelined Query Language";
     homepage = "https://github.com/runreveal/pql";

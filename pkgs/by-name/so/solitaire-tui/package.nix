@@ -16,8 +16,6 @@ buildGoModule {
 
   vendorHash = "sha256-jFbxT0ekimBNjIHGgMmCUrwZTS3Sdop/MFQMVdBF/38=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/brianstrauch/solitaire-tui";
     description = "Klondike solitaire for the terminal";

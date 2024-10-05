@@ -17,7 +17,7 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" "-X=main.version=${version}" ];
+  ldflags = [ "-X=main.version=${version}" ];
 
   postInstall = ''
     installShellCompletion --cmd dnscontrol \

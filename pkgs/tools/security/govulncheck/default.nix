@@ -32,11 +32,6 @@ buildGoModule rec {
   # Vendoring breaks tests
   doCheck = false;
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     homepage = "https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck";
     downloadPage = "https://github.com/golang/vuln";

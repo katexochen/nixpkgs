@@ -15,8 +15,6 @@ buildGoModule rec{
 
   vendorHash = "sha256-quGhv2JpMseQps9qPvuJ6Jit8CxcSCOWYHG684whwl4=";
 
-  ldflags = [ "-s" "-w" ];
-
   nativeBuildInputs = [ installShellFiles ];
 
   postInstall = ''

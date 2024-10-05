@@ -27,7 +27,7 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" "-X main.Version=${version}" ];
+  ldflags = [ "-X main.Version=${version}" ];
 
   postInstall = lib.optionalString stdenv.hostPlatform.isLinux ''
     mkdir -p $out/lib/systemd/user

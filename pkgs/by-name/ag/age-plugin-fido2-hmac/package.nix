@@ -35,7 +35,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-h4/tyq9oZt41IfRJmmsLHUpJiPJ7YuFu59ccM7jHsFo=";
 
-  ldflags = [ "-s" "-w" "-X main.version=v${version}" ];
+  ldflags = [ "-X main.version=v${version}" ];
 
   buildInputs = [ libfido2 ];
 

@@ -23,8 +23,6 @@ buildGo123Module rec {
   excludedPackages = [ "./e2etests" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X oss.terrastruct.com/d2/lib/version.Version=v${version}"
   ];
 

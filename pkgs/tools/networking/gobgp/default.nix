@@ -17,10 +17,6 @@ buildGoModule rec {
     export CGO_ENABLED=0
   '';
 
-  ldflags = [
-    "-s" "-w" "-extldflags '-static'"
-  ];
-
   subPackages = [ "cmd/gobgp" ];
 
   meta = with lib; {

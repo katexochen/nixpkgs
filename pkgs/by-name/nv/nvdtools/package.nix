@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-DzhP42DaddIm+/Z3a83rWX5WY+tM1P+vBNe6B91L7E8=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tools to work with the feeds (vulnerabilities, CPE dictionary etc.) distributed by National Vulnerability Database";
     homepage = "https://github.com/facebookincubator/nvdtools";

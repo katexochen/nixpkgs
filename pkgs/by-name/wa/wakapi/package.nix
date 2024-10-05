@@ -25,11 +25,6 @@ buildGoModule {
   # Fix up reported version
   postPatch = ''echo ${version} > version.txt'';
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = {
     homepage = "https://wakapi.dev/";
     changelog = "https://github.com/muety/wakapi/releases/tag/${version}";

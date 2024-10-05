@@ -16,8 +16,6 @@ buildGoModule {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = ''Generate "if err != nil {" block'';
     homepage = "https://github.com/koron/iferr";

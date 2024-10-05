@@ -99,8 +99,6 @@ buildGoModule rec {
       t = "github.com/prometheus/common/version";
     in
     [
-      "-s"
-      "-w"
       "-X ${t}.Version=${version}"
       "-X ${t}.Revision=unknown"
       "-X ${t}.Branch=unknown"

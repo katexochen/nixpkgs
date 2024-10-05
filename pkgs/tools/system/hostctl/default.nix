@@ -22,8 +22,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/guumaster/hostctl/cmd/hostctl/actions.version=${version}"
   ];
 

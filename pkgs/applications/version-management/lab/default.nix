@@ -19,7 +19,7 @@ buildGoModule rec {
 
   nativeBuildInputs = [ makeBinaryWrapper installShellFiles ];
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   postInstall = ''
     # create shell completions before wrapProgram so that lab detects the right path for itself

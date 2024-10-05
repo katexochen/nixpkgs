@@ -16,8 +16,6 @@ buildGoModule {
 
   vendorHash = "sha256-Qnt1wo/yKC3Ce4JoZBIWtXyzlkh4bWz9vyE349iRsjk=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Displays your webcam on the terminal";
     homepage = "https://github.com/muesli/asciicam";

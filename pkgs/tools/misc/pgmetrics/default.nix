@@ -15,7 +15,7 @@ buildGoModule rec {
 
   doCheck = false;
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   meta = with lib; {
     homepage = "https://pgmetrics.io/";

@@ -27,8 +27,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/GoogleCloudPlatform/docker-credential-gcr/v2/config.Version=${version}"
   ];
 

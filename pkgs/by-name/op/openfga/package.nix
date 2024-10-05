@@ -29,8 +29,6 @@ buildGoModule {
       buildInfoPkg = "github.com/openfga/openfga/internal/build";
     in
     [
-      "-s"
-      "-w"
       "-X ${buildInfoPkg}.Version=${version}"
       "-X ${buildInfoPkg}.Commit=${version}"
       "-X ${buildInfoPkg}.Date=19700101"

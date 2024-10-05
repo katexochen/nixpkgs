@@ -28,8 +28,6 @@ buildGoModule rec {
   subPackages = [ "cmd/trivy" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/aquasecurity/trivy/pkg/version/app.ver=${version}"
   ];
 

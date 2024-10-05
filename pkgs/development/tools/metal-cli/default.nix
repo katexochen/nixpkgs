@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-X+GfM73LAWk2pT4ZOPT2pg8YaKyT+SNjQ14LgB+C7Wo=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/equinix/metal-cli/cmd.Version=${version}"
   ];
 

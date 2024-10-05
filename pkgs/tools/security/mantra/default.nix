@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool used to hunt down API key leaks in JS files and pages";
     homepage = "https://github.com/MrEmpy/Mantra";

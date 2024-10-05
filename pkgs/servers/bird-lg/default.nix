@@ -14,11 +14,6 @@ let
 
       doDist = false;
 
-      ldflags = [
-        "-s"
-        "-w"
-      ];
-
       inherit modRoot vendorHash;
 
       meta = with lib; {

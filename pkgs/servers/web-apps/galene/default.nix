@@ -13,7 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-U8DH3b2KbFQbEV+7suVsBiTA42FEl6DebH+GJDaH6aE=";
 
-  ldflags = [ "-s" "-w" ];
   preCheck = "export TZ=UTC";
 
   outputs = [ "out" "static" ];

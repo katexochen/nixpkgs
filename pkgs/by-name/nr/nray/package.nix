@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-hCFFMSaT73Wx54KayuFc2xJRGp0p10Pn93N8t4Xad8g=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   env = {
     CGO_CFLAGS = "-Wno-undef-prefix";
   };

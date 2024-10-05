@@ -15,7 +15,7 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" "-X=main.VERSION=v${version}" ];
+  ldflags = [ "-X=main.VERSION=v${version}" ];
 
   meta = with lib; {
     homepage = "https://github.com/rancher/rke";

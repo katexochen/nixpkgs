@@ -18,7 +18,7 @@ buildGoModule rec {
     cp ${./go.sum} go.sum
   '';
 
-  ldflags = [ "-w" "-s" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   doCheck = false; # TODO tests are failing
 

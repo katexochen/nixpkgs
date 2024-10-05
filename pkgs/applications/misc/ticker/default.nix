@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-bWdyypcIagbKTMnhT0X4UmoPVjyTasCSud6pX1L3oIc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/achannarasappa/ticker/cmd.Version=v${version}"
   ];
 

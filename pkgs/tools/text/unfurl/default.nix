@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-Kpd916+jjGvw56N122Ej4CXVcv1/xr1THkjsrhkIy+U=";
 
-  ldflags = [ "-s" "-w" ];
-
   # tests tries to download a list of tlds from the internet
   postPatch = ''
     echo com > /tmp/.tlds

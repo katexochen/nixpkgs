@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-iv5zIn9C56AQB87T+n5fJzm/fhBFBUObFwrlJ72A/J4=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/bufbuild/bufisk";
     description = "User-friendly launcher for Buf";

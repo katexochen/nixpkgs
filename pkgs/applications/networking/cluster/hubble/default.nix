@@ -14,7 +14,6 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/cilium/hubble/pkg.GitBranch=none"
     "-X github.com/cilium/hubble/pkg.GitHash=none"
     "-X github.com/cilium/hubble/pkg.Version=${version}"

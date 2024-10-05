@@ -28,8 +28,6 @@ buildGoModule rec {
   allowGoReference = true;
   # Flags set in the upstream build.
   ldflags = [
-    "-s"
-    "-w"
     "-X zgo.at/goatcounter/v2.Version=${src.rev}"
   ];
 

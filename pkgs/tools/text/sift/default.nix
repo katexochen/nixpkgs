@@ -23,8 +23,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     installShellCompletion --cmd sift --bash sift-completion.bash
   '';

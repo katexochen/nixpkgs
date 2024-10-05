@@ -18,8 +18,6 @@ buildGoModule rec {
     ./go-mod.patch
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.tests.version = testers.testVersion {
     package = jid;
     version = "v${version}";

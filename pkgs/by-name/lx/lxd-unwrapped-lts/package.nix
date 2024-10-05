@@ -56,10 +56,6 @@ buildGoModule rec {
     udev.dev
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
   tags = [ "libsqlite3" ];
 
   preBuild = ''

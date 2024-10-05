@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-E6J+0tZriskBnXdhQOQA240c3z+laXM5honoREjHPfM=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/MarkusFreitag/changelogger/cmd.BuildVersion=${version}"
     "-X github.com/MarkusFreitag/changelogger/cmd.BuildDate=1970-01-01T00:00:00"
   ];

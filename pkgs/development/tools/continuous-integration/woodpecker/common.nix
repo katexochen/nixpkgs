@@ -35,8 +35,6 @@ in
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X go.woodpecker-ci.org/woodpecker/v2/version.Version=${version}"
   ];
 

@@ -22,11 +22,6 @@ buildGoModule rec {
     "cmd/subfinder/"
   ];
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Subdomain discovery tool";
     longDescription = ''

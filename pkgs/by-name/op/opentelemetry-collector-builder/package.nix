@@ -19,8 +19,6 @@ buildGoModule rec {
 
   CGO_ENABLED = 0;
   ldflags = [
-    "-s"
-    "-w"
     "-X go.opentelemetry.io/collector/cmd/builder/internal.version=${version}"
   ];
 

@@ -15,7 +15,7 @@ buildGoModule rec {
 
   doCheck = false;
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   meta = with lib; {
     description = "Fastest shell plugin manager";

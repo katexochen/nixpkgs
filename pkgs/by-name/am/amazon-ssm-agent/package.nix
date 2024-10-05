@@ -78,8 +78,6 @@ buildGoModule rec {
     "agent/session/logging"
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   postPatch = ''
     printf "#!/bin/sh\ntrue" > ./Tools/src/checkstyle.sh
 

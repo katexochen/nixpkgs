@@ -24,8 +24,6 @@ buildGoModule rec {
   nativeBuildInputs = [ go-md2man installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/containers/toolbox/pkg/version.currentVersion=${version}"
   ];
 

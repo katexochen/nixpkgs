@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-nmvZKkSfOflsrcos3cCZHrq4DVF23TQG9kST0AcjN7E=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/supabase/auth/internal/utilities.Version=${version}"
   ];
 

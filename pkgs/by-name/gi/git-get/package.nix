@@ -33,8 +33,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X ${config-module}.version=v${version}"
   ];
 

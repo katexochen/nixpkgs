@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-9qkealjjdBO659fdWdgFii3ThPRwKpYasB03L3Bktqs=";
 
-  ldflags = [ "-s" "-w" ];
-
   env.GOWORK = "off";
 
   subPackages = [ "cmd/talosctl" ];

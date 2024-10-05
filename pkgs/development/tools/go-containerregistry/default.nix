@@ -22,7 +22,7 @@ buildGoModule rec {
 
   ldflags =
     let t = "github.com/google/go-containerregistry"; in
-    [ "-s" "-w" "-X ${t}/cmd/crane/cmd.Version=v${version}" "-X ${t}/pkg/v1/remote/transport.Version=${version}" ];
+    [ "-X ${t}/cmd/crane/cmd.Version=v${version}" "-X ${t}/pkg/v1/remote/transport.Version=${version}" ];
 
   postInstall =
     lib.concatStringsSep "\n" (

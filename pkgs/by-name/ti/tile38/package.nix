@@ -15,7 +15,7 @@ buildGoModule rec {
 
   subPackages = [ "cmd/tile38-cli" "cmd/tile38-server" ];
 
-  ldflags = [ "-s" "-w" "-X github.com/tidwall/tile38/core.Version=${version}" ];
+  ldflags = [ "-X github.com/tidwall/tile38/core.Version=${version}" ];
 
   meta = with lib; {
     description = "Real-time Geospatial and Geofencing";

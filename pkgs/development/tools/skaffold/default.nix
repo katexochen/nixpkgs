@@ -16,7 +16,6 @@ buildGoModule rec {
   subPackages = ["cmd/skaffold"];
 
   ldflags = let t = "github.com/GoogleContainerTools/skaffold/v2/pkg/skaffold"; in [
-    "-s" "-w"
     "-X ${t}/version.version=v${version}"
     "-X ${t}/version.gitCommit=${src.rev}"
     "-X ${t}/version.buildDate=unknown"

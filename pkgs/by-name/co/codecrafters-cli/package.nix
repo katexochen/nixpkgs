@@ -28,8 +28,6 @@ buildGoModule rec {
   vendorHash = "sha256-TQcxzfiqKeCQZUKLHnPjBa/0WsYJhER3fmr4cRGFknw=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/codecrafters-io/cli/internal/utils.Version=${version}"
   ];
 

@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-W5fPa02rpWhGwYJzRkn8umqdMHG72Ym8+S0f+Id/mcM=";
 
-  ldflags = [ "-s" "-w" "-X info.Version=${version}" ];
+  ldflags = [ "-X info.Version=${version}" ];
 
   subPackages = [ "cmd/fission-cli" ];
 

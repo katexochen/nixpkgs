@@ -63,8 +63,6 @@ buildGoModule rec {
   # https://gitlab.com/nvidia/container-toolkit/container-toolkit/-/blob/03cbf9c6cd26c75afef8a2dd68e0306aace80401/Makefile#L64
   ldflags = [
     "-extldflags=-Wl,-z,lazy" # May be redunandant, cf. `man ld`: "Lazy binding is the default".
-    "-s" # "disable symbol table"
-    "-w" # "disable DWARF generation"
 
     # "-X name=value"
     "-X"

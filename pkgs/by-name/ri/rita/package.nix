@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-KyC7VPgWlgKD6KWWRo3hFQHl2HjTub+VSMtJCpYE6Zk=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/activecm/rita/config.Version=${version}"
     "-X=github.com/activecm/rita/config.ExactVersion=${version}"
   ];

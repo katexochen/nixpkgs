@@ -31,7 +31,7 @@ buildGoModule rec {
   buildInputs = [ ncurses ];
 
   ldflags = [
-    "-s" "-w" "-X main.version=${version} -X main.revision=${src.rev}"
+    "-X main.version=${version} -X main.revision=${src.rev}"
   ];
 
   # The vim plugin expects a relative path to the binary; patch it to abspath.

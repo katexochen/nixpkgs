@@ -19,8 +19,6 @@ buildGoModule rec {
 
   ldflags = [
     "-X github.com/FreifunkBremen/yanic/cmd.VERSION=${version}"
-    "-s"
-    "-w"
   ];
 
   nativeBuildInputs = [ installShellFiles ];

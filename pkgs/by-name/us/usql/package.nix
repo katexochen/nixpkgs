@@ -46,8 +46,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/xo/usql/text.CommandVersion=${version}"
   ];
 

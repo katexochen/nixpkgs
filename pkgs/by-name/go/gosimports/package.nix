@@ -19,8 +19,6 @@ buildGoModule rec {
   subPackages = [ "cmd/gosimports" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
   ];
 

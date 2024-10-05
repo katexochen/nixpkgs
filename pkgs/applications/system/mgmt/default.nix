@@ -48,8 +48,6 @@ buildGoModule rec {
 
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.program=${pname}"
     "-X main.version=${version}"
   ];

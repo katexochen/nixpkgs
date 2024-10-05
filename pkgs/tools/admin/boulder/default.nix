@@ -29,8 +29,6 @@ buildGoModule rec {
   subPackages = [ "cmd/boulder" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/letsencrypt/boulder/core.BuildHost=nixbld@localhost"
   ];
 

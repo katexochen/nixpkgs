@@ -29,8 +29,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/reproducible-containers/${pname}/pkg/version.Version=v${version}"
   ];
 

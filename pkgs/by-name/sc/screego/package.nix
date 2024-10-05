@@ -56,8 +56,6 @@ buildGo123Module rec {
   vendorHash = "sha256-190Fp2QtnZis0sophGwhnWhXNWLhODWlnzE3bfScZ+Q=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.version=${version}"
     "-X=main.commitHash=${src.rev}"
     "-X=main.mode=prod"

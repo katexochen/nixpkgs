@@ -20,8 +20,6 @@ buildGoModule {
   vendorHash = "sha256-kx3lPhmEo515sHgHBqDC6udz6xkZvB+nn6x3/JaBHbo=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
     "-X main.builtBy=nixpkgs"
   ];

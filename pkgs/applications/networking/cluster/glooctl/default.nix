@@ -25,7 +25,6 @@ buildGoModule rec {
   strictDeps = true;
 
   ldflags = [
-    "-s"
     "-X github.com/solo-io/gloo/pkg/version.Version=${version}"
   ];
 

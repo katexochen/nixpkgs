@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-eeVj0nU+cs1cZNVvwu4LgtQkpddtyYAYS91ANHyOjcY=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   preCheck = ''
     # Test fails with invalid memory address or nil pointer dereference
     substituteInPlace tests/httpfilter_test.go \

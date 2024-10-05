@@ -24,7 +24,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-LuSewWK/sxaHibJ6a05PM9CPen8J+MJD6lwk4SNOWSA=";
 
-  ldflags = [ "-s" "-w" "-X github.com/foxboron/sbctl.DatabasePath=${databasePath}" ];
+  ldflags = [ "-X github.com/foxboron/sbctl.DatabasePath=${databasePath}" ];
 
   nativeBuildInputs = [ installShellFiles asciidoc ];
 

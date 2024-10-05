@@ -20,8 +20,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/j178/leetgo/constants.Version=${version}"
   ];
 

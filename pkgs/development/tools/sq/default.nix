@@ -21,8 +21,6 @@ buildGoModule rec {
   doCheck = false;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/neilotoole/sq/cli/buildinfo.Version=v${version}"
   ];
 

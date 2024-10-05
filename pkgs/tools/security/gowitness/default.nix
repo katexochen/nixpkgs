@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-2hG+93LzJ+kUVCOXFGk83Asvn7zLWq2BSqrq+eOJhQ0=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Web screenshot utility";
     homepage = "https://github.com/sensepost/gowitness";

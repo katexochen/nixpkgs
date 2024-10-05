@@ -15,8 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/esbuild" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Extremely fast JavaScript bundler";
     homepage = "https://esbuild.github.io";

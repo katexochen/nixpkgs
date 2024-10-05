@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-gk8YMMvTHBL7yoXU9n0jhtUS472fqLW5m+mSl4Lio6c=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "CLI tool to execute Trickest workflows";
     homepage = "https://github.com/trickest/trickest-cli";

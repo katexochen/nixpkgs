@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-K2IyljE5QS/SZ6EXV42q/a5ru+0UXZ69oLNi94XKxw4=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=v${version}"
   ];
 

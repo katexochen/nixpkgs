@@ -18,11 +18,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/api-linter" ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Linter for APIs defined in protocol buffers";
     homepage = "https://github.com/googleapis/api-linter/";

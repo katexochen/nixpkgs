@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-PGUOTEFcOL1pG+itTp9ce1qW+1V6hts8jKpA0E8orDk=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   # Disabled for now as there are some failures ("undefined:")
   doCheck = false;
 

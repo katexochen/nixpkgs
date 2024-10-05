@@ -15,7 +15,7 @@ buildGoModule rec {
 
   doCheck = false;
 
-  ldflags = [ "-s" "-w" "-X main.BazeliskVersion=${version}" ];
+  ldflags = [ "-X main.BazeliskVersion=${version}" ];
 
   meta = with lib; {
     description = "User-friendly launcher for Bazel";

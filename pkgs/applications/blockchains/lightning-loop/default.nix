@@ -18,8 +18,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/loop" "cmd/loopd" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Lightning Loop Client";
     homepage = "https://github.com/lightninglabs/loop";

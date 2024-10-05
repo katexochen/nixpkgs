@@ -18,8 +18,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-+eqT3VNqw3fOLwfCKPacIEcoXjuzPaY1EAZI95rgLDs=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Command-line tool for Storj";
     homepage = "https://storj.io";

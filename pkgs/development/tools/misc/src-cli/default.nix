@@ -32,8 +32,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/sourcegraph/src-cli/internal/version.BuildTag=${version}"
   ];
 

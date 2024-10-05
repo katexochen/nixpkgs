@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-HVsaQBd7fSZp2fOpOOmlDhYrHcHqWKiYWPFLQX0azEw=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X sigs.k8s.io/release-utils/version.gitVersion=${version}"
   ];
 

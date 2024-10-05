@@ -26,7 +26,7 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s" "-w" "-X=main.Version=${version}"
+    "-X=main.Version=${version}"
   ];
 
   doInstallCheck = true;

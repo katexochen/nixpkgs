@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/jessfraz/dockfmt/version.VERSION=${version}"
   ];
 

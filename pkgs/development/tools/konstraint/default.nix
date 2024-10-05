@@ -17,7 +17,7 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-s" "-w" "-X github.com/plexsystems/konstraint/internal/commands.version=${version}" ];
+  ldflags = [ "-X github.com/plexsystems/konstraint/internal/commands.version=${version}" ];
 
   postInstall = ''
     installShellCompletion --cmd konstraint \

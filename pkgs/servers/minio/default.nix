@@ -41,8 +41,6 @@ buildGoModule rec {
   tags = [ "kqueue" ];
 
   ldflags = let t = "github.com/minio/minio/cmd"; in [
-    "-s"
-    "-w"
     "-X ${t}.Version=${versionToTimestamp version}"
     "-X ${t}.CopyrightYear=${versionToYear version}"
     "-X ${t}.ReleaseTag=RELEASE.${version}"

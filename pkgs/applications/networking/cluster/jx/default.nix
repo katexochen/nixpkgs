@@ -18,7 +18,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
     "-X github.com/jenkins-x/jx/pkg/cmd/version.Version=${version}"
     "-X github.com/jenkins-x/jx/pkg/cmd/version.Revision=${src.rev}"
     "-X github.com/jenkins-x/jx/pkg/cmd/version.GoVersion=${go.version}"

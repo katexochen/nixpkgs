@@ -26,7 +26,7 @@ buildGoModule rec {
   buildInputs = [ sqlite ];
 
   ldflags = [
-    "-s" "-w" "-X github.com/manojkarthick/expenses/cmd.Version=${version}"
+    "-X github.com/manojkarthick/expenses/cmd.Version=${version}"
   ];
 
   postInstall = ''

@@ -36,8 +36,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/smallstep/step-kms-plugin/cmd.Version=${version}"
   ];
 

@@ -16,8 +16,6 @@ buildGoModule rec {
   subPackages = [ "cmd/docker-credential-up" "cmd/up" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/upbound/up/internal/version.version=v${version}"
   ];
 

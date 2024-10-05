@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-8qI7mLgQB0GK2QV6tZmWU8hJX+Ax1YhEPisQbjGoJRc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/allaboutapps/integresql/internal/config.Commit=${src.rev}"
     "-X github.com/allaboutapps/integresql/internal/config.ModuleName=github.com/allaboutapps/integresql"
   ];

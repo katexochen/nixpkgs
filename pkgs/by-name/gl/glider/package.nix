@@ -15,11 +15,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-v/HJUah+QC34hcf9y5yRSFO8OTkqD2wzdOH/wIXrKoA=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postInstall = ''
     substituteInPlace systemd/glider@.service \
       --replace-fail "/usr/bin/glider" "$out/bin/glider"

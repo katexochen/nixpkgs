@@ -53,8 +53,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X git.numtide.com/numtide/nixos-facter/build.Name=nixos-facter"
     "-X git.numtide.com/numtide/nixos-facter/build.Version=v${version}"
     "-X github.com/numtide/nixos-facter/pkg/build.System=${stdenv.hostPlatform.system}"

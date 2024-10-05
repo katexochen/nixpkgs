@@ -22,7 +22,7 @@ buildGoModule rec {
 
   subPackages = [ "cmd/piv-agent" ];
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" "-X main.shortCommit=${src.rev}" ];
+  ldflags = [ "-X main.version=${version}" "-X main.shortCommit=${src.rev}" ];
 
   nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [ pkg-config ];
 

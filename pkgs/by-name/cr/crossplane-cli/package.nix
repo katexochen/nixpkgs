@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-de9xt3aFmGDddwMO2GgKKKmSfvsfnpit3wUrBme//fI=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/crossplane/crossplane/internal/version.version=v${version}"
   ];
 

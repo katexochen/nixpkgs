@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   nativeCheckInputs = [ git ];
 
   meta = with lib; {

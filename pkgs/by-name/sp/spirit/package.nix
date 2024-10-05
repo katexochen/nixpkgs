@@ -19,11 +19,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/spirit" ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     homepage = "https://github.com/cashapp/spirit";
     description = "Online schema change tool for MySQL";

@@ -24,8 +24,6 @@ buildGo123Module rec {
   proxyVendor = true;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/influxdata/telegraf/internal.Commit=${src.rev}"
     "-X=github.com/influxdata/telegraf/internal.Version=${version}"
   ];

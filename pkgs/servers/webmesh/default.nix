@@ -24,8 +24,6 @@ buildGoModule rec {
   subPackages = [ "cmd/webmesh-node" "cmd/webmeshd" "cmd/wmctl" ];
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/webmeshproj/webmesh/pkg/version.Version=${version}"
     "-X github.com/webmeshproj/webmesh/pkg/version.GitCommit=v${version}"
   ];

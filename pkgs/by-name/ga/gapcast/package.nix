@@ -25,11 +25,6 @@ buildGoModule rec {
     xorg.libX11
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = {
     description = "802.11 broadcast analyzer & injector";
     homepage = "https://github.com/ANDRVV/gapcast";

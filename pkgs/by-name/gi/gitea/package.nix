@@ -66,8 +66,6 @@ in buildGoModule rec {
   tags = lib.optionals sqliteSupport [ "sqlite" "sqlite_unlock_notify" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.Version=${version}"
     "-X 'main.Tags=${lib.concatStringsSep " " tags}'"
   ];

@@ -39,8 +39,6 @@ buildGoModule rec {
     let t = "github.com/grafana/mimir/pkg/util/version";
     in [
       ''-extldflags "-static"''
-      "-s"
-      "-w"
       "-X ${t}.Version=${version}"
       "-X ${t}.Revision=unknown"
       "-X ${t}.Branch=unknown"

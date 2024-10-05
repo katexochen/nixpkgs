@@ -18,8 +18,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/tapcli" "cmd/tapd" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Daemon for the Taro protocol specification";
     homepage = "https://github.com/lightninglabs/taro";

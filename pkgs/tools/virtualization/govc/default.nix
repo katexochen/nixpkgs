@@ -16,8 +16,6 @@ buildGoModule rec {
   vendorHash = "sha256-ddofXjBnyHRn7apS8hpM57S1oo+1w5i4n0Z6ZPKQEDI=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/vmware/govmomi/govc/flags.BuildVersion=${version}"
   ];
 

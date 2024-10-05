@@ -18,7 +18,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-+8dOxPG/Q+wuHgRwwWqdphHOuop0W9dVyClyQuh7aRc=";
 
-  ldflags = ["-s" "-w" "-X github.com/juanfont/headscale/cmd/headscale/cli.Version=v${version}"];
+  ldflags = [ "-X github.com/juanfont/headscale/cmd/headscale/cli.Version=v${version}"];
 
   nativeBuildInputs = [installShellFiles];
   checkFlags = ["-short"];

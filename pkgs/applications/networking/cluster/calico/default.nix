@@ -15,8 +15,6 @@ builtins.mapAttrs (pname: { doCheck ? true, mainProgram ? pname, subPackages }: 
 
   inherit doCheck subPackages;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://projectcalico.docs.tigera.io";
     changelog = "https://github.com/projectcalico/calico/releases/tag/v${version}";

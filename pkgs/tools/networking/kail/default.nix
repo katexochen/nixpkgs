@@ -5,8 +5,6 @@ buildGoModule rec {
   version = "0.17.4";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
   ];
 

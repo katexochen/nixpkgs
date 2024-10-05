@@ -66,8 +66,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/evilsocket/opensnitch/daemon/core.Version=${version}"
   ];
 

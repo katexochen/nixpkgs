@@ -16,11 +16,6 @@ buildGoModule {
 
   vendorHash = "sha256-85jFSAOfNMihv710LtfETmkKRqcdRuFCHVuPkW94X/Y=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   passthru.updateScript = unstableGitUpdater { };
 
   meta = with lib; {

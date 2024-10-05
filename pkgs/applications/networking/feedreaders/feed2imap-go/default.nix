@@ -12,7 +12,6 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/Necoro/feed2imap-go/pkg/version.version=${version}"
     "-X github.com/Necoro/feed2imap-go/pkg/version.commit=nixpkgs"
   ];

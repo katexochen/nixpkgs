@@ -23,8 +23,6 @@ buildGoModule rec {
   subPackages = [ "cmd/main.go" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/danielfoehrkn/kubeswitch/cmd/switcher.version=${version}"
     "-X github.com/danielfoehrkn/kubeswitch/cmd/switcher.buildDate=1970-01-01"
   ];

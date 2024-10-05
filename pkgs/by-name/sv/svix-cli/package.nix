@@ -28,7 +28,7 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags =
-    [ "-s" "-w" "-X github.com/svix/svix-cli/version.Version=v${version}" ];
+    [ "-X github.com/svix/svix-cli/version.Version=v${version}" ];
 
   meta = with lib; {
     description = "A CLI for interacting with the Svix API";

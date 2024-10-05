@@ -32,8 +32,6 @@ buildGoModule {
     libadwaita
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   enableParallelBuilding = true;
 
   meta = with lib; {

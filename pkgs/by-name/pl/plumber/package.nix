@@ -21,8 +21,6 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/streamdal/plumber/options.VERSION=${version}"
   ];
 

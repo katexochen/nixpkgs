@@ -22,8 +22,6 @@ buildGoModule rec {
   passthru.tests = { inherit (nixosTests.prometheus-exporters) ipmi; };
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/prometheus/common/version.Version=${version}"
     "-X github.com/prometheus/common/version.Revision=0000000"
     "-X github.com/prometheus/common/version.Branch=unknown"

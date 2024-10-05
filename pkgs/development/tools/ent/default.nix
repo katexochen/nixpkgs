@@ -15,11 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/ent" ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   nativeBuildInputs = [ installShellFiles ];
 
   postInstall = ''

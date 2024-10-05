@@ -23,7 +23,7 @@ buildGoModule rec {
     go test $(go list ./... | grep -vE '(awsutil|e2e)')
   '';
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   subPackages = [ "cmd/helm-s3" ];
 

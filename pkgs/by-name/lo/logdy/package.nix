@@ -18,11 +18,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-kFhcbBMymzlJ+2zw7l09LJfCdps26Id+VzOehqrLDWU=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   nativeBuildInputs = [ installShellFiles ];
 
   # After the build this derivation will generate two binaries.

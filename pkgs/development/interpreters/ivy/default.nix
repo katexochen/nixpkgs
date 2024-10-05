@@ -15,8 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/robpike/ivy";
     description = "ivy, an APL-like calculator";

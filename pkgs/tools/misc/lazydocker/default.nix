@@ -19,7 +19,7 @@ buildGoModule rec {
 
   excludedPackages = [ "scripts" "test/printrandom" ];
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   passthru.tests.version = testers.testVersion {
     package = lazydocker;

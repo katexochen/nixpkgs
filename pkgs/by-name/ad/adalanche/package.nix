@@ -22,8 +22,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/lkarlslund/adalanche/modules/version.Version=${version}"
   ];
 

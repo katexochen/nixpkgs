@@ -26,8 +26,6 @@ buildGoModule rec {
   doCheck = false;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/gruntwork-io/go-commons/version.Version=v${version}"
   ];
 

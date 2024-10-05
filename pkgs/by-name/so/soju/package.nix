@@ -27,8 +27,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X codeberg.org/emersion/soju/config.DefaultPath=/etc/soju/config"
     "-X codeberg.org/emersion/soju/config.DefaultUnixAdminPath=/run/soju/admin"
   ];

@@ -21,8 +21,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-extldflags -static"
     "-X github.com/megaease/easeprobe/global.Ver=${version}"
     "-X github.com/megaease/easeprobe/pkg/version.REPO=megaease/easeprobe"

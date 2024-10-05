@@ -35,11 +35,6 @@ buildGoModule rec {
     makeWrapper
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   doCheck = true;
 
   checkFlags =

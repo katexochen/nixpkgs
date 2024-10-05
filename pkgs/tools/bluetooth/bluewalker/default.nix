@@ -13,11 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-kHwj6FNWIonaHKy4QE0/UcuOfHAPE1al5nuYXrfROKE=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Simple command line Bluetooth LE scanner";
     homepage = "https://gitlab.com/jtaimisto/bluewalker";

@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-zCloMhjHNkPZHYX1e1nx072IYbWHFWam4Af0l0s8a6M=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = {
     description = "A cross-platform command-line tool for executing jobs in parallel";
     homepage = "https://github.com/shenwei356/rush";

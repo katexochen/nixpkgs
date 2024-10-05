@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-nhsGhuX5AJMHg+zQUt1G1TwVgMCxnuJ2T3uBrx7bJNs=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Tool to fetch known URLs";
     longDescription = ''

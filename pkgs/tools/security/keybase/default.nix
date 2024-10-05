@@ -30,7 +30,6 @@ buildGoModule rec {
 
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ AppKit AVFoundation AudioToolbox ImageIO CoreMedia Foundation CoreGraphics MediaToolbox ];
   tags = [ "production" ];
-  ldflags = [ "-s" "-w" ];
 
   meta = with lib; {
     homepage = "https://www.keybase.io/";

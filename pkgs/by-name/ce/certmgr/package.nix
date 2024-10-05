@@ -17,8 +17,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.tests = { inherit (nixosTests) certmgr; };
 
 

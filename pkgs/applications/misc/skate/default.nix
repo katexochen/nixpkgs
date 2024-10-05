@@ -14,7 +14,7 @@ buildGoModule rec {
   proxyVendor = true;
   vendorHash = "sha256-nCT9PsRPxefjC4q4cr5UigTITUkx0JmQtdv7/ZXbXVI=";
 
-  ldflags = [ "-s" "-w" "-X=main.Version=${version}" ];
+  ldflags = [ "-X=main.Version=${version}" ];
 
   meta = with lib; {
     description = "Personal multi-machine syncable key value store";

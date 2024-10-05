@@ -20,11 +20,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/nuclei/" ];
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   # Test files are not part of the release tarball
   doCheck = false;
 

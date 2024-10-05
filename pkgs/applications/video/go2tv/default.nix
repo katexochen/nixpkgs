@@ -39,8 +39,6 @@ buildGoModule rec {
   ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ Carbon Cocoa Kernel UserNotifications ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-linkmode=external"
   ];
 

@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/oem/lnch";
     description = "Launches a process and moves it out of the process group";

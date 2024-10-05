@@ -17,8 +17,6 @@ buildGoModule rec {
   buildInputs = [ btrfs-progs lvm2 ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/goodwithtech/dockle/pkg.version=${version}"
   ];
 

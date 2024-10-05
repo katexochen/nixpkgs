@@ -19,8 +19,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/controlplaneio/kubesec/v${lib.versions.major version}/cmd.version=v${version}"
   ];
 

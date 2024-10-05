@@ -28,8 +28,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/updatecli/updatecli/pkg/core/version.BuildTime=unknown"
     ''-X "github.com/updatecli/updatecli/pkg/core/version.GoVersion=go version go${lib.getVersion go}"''
     "-X github.com/updatecli/updatecli/pkg/core/version.Version=${version}"

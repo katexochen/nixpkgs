@@ -50,8 +50,6 @@ buildGoModule rec {
   };
 
   ldflags = let t = "github.com/grafana/loki/v3/pkg/util/build"; in [
-    "-s"
-    "-w"
     "-X ${t}.Version=${version}"
     "-X ${t}.BuildUser=nix@nixpkgs"
     "-X ${t}.BuildDate=unknown"

@@ -15,7 +15,7 @@ buildGoModule rec {
 
   patches = [ ./viewer.patch ];
 
-  ldflags = [ "-s" "-w" "-X=main.Version=${version}" ];
+  ldflags = [ "-X=main.Version=${version}" ];
 
   meta = with lib; {
     homepage = "https://github.com/mathaou/termdbms/";

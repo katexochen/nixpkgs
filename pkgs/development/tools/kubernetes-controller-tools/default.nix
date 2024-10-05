@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-zWvFwYHqECga1E2lWVA+wqY744OLXzRxK6JkniTZN70=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X sigs.k8s.io/controller-tools/pkg/version.version=v${version}"
   ];
 

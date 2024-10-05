@@ -25,8 +25,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.version=${version}"
     "-X=main.buildTime=1970-01-01T00:00:00Z"
     "-X=main.builder=nixpkgs"

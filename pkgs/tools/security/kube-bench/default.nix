@@ -16,8 +16,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/aquasecurity/kube-bench/cmd.KubeBenchVersion=v${version}"
   ];
 

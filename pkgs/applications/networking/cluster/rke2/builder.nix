@@ -45,7 +45,6 @@ buildGoModule rec {
 
   # See: https://github.com/rancher/rke2/blob/e7f87c6dd56fdd76a7dab58900aeea8946b2c008/scripts/build-binary#L27-L38
   ldflags = [
-    "-w"
     "-X github.com/k3s-io/k3s/pkg/version.GitCommit=${lib.substring 0 6 rke2Commit}"
     "-X github.com/k3s-io/k3s/pkg/version.Program=${pname}"
     "-X github.com/k3s-io/k3s/pkg/version.Version=v${version}"

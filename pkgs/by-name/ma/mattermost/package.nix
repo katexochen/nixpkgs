@@ -53,8 +53,6 @@ buildGoModule rec {
   tags = [ "production" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/mattermost/mattermost/server/public/model.Version=${version}"
     "-X github.com/mattermost/mattermost/server/public/model.BuildNumber=${version}-nixpkgs"
     "-X github.com/mattermost/mattermost/server/public/model.BuildDate=1970-01-01"

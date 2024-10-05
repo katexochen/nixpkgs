@@ -22,8 +22,6 @@ buildGoModule {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-s" "-w" ];
-
   doCheck = false;
 
   postInstall = ''

@@ -16,8 +16,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/snyk/driftctl/pkg/version.version=v${version}"
     "-X github.com/snyk/driftctl/build.env=release"
     "-X github.com/snyk/driftctl/build.enableUsageReporting=false"

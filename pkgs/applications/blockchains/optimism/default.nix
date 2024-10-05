@@ -24,8 +24,6 @@ buildGoModule rec {
     libpcap
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Optimism is Ethereum, scaled";
     homepage = "https://github.com/ethereum-optimism/optimism";

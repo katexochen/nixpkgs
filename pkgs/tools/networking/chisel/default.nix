@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-+11Pd/QCxoLLkeazmU9/vnPBaB2MZXmx4cEZRDnyRcQ=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/jpillora/chisel/share.BuildVersion=${version}"
   ];
 

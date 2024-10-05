@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-XHgdiXdp9aNEAc/Apvb64ExnpywjddWOw1scNKy+ico=";
 
-  ldflags = [ "-s" "-w" "-X main.version=v${version}-nixpkgs" ];
+  ldflags = [ "-X main.version=v${version}-nixpkgs" ];
 
   nativeBuildInputs = [ installShellFiles ];
 

@@ -16,7 +16,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-kAPw5M9o99NijCC9BzYhIpzHK/8fSAJxvckaj8iRby0=";
 
-  ldflags = [ "-s" "-w" "-X main.appVersion=${version}" ];
+  ldflags = [ "-X main.appVersion=${version}" ];
 
   meta = with lib; {
     changelog = let

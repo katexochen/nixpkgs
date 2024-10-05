@@ -16,7 +16,6 @@ buildGoModule rec {
   ldflags =
     let package_url = "github.com/kbst/kbst"; in
     [
-      "-s" "-w"
       "-X ${package_url}.version=${version}"
       "-X ${package_url}.buildDate=unknown"
       "-X ${package_url}.gitCommit=${src.rev}"

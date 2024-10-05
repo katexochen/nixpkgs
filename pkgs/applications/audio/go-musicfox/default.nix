@@ -26,8 +26,6 @@ buildGoModule rec {
   subPackages = [ "cmd/musicfox.go" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/go-musicfox/go-musicfox/internal/types.AppVersion=${version}"
   ];
 

@@ -16,8 +16,6 @@ buildGoModule rec {
   subPackages = [ "src/server/cmd/pachctl" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/pachyderm/pachyderm/v${lib.versions.major version}/src/version.AppVersion=${version}"
   ];
 

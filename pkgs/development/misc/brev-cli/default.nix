@@ -20,8 +20,6 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/brevdev/brev-cli/pkg/cmd/version.Version=${src.rev}"
   ];
 

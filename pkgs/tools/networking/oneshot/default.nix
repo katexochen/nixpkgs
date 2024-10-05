@@ -20,8 +20,6 @@ buildGoModule rec {
   modRoot = "v2";
 
   ldflags = [
-    "-s"
-    "-w"
     "-extldflags=-static"
     "-X github.com/forestnode-io/oneshot/v2/pkg/version.Version=${version}"
     "-X github.com/forestnode-io/oneshot/v2/pkg/version.APIVersion=v1.0.0"

@@ -22,8 +22,6 @@ buildGoModule rec {
   doCheck = false;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/arduino/arduino-language-server/version.versionString=${version}"
     "-X github.com/arduino/arduino-language-server/version.commit=unknown"
   ] ++ lib.optionals stdenv.hostPlatform.isLinux [

@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-ymXpuCc1Pv12kFcBf1STT2wiUXTyT4R1DHnDCeBWbSs=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool to uncover security misconfigurations on popular third-party services";
     homepage = "https://github.com/intigriti/misconfig-mapper";

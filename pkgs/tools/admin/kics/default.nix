@@ -26,10 +26,8 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
-    "-X=github.com/Checkmarx/kics/v2/internal/constants.SCMCommit=${version}"
-    "-X=github.com/Checkmarx/kics/v2/internal/constants.Version=${version}"
+    "-X github.com/Checkmarx/kics/v2/internal/constants.SCMCommit=${version}"
+    "-X github.com/Checkmarx/kics/v2/internal/constants.Version=${version}"
   ];
 
   passthru.tests.version = testers.testVersion {

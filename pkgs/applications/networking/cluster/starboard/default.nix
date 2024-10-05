@@ -27,8 +27,6 @@ buildGoModule rec {
   subPackages = [ "cmd/starboard" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=v${version}"
   ];
 

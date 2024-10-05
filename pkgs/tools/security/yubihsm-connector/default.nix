@@ -21,8 +21,6 @@ buildGoModule rec {
     libusb1
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   preBuild = ''
     GOOS= GOARCH= go generate
   '';

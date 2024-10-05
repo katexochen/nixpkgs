@@ -18,8 +18,6 @@ buildGoModule rec {
   subPackages = [ "cmd/ctlptl" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
   ];
 

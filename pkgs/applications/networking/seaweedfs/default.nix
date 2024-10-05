@@ -21,8 +21,6 @@ buildGoModule rec {
   subPackages = [ "weed" ];
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/seaweedfs/seaweedfs/weed/util.COMMIT=N/A"
   ];
 

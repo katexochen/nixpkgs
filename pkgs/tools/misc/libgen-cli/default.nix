@@ -19,8 +19,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     installShellCompletion --cmd libgen-cli \
       --bash <($out/bin/libgen-cli completion bash) \

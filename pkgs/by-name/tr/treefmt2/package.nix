@@ -17,8 +17,6 @@ buildGoModule rec {
   CGO_ENABLED = 1;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X git.numtide.com/numtide/treefmt/build.Name=treefmt"
     "-X git.numtide.com/numtide/treefmt/build.Version=v${version}"
   ];

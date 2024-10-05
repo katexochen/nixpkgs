@@ -9,7 +9,6 @@ buildGoModule {
   subPackages = [ "kbfs/kbfsfuse" "kbfs/redirector" "kbfs/kbfsgit/git-remote-keybase" ];
 
   tags = [ "production" ];
-  ldflags = [ "-s" "-w" ];
 
   meta = with lib; {
     homepage = "https://keybase.io/docs/kbfs";

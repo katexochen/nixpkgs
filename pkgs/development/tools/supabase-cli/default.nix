@@ -21,8 +21,6 @@ buildGoModule rec {
   vendorHash = "sha256-1g+J7IEkslASyLlfk0zxaFVpNtYDmfZPjkHcAiUzQDM=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/supabase/cli/internal/utils.Version=${version}"
   ];
 

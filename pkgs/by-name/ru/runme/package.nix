@@ -38,8 +38,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/stateful/runme/v3/internal/version.BuildDate=1970-01-01T00:00:00Z"
     "-X=github.com/stateful/runme/v3/internal/version.BuildVersion=${version}"
     "-X=github.com/stateful/runme/v3/internal/version.Commit=${src.rev}"

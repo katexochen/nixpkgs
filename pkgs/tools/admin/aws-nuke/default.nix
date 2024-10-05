@@ -29,8 +29,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     installShellCompletion --cmd aws-nuke \
       --bash <($out/bin/aws-nuke completion bash) \

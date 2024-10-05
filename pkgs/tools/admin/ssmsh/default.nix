@@ -15,7 +15,7 @@ buildGoModule rec {
 
   doCheck = true;
 
-  ldflags = [ "-w" "-s" "-X main.Version=${version}" ];
+  ldflags = [ "-X main.Version=${version}" ];
 
   passthru.tests = testers.testVersion {
     package = ssmsh;

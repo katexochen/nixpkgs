@@ -63,8 +63,6 @@ buildGoModule {
   vendorHash = "sha256-Oa7YmxcZr5scbhNeqGxJOkryL2uHQQ3RkLGWJaIXq3s=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/v2rayA/v2rayA/conf.Version=${version}"
   ];
 

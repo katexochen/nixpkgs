@@ -33,8 +33,6 @@ buildGoModule rec {
     sed -i -E 's/Version:(\s*)".*"/Version:\1"${version}"/' main.go
   '';
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     installShellCompletion --cmd otelcorecol \
       --bash <($out/bin/otelcorecol completion bash) \

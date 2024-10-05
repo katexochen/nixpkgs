@@ -15,8 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Infra manages access to infrastructure such as Kubernetes";
     homepage = "https://github.com/infrahq/infra";

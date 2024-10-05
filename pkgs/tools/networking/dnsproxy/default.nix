@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-tyEp0vY8hWE8jTvkxKuqQJcgeey+c50pxREpmlZWE24=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X"
     "github.com/AdguardTeam/dnsproxy/internal/version.version=${version}"
   ];

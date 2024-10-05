@@ -23,11 +23,6 @@ buildGoModule rec {
     makeWrapper
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "OBS-cli is a command-line remote control for OBS";
     homepage = "https://github.com/muesli/obs-cli";

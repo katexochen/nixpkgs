@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-G6GZO2+CfEAYcf7zBcqDa808A0eJjM8dq7+4VGZ+P4c=";
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     install -Dm444 -t $out/share/applications scripts/open-in-mpv.desktop
   '';

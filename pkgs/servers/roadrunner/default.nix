@@ -22,7 +22,6 @@ buildGoModule rec {
   # Flags as provided by the build automation of the project:
   # https://github.com/roadrunner-server/roadrunner/blob/fe572d0eceae8fd05225fbd99ba50a9eb10c4393/.github/workflows/release.yml#L89
   ldflags = [
-    "-s"
     "-X=github.com/roadrunner-server/roadrunner/v2023/internal/meta.version=${version}"
     "-X=github.com/roadrunner-server/roadrunner/v2023/internal/meta.buildTime=1970-01-01T00:00:00Z"
   ];

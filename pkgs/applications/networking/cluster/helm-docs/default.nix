@@ -15,8 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/helm-docs" ];
   ldflags = [
-    "-w"
-    "-s"
     "-X main.version=${version}"
   ];
 

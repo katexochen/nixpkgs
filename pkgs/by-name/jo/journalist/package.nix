@@ -31,8 +31,6 @@ buildGoModule rec {
   vendorHash = "sha256-fEHVc9kRbeeXICWhJshLp9JK/ICBR/RB5SVChJzSXpI=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/mrusme/journalist/journalistd.VERSION=${version}"
   ];
 

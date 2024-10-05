@@ -197,8 +197,6 @@ goBuild {
     '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/ollama/ollama/version.Version=${version}"
     "-X=github.com/ollama/ollama/server.mode=release"
   ];

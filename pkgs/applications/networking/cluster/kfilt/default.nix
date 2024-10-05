@@ -16,8 +16,6 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ryane/kfilt/cmd.Version=${version}"
     "-X github.com/ryane/kfilt/cmd.GitCommit=${src.rev}"
   ];

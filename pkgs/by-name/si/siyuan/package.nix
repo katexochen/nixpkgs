@@ -68,8 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
 
     # Set flags and tags as per upstream's Dockerfile
     ldflags = [
-      "-s"
-      "-w"
       "-X"
       "github.com/siyuan-note/siyuan/kernel/util.Mode=prod"
     ];

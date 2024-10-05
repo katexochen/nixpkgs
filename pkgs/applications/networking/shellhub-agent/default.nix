@@ -24,7 +24,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-qqh9KdhOt6KDgwUhf6lzb6I7YAhocBSZ7UeyBT0e0eM=";
 
-  ldflags = [ "-s" "-w" "-X main.AgentVersion=v${version}" ];
+  ldflags = [ "-X main.AgentVersion=v${version}" ];
 
   passthru = {
     updateScript = nix-update-script { };

@@ -24,8 +24,6 @@ buildGoModule {
   allowGoReference = true;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
     "-X main.builtBy=nixpkgs"
   ];

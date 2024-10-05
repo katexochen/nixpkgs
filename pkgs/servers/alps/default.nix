@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-QsGfINktk+rBj4b5h+NBVS6XV1SVz+9fDL1vtUqcKEU=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.themesPath=${placeholder "out"}/share/alps/themes"
     "-X git.sr.ht/~migadu/alps.PluginDir=${placeholder "out"}/share/alps/plugins"
   ];

@@ -25,8 +25,6 @@ buildGoModule rec {
   subPackages = [ "main" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ava-labs/avalanchego/version.GitCommit=${version}"
   ];
 

@@ -66,8 +66,6 @@ buildGo123Module {
   doCheck = false;
 
   ldflags = [
-    "-s"
-    "-w"
     "-extldflags=-static"
     "-X main.version=${version}"
     "-X main.commit=${version}"

@@ -10,10 +10,6 @@ let
 in
 buildGoModule {
   inherit pname version;
-  ldflags = [
-    "-s"
-    "-w"
-  ];
 
   src = fetchFromGitHub {
     owner = "rhysd";

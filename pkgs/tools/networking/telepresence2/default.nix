@@ -20,8 +20,6 @@ let
 
     buildInputs = [ fuse ];
 
-    ldflags = [ "-s" "-w" ];
-
     subPackages = [ "pkg/main" ];
   };
 in
@@ -50,7 +48,7 @@ buildGoModule rec {
   vendorHash = "sha256-pz0a0w4SBPJVLWlZi6tsWysiJmwSzroF61nsFxg3R4g=";
 
   ldflags = [
-    "-s" "-w" "-X=github.com/telepresenceio/telepresence/v2/pkg/version.Version=${src.rev}"
+    "-X=github.com/telepresenceio/telepresence/v2/pkg/version.Version=${src.rev}"
   ];
 
   subPackages = [ "cmd/telepresence" ];

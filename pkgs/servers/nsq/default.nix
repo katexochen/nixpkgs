@@ -15,8 +15,6 @@ buildGoModule rec {
 
   excludedPackages = [ "bench" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://nsq.io/";
     description = "Realtime distributed messaging platform";

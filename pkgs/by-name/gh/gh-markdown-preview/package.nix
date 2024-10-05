@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-O6Q9h5zcYAoKLjuzGu7f7UZY0Y5rL2INqFyJT2QZJ/E=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/yusukebe/gh-markdown-preview/cmd.Version=${version}"
   ];
 

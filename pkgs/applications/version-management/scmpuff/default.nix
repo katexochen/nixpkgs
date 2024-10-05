@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-7WHVSEz3y1nxWfbxkzkfHhINLC8+snmWknHyUUpNy7c=";
 
-  ldflags = [ "-s" "-w" "-X main.VERSION=${version}" ];
+  ldflags = [ "-X main.VERSION=${version}" ];
 
   passthru.tests.version = testers.testVersion {
     package = scmpuff;

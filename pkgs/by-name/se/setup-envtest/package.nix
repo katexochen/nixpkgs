@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-sn3HiKTpQzjrFTOVOGFJwoNpxU+XWgkWD2EOcPilePY=";
 
-  ldflags = [ "-s" "-w" ];
-
   __darwinAllowLocalNetworking = true;
 
   meta = with lib; {

@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-BY2KnAwlrIyqSHWFLD0QU93EXAv4ta/ibvYWiHXvYMc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.airVersion=${version}"
   ];
 

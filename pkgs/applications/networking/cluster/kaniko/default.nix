@@ -21,7 +21,6 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/GoogleContainerTools/kaniko/pkg/version.version=${version}"
   ];
 

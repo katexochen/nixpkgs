@@ -24,8 +24,6 @@ buildGoModule rec {
 
   # We do not supply the build time as the build wouldn't be reproducible otherwise.
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.appVersion=v${version}"
   ];
 

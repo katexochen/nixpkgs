@@ -15,8 +15,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles git ];
 
-  ldflags = [ "-s" "-w" ];
-
   checkFlags = [ "-short" ];
 
   postInstall = ''

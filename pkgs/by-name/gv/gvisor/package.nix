@@ -36,8 +36,6 @@ buildGoModule {
 
   CGO_ENABLED = 0;
 
-  ldflags = [ "-s" "-w" ];
-
   subPackages = [ "runsc" "shim" ];
 
   postInstall = ''

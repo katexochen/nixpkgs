@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-rSg4YFLZdtyC/tm/EULyt7r0O9PXI72W8y6/ltDSbj4=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool to parse, deduplicate, and query multiple port scans";
     homepage = "https://github.com/leesoh/np";

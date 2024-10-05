@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-M1/XTY4ihkPNDiCv87I+kPgsTPU+sCqdnRoP09iVFu4=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "GTFO Command Line Interface for search binaries commands to bypass local security restrictions";
     homepage = "https://github.com/cmd-tools/gtfocli";

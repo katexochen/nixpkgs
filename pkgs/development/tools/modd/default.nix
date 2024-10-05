@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-O+hJRMSwV/9NHxbaLjloCWnfPugfRYaXNve098wjbqQ=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Flexible developer tool that runs processes and responds to filesystem changes";
     mainProgram = "modd";

@@ -17,7 +17,7 @@ buildGoModule rec {
     stuffbin
   ];
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   postInstall = ''
     mv $out/bin/cmd $out/bin/listmonk

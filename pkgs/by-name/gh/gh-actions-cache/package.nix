@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-4/Zt+ga3abEPtR0FjWIsDpOiG1bfVtVuLuXP8aHbzqk=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   # Needed for tests.
   # https://github.com/actions/gh-actions-cache/issues/53#issuecomment-1464954495
   env.GH_TOKEN = "dummy-token-to-facilitate-rest-client";

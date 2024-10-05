@@ -21,8 +21,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.Version=${version}"
     "-X main.GitTag=${src.rev}"
     "-X main.BuildDate=unknown"

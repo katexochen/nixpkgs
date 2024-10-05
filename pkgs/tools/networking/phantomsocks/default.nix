@@ -21,10 +21,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-0MJlz7HAhRThn8O42yhvU3p5HgTG8AkPM0ksSjWYAC4=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
   buildInputs = lib.optional withPcap libpcap;
   tags = lib.optional withPcap "pcap"
     ++ lib.optional withRawsocket "rawsocket";

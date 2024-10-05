@@ -21,8 +21,6 @@ buildGoModule rec {
     })
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/monochromegane/the_platinum_searcher";
     description = "Code search tool similar to ack and the_silver_searcher(ag)";

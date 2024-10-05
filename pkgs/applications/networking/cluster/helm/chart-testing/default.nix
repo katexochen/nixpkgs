@@ -30,8 +30,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/helm/chart-testing/v3/ct/cmd.Version=${version}"
     "-X github.com/helm/chart-testing/v3/ct/cmd.GitCommit=${src.rev}"
     "-X github.com/helm/chart-testing/v3/ct/cmd.BuildDate=19700101-00:00:00"

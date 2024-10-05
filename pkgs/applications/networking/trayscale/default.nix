@@ -25,8 +25,6 @@ buildGoModule rec {
   subPackages = [ "cmd/trayscale" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=deedles.dev/trayscale/internal/version.version=${version}"
   ];
 

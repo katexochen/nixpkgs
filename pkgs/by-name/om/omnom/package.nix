@@ -23,11 +23,6 @@ buildGoModule {
 
   nativeBuildInputs = [ makeWrapper ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postPatch = ''
     # For the default config to work, we have to put `static/data` and
     # `db.sqlite3` in a temporary directory since they need to be writeable.

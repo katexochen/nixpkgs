@@ -35,8 +35,6 @@ buildGoModule rec {
       prefix = "github.com/grafana/alloy/internal/build";
     in
     [
-      "-s"
-      "-w"
       # https://github.com/grafana/alloy/blob/3201389252d2c011bee15ace0c9f4cdbcb978f9f/Makefile#L110
       "-X ${prefix}.Branch=v${version}"
       "-X ${prefix}.Version=${version}"

@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-9lQC35yt1S2uch3qgwNfa/1FHy+Qi1D5Jo7DWNMgU9w=";
 
   ldflags = let pkgSrc = "github.com/yggdrasil-network/yggdrasil-go/src/version"; in [
-    "-s"
-    "-w"
     "-X=${pkgSrc}.buildName=yggdrasil"
     "-X=${pkgSrc}.buildVersion=${version}"
    ];

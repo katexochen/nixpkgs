@@ -18,8 +18,6 @@ buildGoModule rec {
   excludedPackages = [ "./test/e2e" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X oras.land/oras/internal/version.Version=${version}"
     "-X oras.land/oras/internal/version.BuildMetadata="
     "-X oras.land/oras/internal/version.GitTreeState=clean"

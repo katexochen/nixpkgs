@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-yFKYZlA06yE48Wiz0cKgD57JEREwYyYkLM1NZPV8+Xc=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Analysis and management tools for an Open Asset Model database";
     homepage = "https://github.com/owasp-amass/oam-tools";

@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-BBDGnz8u2FEKwuTP9DKz6FoODaW4+VFcL36lumoYTb8=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Advanced exploiting tool for Padding Oracle attacks against CBC mode encryption";
     homepage = "https://github.com/glebarez/padre";

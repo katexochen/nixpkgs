@@ -16,8 +16,6 @@ buildGoModule rec {
   nativeBuildInputs = [ asciidoctor installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/git-lfs/git-lfs/v${lib.versions.major version}/config.Vendor=${version}"
   ];
 

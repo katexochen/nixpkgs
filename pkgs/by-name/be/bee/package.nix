@@ -19,8 +19,6 @@ buildGoModule rec {
   subPackages = [ "cmd/bee" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ethersphere/bee/v2.version=${version}"
     "-X github.com/ethersphere/bee/v2/pkg/api.Version=5.2.0"
     "-X github.com/ethersphere/bee/v2/pkg/api.DebugVersion=4.1.1"

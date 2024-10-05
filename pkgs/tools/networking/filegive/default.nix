@@ -12,8 +12,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-l7FRl58NWGBynMlGu1SCxeVBEzTdxREvUWzmJDiliZM=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://viric.name/cgi-bin/filegive";
     description = "Easy p2p file sending program";

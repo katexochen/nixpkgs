@@ -17,7 +17,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-VsPdMUfS4UVem6uJgFISfFHQEKtIumDQktHQFPC1muc=";
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   passthru.tests.version = testers.testVersion {
     package = curlie;

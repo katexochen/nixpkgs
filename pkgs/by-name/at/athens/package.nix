@@ -21,7 +21,6 @@ buildGoModule rec {
 
   CGO_ENABLED = "0";
   ldflags = [
-    "-s"
     "-X github.com/gomods/athens/pkg/build.version=${version}"
   ];
 

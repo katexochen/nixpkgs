@@ -56,8 +56,6 @@ let
     '';
 
     ldflags = [
-      "-s"
-      "-w"
       "-X github.com/arduino/arduino-cli/version.versionString=${version}"
       "-X github.com/arduino/arduino-cli/version.commit=unknown"
     ] ++ lib.optionals stdenv.hostPlatform.isLinux [ "-extldflags '-static'" ];

@@ -28,8 +28,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/goss-org/goss/util.Version=v${version}"
   ];
 

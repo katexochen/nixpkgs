@@ -25,11 +25,6 @@ buildGoModule rec {
     makeWrapper
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postFixup = ''
     wrapProgram $out/bin/easyeasm \
       --prefix PATH : "${lib.makeBinPath [

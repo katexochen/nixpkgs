@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-N2vcj3STkaZO2eRr8VztZTWOBUTI+wOri0HYDJ1KiN8=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Small library to manage encrypted secrets using asymmetric encryption";
     mainProgram = "ejson";

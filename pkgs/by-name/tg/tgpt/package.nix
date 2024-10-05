@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-docq/r6yyMPsuUyFbtCMaYfEVL0gLmyTy4PbrAemR00=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   preCheck = ''
     # Remove test which need network access
     rm providers/koboldai/koboldai_test.go

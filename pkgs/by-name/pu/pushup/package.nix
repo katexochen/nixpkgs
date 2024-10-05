@@ -15,7 +15,6 @@ buildGoModule rec {
   subPackages = ".";
   # Pushup doesn't need CGO so disable it.
   CGO_ENABLED=0;
-  ldflags = [ "-s" "-w" ];
   nativeBuildInputs = [ makeWrapper ];
   # The Go compiler is a runtime dependency of Pushup.
   allowGoReference = true;

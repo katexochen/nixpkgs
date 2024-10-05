@@ -19,11 +19,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-HYuyGSatUOch73IKc7/9imhwz0Oz6Mrccs2HKVQtaVE=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   nativeBuildInputs = [ installShellFiles ];
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''

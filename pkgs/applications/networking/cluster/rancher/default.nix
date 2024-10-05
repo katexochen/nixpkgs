@@ -12,8 +12,6 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-w"
-    "-s"
     "-X main.VERSION=${version}"
     "-extldflags"
     "-static"

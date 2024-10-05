@@ -23,8 +23,6 @@ buildGoModule rec {
   doCheck = false;
 
   ldflags = [
-    "-w"
-    "-s"
     "-X=github.com/wallarm/gotestwaf/internal/version.Version=v${version}"
   ];
 

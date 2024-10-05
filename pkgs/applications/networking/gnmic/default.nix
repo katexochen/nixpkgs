@@ -20,7 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-pJz613QFdA+8HcV+U0aG+A+WDZtSZIgaLVqCnu4WQWo=";
 
   ldflags = [
-    "-s" "-w"
     "-X" "github.com/openconfig/gnmic/app.version=${version}"
     "-X" "github.com/openconfig/gnmic/app.commit=${src.rev}"
     "-X" "github.com/openconfig/gnmic/app.date=1970-01-01T00:00:00Z"

@@ -15,8 +15,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     installShellCompletion --cmd madonctl \
       --bash <($out/bin/madonctl completion bash) \

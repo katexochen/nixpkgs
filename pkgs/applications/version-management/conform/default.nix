@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-hDdNYXy5NIrlqT6yyOglFg2v7HOM9nE+oh7mx2kLdnQ=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/siderolabs/conform/internal/version.Tag=v${version}"
   ];
 

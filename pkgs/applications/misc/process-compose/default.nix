@@ -35,8 +35,6 @@ buildGoModule rec {
 
   ldflags = [
     "-X ${config-module}.Version=v${version}"
-    "-s"
-    "-w"
   ];
 
   nativeBuildInputs = [

@@ -21,8 +21,6 @@ buildGoModule {
   vendorHash = "sha256-Igtccundx/2PHFp8+L44CvOLG+/Ndinhonh/EDcQeoY=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X agola.io/agola/cmd.Version=${version}"
   ];
 

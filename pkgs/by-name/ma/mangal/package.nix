@@ -19,11 +19,6 @@ buildGoModule rec {
   proxyVendor = true;
   vendorHash = null;
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   nativeBuildInputs = [ installShellFiles ];
 
   postInstall = lib.optionalString (stdenv.hostPlatform == stdenv.buildPlatform) ''

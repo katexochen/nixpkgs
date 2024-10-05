@@ -22,8 +22,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-s" "-w" ];
-
   CGO_CFLAGS = [ "-Wno-format-security" ];
 
   preCheck = ''

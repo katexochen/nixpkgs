@@ -20,8 +20,6 @@ buildGoModule rec {
   excludedPackages = [ "./test" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/metacubex/mihomo/constant.Version=${version}"
   ];
 

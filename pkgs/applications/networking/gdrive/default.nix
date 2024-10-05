@@ -22,8 +22,6 @@ buildGoModule rec {
     })
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/prasmussen/gdrive";
     description = "Command line utility for interacting with Google Drive";

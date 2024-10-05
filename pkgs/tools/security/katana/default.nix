@@ -20,11 +20,6 @@ buildGoModule rec {
     "cmd/katana"
   ];
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Next-generation crawling and spidering framework";
     mainProgram = "katana";

@@ -28,11 +28,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-QeNFXmWeA/hkYdFzJoHj61bo/DmGWakdhFRLtSYG7+Y=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   buildInputs =
     # Depends on a vendored, patched GLFW.
     glfw.buildInputs or [ ]

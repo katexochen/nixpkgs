@@ -20,8 +20,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/frcli" "cmd/faraday" ];
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.tests.version = testers.testVersion {
     package = faraday;
   };

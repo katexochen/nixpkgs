@@ -15,7 +15,7 @@ buildGoModule rec {
 
   subPackages = [ "cmd/client" ];
 
-  ldflags = [ "-s" "-w" "-X github.com/knight42/krelay/pkg/constants.ClientVersion=${version}" ];
+  ldflags = [ "-X github.com/knight42/krelay/pkg/constants.ClientVersion=${version}" ];
 
   postInstall = ''
     mv $out/bin/client $out/bin/kubectl-relay

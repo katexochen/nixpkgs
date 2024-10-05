@@ -14,8 +14,6 @@ buildGoModule rec {
     hash = "sha256-ZQkXXaa4n88bJdgP2FSXtgBrUi39teO98SzZq+I5doM=";
   };
 
-  ldflags = [ "-s" "-w" ];
-
   vendorHash = "sha256-D/YZLwwGJWCekq9mpfCECzJyJ/xSlg7fC6leJh+e8i0=";
 
   # Skip checks because some of test suites require fixture.

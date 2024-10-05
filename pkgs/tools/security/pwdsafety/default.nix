@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-RoRq9JZ8lOMtAluz8TB2RRuDEWFOBtWVhz21aTkXXy4=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Command line tool checking password safety";
     homepage = "https://github.com/edoardottt/pwdsafety";

@@ -15,7 +15,7 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles makeWrapper ];
 
-  ldflags = [ "-s" "-w" "-X main.Version=${version}" ];
+  ldflags = [ "-X main.Version=${version}" ];
 
   postInstall = ''
     installShellCompletion --bash --name aptly completion.d/aptly

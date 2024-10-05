@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postInstall = ''
     mv -v $out/bin/cli $out/bin/sqlpkg
   '';

@@ -22,11 +22,6 @@ buildGoModule rec {
     makeWrapper
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postInstall = ''
     mkdir -p $out/share
     cp -r build/font $out/share

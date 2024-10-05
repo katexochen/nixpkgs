@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-LKJXoXZS866UfJ+Edwf6AkAZmTV2Q1OI1mZfbsxHb3s=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/barnybug/cli53.version=${version}"
   ];
 

@@ -19,8 +19,6 @@ buildGoModule rec {
     "-X github.com/yggdrasil-network/yggdrasil-go/src/version.buildVersion=${version}"
     "-X github.com/yggdrasil-network/yggdrasil-go/src/version.buildName=yggdrasil"
     "-X github.com/yggdrasil-network/yggdrasil-go/src/config.defaultAdminListen=unix:///var/run/yggdrasil/yggdrasil.sock"
-    "-s"
-    "-w"
   ];
 
   passthru.tests.basic = nixosTests.yggdrasil;

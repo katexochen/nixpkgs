@@ -19,7 +19,6 @@ buildGoModule rec {
   proxyVendor = true;
 
   ldflags = [
-    "-s"
     "-X main.version=v${version}"
   ];
 

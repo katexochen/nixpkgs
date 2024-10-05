@@ -17,7 +17,6 @@ buildGoModule rec {
   doCheck = false;
 
   ldflags = [
-    "-s" "-w"
     "-X main.version=v${version}"
   ];
 

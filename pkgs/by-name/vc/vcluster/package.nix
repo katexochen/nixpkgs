@@ -25,8 +25,6 @@ buildGoModule rec {
   subPackages = [ "cmd/vclusterctl" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
     "-X main.goVersion=${lib.getVersion go}"
   ];

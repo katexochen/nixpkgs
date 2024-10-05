@@ -23,8 +23,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/tetratelabs/wazero/internal/version.version=${version}"
   ];
 

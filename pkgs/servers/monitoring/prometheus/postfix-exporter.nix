@@ -20,8 +20,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-a4Lk4wh4mvXEjLgFksZIVVtbp+zTUyjtLVuk7vuot2k=";
 
-  ldflags = [ "-s" "-w" ];
-
   nativeBuildInputs = lib.optionals withSystemdSupport [ makeWrapper ];
   buildInputs = lib.optionals withSystemdSupport [ systemd ];
   tags = lib.optionals (!withSystemdSupport) "nosystemd";

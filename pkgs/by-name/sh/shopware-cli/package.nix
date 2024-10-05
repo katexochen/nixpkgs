@@ -36,8 +36,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X 'github.com/FriendsOfShopware/shopware-cli/cmd.version=${version}'"
   ];
 

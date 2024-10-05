@@ -21,8 +21,6 @@ buildGoModule rec {
   vendorHash = "sha256-RCZzcycUKqJgwBZZQBD1UEZCZCitpiqNpD51oKm6IvI=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/iawia002/lux/app.version=v${version}"
   ];
 

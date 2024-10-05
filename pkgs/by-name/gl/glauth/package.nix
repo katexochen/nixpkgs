@@ -30,8 +30,6 @@ buildGoModule rec {
 
   # Based on ldflags in <glauth>/Makefile.
   ldflags = [
-    "-s"
-    "-w"
     "-X main.GitClean=1"
     "-X main.LastGitTag=v${version}"
     "-X main.GitTagIsCommit=1"

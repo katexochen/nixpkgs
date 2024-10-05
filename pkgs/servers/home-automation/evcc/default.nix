@@ -59,8 +59,6 @@ buildGoModule rec {
   ldflags = [
     "-X github.com/evcc-io/evcc/server.Version=${version}"
     "-X github.com/evcc-io/evcc/server.Commit=${src.rev}"
-    "-s"
-    "-w"
   ];
 
   preBuild = ''

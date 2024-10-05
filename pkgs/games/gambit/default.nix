@@ -24,8 +24,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.Version=v${version}"
     "-X=main.CommitSHA=${src.rev}"
   ];

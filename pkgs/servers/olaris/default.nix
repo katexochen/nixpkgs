@@ -31,8 +31,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X gitlab.com/olaris/olaris-server/helpers.Version=${version}"
   ];
 

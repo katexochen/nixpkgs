@@ -11,8 +11,6 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/jacobbednarz/cf-vault/cmd.Rev=${version}"
   ];
 

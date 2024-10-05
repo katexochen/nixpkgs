@@ -70,8 +70,6 @@ buildGoModule {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/axllent/mailpit/config.Version=${version}"
   ];
 

@@ -23,8 +23,6 @@ buildGoModule rec {
   vendorHash = "sha256-BxuqNe021wfvFHpTRQtDImallBg2PcIX5qM7aLB+uH0=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/zricethezav/gitleaks/v${lib.versions.major version}/cmd.Version=${version}"
   ];
 

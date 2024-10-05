@@ -13,7 +13,7 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-s" "-w" "-X main.Version=v${version}"
+    "-X main.Version=v${version}"
   ];
 
   passthru.tests.version = testers.testVersion {

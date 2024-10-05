@@ -18,11 +18,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-M9Al3zl2Ltv4yWdyRB3+9zpTr3foliu5WweImHltz3M=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   subPackages = [ "cmd/updater" ];
 
   passthru = {

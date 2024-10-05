@@ -41,11 +41,6 @@ buildGoModule rec{
     libXxf86vm
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postInstall = ''
     mv $out/bin/cli $out/bin/bepass
   '';

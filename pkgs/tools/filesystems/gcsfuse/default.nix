@@ -18,7 +18,7 @@ buildGoModule rec {
 
   subPackages = [ "." "tools/mount_gcsfuse" ];
 
-  ldflags = [ "-s" "-w" "-X main.gcsfuseVersion=${version}" ];
+  ldflags = [ "-X main.gcsfuseVersion=${version}" ];
 
   checkFlags =
     let

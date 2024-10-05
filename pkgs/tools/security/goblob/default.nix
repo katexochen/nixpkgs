@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Enumeration tool for publicly exposed Azure Storage blobs";
     mainProgram = "goblob";

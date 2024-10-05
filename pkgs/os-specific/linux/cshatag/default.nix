@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-OYMnZub4Yi11uMHzL1O5l6/J1md6ORS5cWm9K4yP92Q=";
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     # Install man page
     install -D -m755 -t $out/share/man/man1/ cshatag.1

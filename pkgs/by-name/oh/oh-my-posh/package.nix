@@ -24,8 +24,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/jandedobbeleer/oh-my-posh/src/build.Version=${version}"
     "-X github.com/jandedobbeleer/oh-my-posh/src/build.Date=1970-01-01T00:00:00Z"
   ];

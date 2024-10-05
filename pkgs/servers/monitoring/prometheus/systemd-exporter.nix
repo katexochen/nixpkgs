@@ -14,8 +14,6 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/prometheus/common/version.Version=${version}"
     "-X github.com/prometheus/common/version.Revision=unknown"
     "-X github.com/prometheus/common/version.Branch=unknown"

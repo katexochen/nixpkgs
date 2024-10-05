@@ -20,12 +20,10 @@ buildGoModule rec {
 
   doCheck = false;
 
-  # The ldflags reduce the executable size by stripping some debug stuff.
-  # The other variables are set so that the output of dstask version shows the
+  # The variables are set so that the output of dstask version shows the
   # git ref and the release version from github.
   # Ref <https://github.com/NixOS/nixpkgs/pull/87383#discussion_r432097657>
   ldflags = [
-    "-w" "-s"
     "-X github.com/naggie/dstask.VERSION=${version}"
     "-X github.com/naggie/dstask.GIT_COMMIT=v${version}"
   ];

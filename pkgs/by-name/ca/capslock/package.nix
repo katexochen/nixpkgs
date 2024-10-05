@@ -22,8 +22,6 @@ buildGoModule rec {
 
   CGO_ENABLED = "0";
 
-  ldflags = [ "-s" ];
-
   passthru.updateScript = nix-update-script { };
 
   meta = {

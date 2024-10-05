@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-ML1aLbrYhs2IxnN2ywKFOpvAV6yuYb8GI+dtoxwJl4A=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Crawler for URLs and endpoints";
     homepage = "https://github.com/edoardottt/cariddi";

@@ -12,8 +12,6 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=gopkg.in/k8snetworkplumbingwg/multus-cni.v3/pkg/multus.version=${version}"
   ];
 

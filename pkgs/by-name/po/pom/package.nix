@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-xJNcFX+sZjZwXFTNrhsDnj3eR/r8+NH6tzpEJOhtkeY=";
 
-  ldflags = [ "-s" "-w" "-X=main.Version=${version}" ];
+  ldflags = [ "-X=main.Version=${version}" ];
 
   meta = with lib; {
     description = "Pomodoro timer in your terminal";

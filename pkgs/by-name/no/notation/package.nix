@@ -21,8 +21,6 @@ buildGoModule rec {
   excludedPackages = [ "./test" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/notaryproject/notation/internal/version.Version=${version}"
     "-X github.com/notaryproject/notation/internal/version.BuildMetadata="
   ];

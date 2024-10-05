@@ -20,8 +20,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-QdH98NA5Y9YKkvL8Gq8ChgvHFOyOBFXDDulxwql6v5c=";
 
-  ldflags = [ "-s" "-w" ];
-
   buildInputs = [ olm ];
 
   doCheck = false;

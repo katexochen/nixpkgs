@@ -41,8 +41,6 @@ buildGoModule rec {
   subPackages = [ "cmd/torq" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/lncapital/torq/build.version=v${version}"
   ];
 

@@ -28,8 +28,6 @@ buildGoModule rec {
   subPackages = "cmd/dirstalk";
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/stefanoj3/dirstalk/pkg/cmd.Version=${version}"
   ];
 

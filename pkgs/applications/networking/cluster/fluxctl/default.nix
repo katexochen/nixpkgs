@@ -19,7 +19,7 @@ buildGoModule rec {
 
   subPackages = [ "cmd/fluxctl" ];
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   postInstall = ''
     for shell in bash fish zsh; do

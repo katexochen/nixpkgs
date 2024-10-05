@@ -22,8 +22,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/slimtoolkit/slim/pkg/version.appVersionTag=${version}"
     "-X github.com/slimtoolkit/slim/pkg/version.appVersionRev=${src.rev}"
   ];

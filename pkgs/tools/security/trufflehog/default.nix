@@ -22,8 +22,6 @@ buildGoModule rec {
   proxyVendor = true;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/trufflesecurity/trufflehog/v3/pkg/version.BuildVersion=${version}"
   ];
 

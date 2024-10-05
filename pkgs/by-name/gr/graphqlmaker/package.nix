@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-1mDOqTsQ3kHs3MEWlRcdqhjIRul7um2mfBAxObhoSlE=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool to find graphql queries in Javascript files";
     homepage = "https://github.com/xssdoctor/graphqlMaker";

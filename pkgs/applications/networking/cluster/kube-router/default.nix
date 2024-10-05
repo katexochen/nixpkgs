@@ -16,8 +16,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/cloudnativelabs/kube-router/v2/pkg/version.Version=${version}"
     "-X github.com/cloudnativelabs/kube-router/v2/pkg/version.BuildDate=Nix"
   ];

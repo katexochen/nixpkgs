@@ -26,7 +26,6 @@ buildGoModule rec {
 
   doCheck = false;
 
-  ldflags = [ "-s" "-w" ];
   subPackages = [ "main" ];
 
    installPhase = ''

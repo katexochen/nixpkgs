@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/redhat-developer/app-services-cli/internal/build.Version=${version}"
   ];
 

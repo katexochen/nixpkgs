@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-Ry3wR2u+vr97icP9jwAVWcFO98JVDo9TrDg9D8hfv5I=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = {
     homepage = "https://decred.org";
     description = "Secure Decred wallet daemon written in Go (golang)";

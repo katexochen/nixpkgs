@@ -16,10 +16,6 @@ buildGoModule {
   };
 
   vendorHash = "sha256-qkBpSVLWZPRgS9bqOVUWHpyj8z/nheQJON3vJOwPUj4=";
-  ldflags = [
-    "-s"
-    "-w"
-  ];
 
   passthru.updateScript = nix-update-script {
     extraArgs = [

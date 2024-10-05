@@ -26,7 +26,7 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" "-X github.com/open-policy-agent/opa/version.Version=${version}" ];
+  ldflags = [ "-X github.com/open-policy-agent/opa/version.Version=${version}" ];
 
   tags = lib.optional enableWasmEval (
     builtins.trace

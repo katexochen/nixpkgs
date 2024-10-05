@@ -26,7 +26,6 @@ buildGoModule rec {
   doCheck = false;
 
   ldflags = [
-    "-s"
     "-X github.com/civo/cli/common.VersionCli=${version}"
     "-X github.com/civo/cli/common.CommitCli=${src.rev}"
     "-X github.com/civo/cli/common.DateCli=unknown"

@@ -12,7 +12,7 @@ buildGoModule rec {
   };
   vendorHash = "sha256-bLSj4/+7h0uHdR956VL4iLqRddKV5Ac+FIL1zJxPCW8=";
 
-  ldflags = [ "-s" "-w" "-X github.com/infracost/infracost/internal/version.Version=v${version}" ];
+  ldflags = [ "-X github.com/infracost/infracost/internal/version.Version=v${version}" ];
 
   subPackages = [ "cmd/infracost" ];
 

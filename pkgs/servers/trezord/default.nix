@@ -34,7 +34,6 @@ buildGoModule rec {
     ++ lib.optionals stdenv.hostPlatform.isDarwin [ AppKit ];
 
   ldflags = [
-    "-s" "-w"
     "-X main.githash=${commit}"
   ];
 

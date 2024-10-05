@@ -15,8 +15,6 @@ buildGoModule {
 
   subPackages = [ "cmd/bosun" "cmd/scollector" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Time Series Alerting Framework";
     license = licenses.mit;

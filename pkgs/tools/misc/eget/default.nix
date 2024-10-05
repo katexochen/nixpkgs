@@ -21,7 +21,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-A3lZtV0pXh4KxINl413xGbw2Pz7OzvIQiFSRubH428c=";
 
-  ldflags = [ "-s" "-w" "-X main.Version=v${version}" ];
+  ldflags = [ "-X main.Version=v${version}" ];
 
   nativeBuildInputs = [ pandoc installShellFiles ];
 

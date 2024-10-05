@@ -14,8 +14,6 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/cycloidio/inframap/cmd.Version=${version}"
   ];
 

@@ -24,7 +24,7 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles makeWrapper ];
 
   ldflags = [
-    "-s" "-w" "-X main.version=${version}" "-X main.commit=${src.rev}"
+    "-X main.version=${version}" "-X main.commit=${src.rev}"
   ];
 
   postFixup = ''

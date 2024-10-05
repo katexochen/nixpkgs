@@ -18,8 +18,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/flarectl" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "CLI application for interacting with a Cloudflare account";
     homepage = "https://github.com/cloudflare/cloudflare-go";

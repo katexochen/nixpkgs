@@ -21,8 +21,6 @@ buildGoModule rec {
   subPackages = [ "cmd/kubedog" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/werf/kubedog.Version=${src.rev}"
   ];
 

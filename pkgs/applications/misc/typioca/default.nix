@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-fUkajuviQuQuVgzWAxsInd+c+eNQArKNjiNsi7mCNWU=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/bloznelis/typioca/cmd.Version=${version}"
   ];
 

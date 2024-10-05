@@ -23,8 +23,6 @@ buildGoModule rec {
   vendorHash = "sha256-H2vo5gngXUcrem25tqz/1MhOgpNZcN+IcaQHZrGyjW8=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/slashformotion/radioboat/internal/buildinfo.Version=${version}"
   ];
 

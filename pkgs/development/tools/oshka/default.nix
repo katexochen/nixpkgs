@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-ZBI3WDXfJKBEF2rmUN3LvOOPT1185dHmj88qJKsdUiE=";
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/k1LoW/oshka/version.Version=${version}"
   ];
 

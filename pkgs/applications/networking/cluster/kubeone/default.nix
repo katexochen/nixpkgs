@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-z1BBE+PH2s7VxWNxneu5y2ZerfzCZNPJowZJVq821Kk=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X k8c.io/kubeone/pkg/cmd.version=${version}"
     "-X k8c.io/kubeone/pkg/cmd.date=unknown"
   ];

@@ -24,10 +24,7 @@ buildGoModule rec {
 
   subPackages = [ "cmd/cilium" ];
 
-  ldflags = [
-    "-s" "-w"
-    "-X=github.com/cilium/cilium-cli/defaults.CLIVersion=${version}"
-  ];
+  ldflags = [ "-X=github.com/cilium/cilium-cli/defaults.CLIVersion=${version}" ];
 
   # Required to workaround install check error:
   # 2022/06/25 10:36:22 Unable to start gops: mkdir /homeless-shelter: permission denied
@@ -51,7 +48,11 @@ buildGoModule rec {
     homepage = "https://www.cilium.io/";
     changelog = "https://github.com/cilium/cilium-cli/releases/tag/v${version}";
     license = lib.licenses.asl20;
-    maintainers = with lib.maintainers; [ bryanasdev000 humancalico qjoly ];
+    maintainers = with lib.maintainers; [
+      bryanasdev000
+      humancalico
+      qjoly
+    ];
     mainProgram = "cilium";
   };
 }

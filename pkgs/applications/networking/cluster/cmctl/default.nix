@@ -22,8 +22,6 @@ buildGoModule rec {
   vendorHash = "sha256-qaSzAPNVe25Fbbfqy0OFFnMJ21IlWuoJKwnT7y2wmOs=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/cert-manager/cert-manager/cmd/ctl/pkg/build.name=cmctl"
     "-X github.com/cert-manager/cert-manager/cmd/ctl/pkg/build/commands.registerCompletion=true"
     "-X github.com/cert-manager/cert-manager/pkg/util.AppVersion=v${version}"

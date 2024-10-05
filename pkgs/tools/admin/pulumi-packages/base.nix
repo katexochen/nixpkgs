@@ -22,8 +22,6 @@ let
       doCheck = false;
 
       ldflags = [
-        "-s"
-        "-w"
       ] ++ extraLdflags;
     } // args);
 

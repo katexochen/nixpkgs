@@ -20,8 +20,6 @@ buildGoModule rec {
     })
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Very simple compile daemon for Go";
     homepage = "https://github.com/githubnemo/CompileDaemon";

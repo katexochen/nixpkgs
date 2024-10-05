@@ -16,8 +16,6 @@ buildGoModule rec {
   subPackages = [ "cmd/ghz" "cmd/ghz-web" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.version=${version}"
   ];
 

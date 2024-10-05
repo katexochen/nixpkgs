@@ -24,8 +24,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/jzelinskie/faq/internal/version.Version=${version}"
   ];
 

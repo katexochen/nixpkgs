@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-BF/F/siVIYJT4abOlwQjpnQpmNFdOo566VGPIo08PO0=";
 
-  ldflags = [ "-s" "-w" ];
-
   GOWORK = "off";
 
   subPackages = [ "cmd/omnictl" ];

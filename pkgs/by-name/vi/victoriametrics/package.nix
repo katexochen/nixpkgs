@@ -66,8 +66,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/VictoriaMetrics/VictoriaMetrics/lib/buildinfo.Version=${version}"
   ];
 

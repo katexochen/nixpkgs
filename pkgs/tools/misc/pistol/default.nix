@@ -35,7 +35,7 @@ buildGoModule rec {
     installManPage pistol.1
   '';
 
-  ldflags = [ "-s" "-w" "-X main.Version=${version}" ];
+  ldflags = [ "-X main.Version=${version}" ];
 
   meta = with lib; {
     description = "General purpose file previewer designed for Ranger, Lf to make scope.sh redundant";

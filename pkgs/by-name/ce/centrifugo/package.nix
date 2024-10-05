@@ -26,8 +26,6 @@ buildGoModule rec {
   vendorHash = "sha256-gfz2jRGx8egAKCFaQOZfh7cthcXS9t8ugB0zF+tiYh0=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/centrifugal/centrifugo/v5/internal/build.Version=${version}"
     "-X=github.com/centrifugal/centrifugo/v5/internal/build.UsageStatsEndpoint=${statsEndpoint}"
     "-X=github.com/centrifugal/centrifugo/v5/internal/build.UsageStatsToken=${statsToken}"

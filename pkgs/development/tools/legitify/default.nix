@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-QwSh7+LuwdbBtrIGk3ZK6cMW9h7wzNArPT/lVZgUGBU=";
 
   ldflags = [
-    "-w"
-    "-s"
     "-X=github.com/Legit-Labs/legitify/internal/version.Version=${version}"
   ];
 

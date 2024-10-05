@@ -42,8 +42,6 @@ buildGoModule {
     openpam
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Public repository for SCION applications";
     homepage = "https://github.com/netsec-ethz/scion-apps";

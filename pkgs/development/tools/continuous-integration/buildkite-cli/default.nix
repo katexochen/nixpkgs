@@ -21,7 +21,7 @@ buildGoModule rec {
 
   subPackages = [ "cmd/bk" ];
 
-  ldflags = [ "-s" "-w" "-X main.VERSION=${version}" ];
+  ldflags = [ "-X main.VERSION=${version}" ];
 
   meta = with lib; {
     description = "Command line interface for Buildkite";

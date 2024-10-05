@@ -18,11 +18,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-HmEh8WmKbdAimvzsAiaXcqSXoU1DJx06+s1EH1JZmwo=";
 
-  ldflags = [
-    "-s"
-    "-w"
-    "-X github.com/writefreely/writefreely.softwareVer=${version}"
-  ];
+  ldflags = [ "-X github.com/writefreely/writefreely.softwareVer=${version}" ];
 
   tags = [ "sqlite" ];
 

@@ -19,7 +19,7 @@ buildGoModule rec {
   vendorHash = "sha256-edyFs5oURklkqsTF7JA1in3XteSBx/6YEVu4MjIcGN4=";
 
   ldflags = [
-    "-s" "-w" "-X github.com/tomwright/dasel/v2/internal.Version=${version}"
+    "-X github.com/tomwright/dasel/v2/internal.Version=${version}"
   ];
 
   nativeBuildInputs = [ installShellFiles ];

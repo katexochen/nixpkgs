@@ -21,8 +21,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/zyedidia/knit/info.Version=${version}"
   ];
 

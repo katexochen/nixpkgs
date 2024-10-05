@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-skhEHpSnxOTZrL8XLlQZL3s224mg8XRINKJnatYCQko=";
 
-  ldflags = [ "-s" "-w" "-X=main.Version=v${version}" ];
+  ldflags = [ "-X=main.Version=v${version}" ];
 
   subPackages = [ "cmd/git-chglog" ];
 

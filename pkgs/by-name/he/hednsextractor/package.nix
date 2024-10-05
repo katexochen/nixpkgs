@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-8yD/yHSqesyS71YeRBv4ARyXyIbTcan7YjBeKBrg0Vc=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool suite for hunting suspicious targets, expose domains and phishing discovery";
     homepage = "https://github.com/HuntDownProject/HEDnsExtractor";

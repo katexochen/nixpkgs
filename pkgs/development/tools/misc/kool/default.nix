@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-wzTsd2ITwnPFc85bXoZLLb9wKvHYOgnb1FGiFXLkkiE=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=kool-dev/kool/commands.version=${version}"
   ];
 

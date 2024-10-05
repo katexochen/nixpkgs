@@ -16,8 +16,6 @@ buildGoModule rec {
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ glib libxml2 ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/sloonz/ua";
     license = licenses.isc;

@@ -23,8 +23,6 @@ buildGoModule rec {
   subPackages = ".";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.version=${version}"
     "-X=main.commit=nixpkg-${version}"
     "-X=main.date=1970-01-01"

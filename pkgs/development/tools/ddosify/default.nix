@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-Wg4JzA2aEwNBsDrkauFUb9AS38ITLBGex9QHzDcdpoM=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.GitVersion=${version}"
     "-X=main.GitCommit=unknown"
     "-X=main.BuildDate=unknown"

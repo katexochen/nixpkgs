@@ -23,8 +23,6 @@ buildGoModule rec {
   subPackages = [ "backend" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/deggja/netfetch/backend/cmd.Version=${version}"
   ];
 

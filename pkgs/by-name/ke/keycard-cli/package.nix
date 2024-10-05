@@ -16,7 +16,7 @@ buildGoModule rec {
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ pcsclite ];
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   meta = with lib; {
     description = "Command line tool and shell to manage keycards";

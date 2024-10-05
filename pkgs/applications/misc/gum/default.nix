@@ -17,7 +17,7 @@ buildGoModule rec {
     installShellFiles
   ];
 
-  ldflags = [ "-s" "-w" "-X=main.Version=${version}" ];
+  ldflags = [ "-X=main.Version=${version}" ];
 
   postInstall = ''
     $out/bin/gum man > gum.1

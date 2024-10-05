@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-xCNuFO+J0NXq8CPZXB0R2RmLLH27Vh/GMrBKk+mGk04=";
 
   ldflags = let PKG = "sigs.k8s.io/aws-iam-authenticator"; in [
-    "-s"
-    "-w"
     "-X=${PKG}/pkg.Version=${version}"
     "-X=${PKG}/pkg.BuildDate=1970-01-01T01:01:01Z"
     "-X ?${PKG}/pkg.CommitID=${version}"

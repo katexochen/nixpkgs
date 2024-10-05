@@ -22,8 +22,6 @@ buildGoModule rec {
       modulePath = "github.com/git-town/git-town/v${lib.versions.major version}";
     in
     [
-      "-s"
-      "-w"
       "-X ${modulePath}/src/cmd.version=v${version}"
       "-X ${modulePath}/src/cmd.buildDate=nix"
     ];

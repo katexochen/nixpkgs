@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-MTPFBrLFMQ2hEwtSDb7t3ls/Wagw7s9/w6bwWjZ62vE=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ferama/rospo/cmd.Version=${version}"
   ];
 

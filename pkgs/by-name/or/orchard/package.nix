@@ -24,8 +24,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/cirruslabs/orchard/internal/version.Version=${version}"
   ];
 

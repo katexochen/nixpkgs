@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-V6qEvMsX7tdhooW116+0ayT6RYkdjDbz6QwWb8rC4ig=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Kubernetes exploitation tool";
     homepage = "https://github.com/Rolix44/Kubestroyer";

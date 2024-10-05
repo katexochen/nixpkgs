@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-ji2B9Gr1oQGouGH2hBpTyfjbht6bRfIeLcdTBhmmIwk=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/homeport/termshot/internal/cmd.version=${version}"
   ];
 

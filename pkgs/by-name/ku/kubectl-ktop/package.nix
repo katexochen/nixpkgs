@@ -16,8 +16,6 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/vladimirvivien/ktop/buildinfo.Version=v${version}"
     "-X github.com/vladimirvivien/ktop/buildinfo.GitSHA=${src.rev}"
   ];

@@ -44,9 +44,7 @@ buildGoModule rec {
   # Bundle release metadata
   ldflags = [
     # Omit the symbol table and debug information.
-    "-s"
     # Omit the DWARF symbol table.
-    "-w"
   ] ++ importpathFlags;
 
   importpathFlags = [

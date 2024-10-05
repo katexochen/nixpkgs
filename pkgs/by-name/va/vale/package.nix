@@ -24,7 +24,6 @@ buildGoModule rec {
   vendorHash = "sha256-0AeG0/ALU/mkXxVKzqGhxXLqq2XYmnF/ZRaZkJ5eQxU=";
 
   ldflags = [
-    "-s"
     "-X main.version=${version}"
   ];
 

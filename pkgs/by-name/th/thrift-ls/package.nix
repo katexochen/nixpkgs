@@ -21,11 +21,6 @@ buildGoModule rec {
     mv $out/bin/thrift-ls $out/bin/thriftls
   '';
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = {
     description = "Thrift Language Server";
     homepage = "https://github.com/joyme123/thrift-ls";

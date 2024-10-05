@@ -48,8 +48,6 @@ buildGo123Module {
   subPackages = [ "cmd/derper" "cmd/tailscaled" ];
 
   ldflags = [
-    "-w"
-    "-s"
     "-X tailscale.com/version.longStamp=${version}"
     "-X tailscale.com/version.shortStamp=${version}"
   ];

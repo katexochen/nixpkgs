@@ -15,8 +15,6 @@ buildGoModule rec {
 
   # config.Build not defined as it would break r-ryantm
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/joyrex2001/kubedock/internal/config.Version=${version}"
   ];
 

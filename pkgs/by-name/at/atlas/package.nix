@@ -25,11 +25,7 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [
-    "-s"
-    "-w"
-    "-X ariga.io/atlas/cmd/atlas/internal/cmdapi.version=v${version}"
-  ];
+  ldflags = [ "-X ariga.io/atlas/cmd/atlas/internal/cmdapi.version=v${version}" ];
 
   subPackages = [ "." ];
 

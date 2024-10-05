@@ -14,7 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-EaOMIfkaYPXmsqw/Oi3caKjarR5ijwcoK+EXwGfSUqE=";
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/styrainc/regal/pkg/version.Version=${version}"
     "-X github.com/styrainc/regal/pkg/version.Commit=${version}"
   ];

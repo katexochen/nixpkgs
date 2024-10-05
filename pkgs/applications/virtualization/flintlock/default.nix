@@ -23,7 +23,7 @@ buildGoModule rec{
 
   subPackages = [ "cmd/flintlock-metrics" "cmd/flintlockd" ];
 
-  ldflags = [ "-s" "-w" "-X github.com/weaveworks/flintlock/internal/version.Version=v${version}" ];
+  ldflags = [ "-X github.com/weaveworks/flintlock/internal/version.Version=v${version}" ];
 
   nativeBuildInputs = [
     makeWrapper

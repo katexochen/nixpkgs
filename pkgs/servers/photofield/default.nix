@@ -55,8 +55,6 @@ buildGoModule {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
     "-X main.builtBy=Nix"
   ];

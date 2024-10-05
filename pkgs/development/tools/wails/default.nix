@@ -51,11 +51,6 @@ buildGoModule rec {
     webkitgtk_4_0
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   # As Wails calls a compiler, certain apps and libraries need to be made available.
   postFixup = ''
     wrapProgram $out/bin/wails \

@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-q/Co67AwJVElJnEY2O0SLLUzwlGiqazKu+fD/nnbrTk=";
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/matsuridayo/libneko/neko_common.Version_neko=${version}"
   ];
 

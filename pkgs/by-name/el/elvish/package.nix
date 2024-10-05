@@ -23,8 +23,6 @@ buildGoModule {
   subPackages = [ "cmd/elvish" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X src.elv.sh/pkg/buildinfo.Version==${version}"
   ];
 

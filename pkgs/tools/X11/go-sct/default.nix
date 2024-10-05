@@ -20,8 +20,6 @@ buildGoModule rec {
 
   buildInputs = [ xorg.libX11 xorg.libXrandr wayland.dev ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Color temperature setting library and CLI that operates in a similar way to f.lux and Redshift";
     homepage = "https://github.com/d4l3k/go-sct";

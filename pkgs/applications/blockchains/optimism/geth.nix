@@ -39,8 +39,6 @@ buildGoModule rec {
   propagatedBuildInputs =
     lib.optionals stdenv.hostPlatform.isDarwin [ libobjc IOKit ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "";
     homepage = "https://github.com/ethereum-optimism/op-geth";

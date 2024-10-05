@@ -35,11 +35,6 @@ buildGoModule rec {
 
   CGO_ENABLED = "0";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postInstall = ''
     mv $out/bin/cli $out/bin/kubeclarity
   '';

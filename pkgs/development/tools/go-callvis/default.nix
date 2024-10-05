@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-AfbUxA5C5dH70+vqC+1RGaTt7S0FL9CBcxel0ifmHKs=";
 
-  ldflags = [ "-s" "-w" ];
-
   # Build errors in github.com/goccy/go-graphviz/internal/ccall when format hardening is enabled:
   #   cc1: error: '-Wformat-security' ignored without '-Wformat' [-Werror=format-security]
   hardeningDisable = [ "format" ];

@@ -17,11 +17,6 @@ buildGoModule rec {
   sourceRoot = "${src.name}/picocrypt";
   vendorHash = "sha256-QIeuqdoC17gqxFgKJ/IU024dgofBCizWTj2S7CCmED4=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   CGO_ENABLED = 1;
 
   meta = {

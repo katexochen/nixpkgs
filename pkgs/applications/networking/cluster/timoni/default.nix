@@ -26,8 +26,6 @@ buildGoModule rec {
   passthru.updateScript = ./update.sh;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.VERSION=${version}"
   ];
 

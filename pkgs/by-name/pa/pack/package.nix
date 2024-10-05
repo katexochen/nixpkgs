@@ -23,8 +23,6 @@ buildGoModule rec {
   subPackages = [ "cmd/pack" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/buildpacks/pack.Version=${version}"
   ];
 

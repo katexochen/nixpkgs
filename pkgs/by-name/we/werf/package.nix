@@ -36,8 +36,6 @@ buildGoModule rec {
 
   ldflags =
     [
-      "-s"
-      "-w"
       "-X github.com/werf/werf/v2/pkg/werf.Version=v${version}"
     ]
     ++ lib.optionals (CGO_ENABLED == 1) [

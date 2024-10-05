@@ -20,8 +20,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/darkhz/bluetuith/cmd.Version=${version}@nixpkgs"
   ];
 

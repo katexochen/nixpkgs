@@ -25,7 +25,7 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" "-X go.szostok.io/version.version=v${version}" ];
+  ldflags = [ "-X go.szostok.io/version.version=v${version}" ];
 
   nativeBuildInputs =
     [ installShellFiles ] ++

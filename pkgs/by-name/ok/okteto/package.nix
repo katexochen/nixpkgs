@@ -24,8 +24,6 @@ buildGoModule rec {
   excludedPackages = [ "integration" "samples" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/okteto/okteto/pkg/config.VersionString=${version}"
   ];
 

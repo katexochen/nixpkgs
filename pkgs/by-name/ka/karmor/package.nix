@@ -22,8 +22,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/kubearmor/kubearmor-client/selfupdate.BuildDate=1970-01-01"
     "-X=github.com/kubearmor/kubearmor-client/selfupdate.GitSummary=${version}"
   ];

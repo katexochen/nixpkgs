@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-vL3a9eO5G0WqnqcIjA9D2XM7iQ87JH0q+an2nLcG28A=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/qustavo/httplab";
     description = "Interactive WebServer";

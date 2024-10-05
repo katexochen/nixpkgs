@@ -23,7 +23,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/giantswarm/gsctl/buildinfo.Version=${version}"
   ];
 

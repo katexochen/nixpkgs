@@ -13,9 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-NP5LLP27hn8p2gUVO/qpdu1Yp3t8iarUUKR/FjU0Qlc=";
 
-  # Strip the final binary.
-  ldflags = [ "-s" "-w" ];
-
   nativeBuildInputs = [ installShellFiles ];
 
   # Tests expect the binary to be located in the root directory.

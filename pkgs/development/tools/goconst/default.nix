@@ -15,8 +15,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Find in Go repeated strings that could be replaced by a constant";
     mainProgram = "goconst";

@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-iPKZPXsa6ya29N/u9QYd5LAm42+FtHZLGStRDxsAxe4=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/jech/storrent";
     description = "Implementation of the BitTorrent protocol that is optimised for streaming media";

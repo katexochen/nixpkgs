@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-5BJFAnsmx6lbGQTx/6dIdcsETsllCr6C3wPbB2Gvj5Y=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Secure private tunnel to your local servers";
     homepage = "https://github.com/ntnj/tunwg";

@@ -1,9 +1,10 @@
-{ lib
-, buildGoModule
-, fetchFromGitHub
-, installShellFiles
-, testers
-, k0sctl
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
+  installShellFiles,
+  testers,
+  k0sctl,
 }:
 
 buildGoModule rec {
@@ -20,8 +21,6 @@ buildGoModule rec {
   vendorHash = "sha256-eKim5F8bKC1UOY+lOo0NSHOzXuMOcnBjkjm3/vDkGEM=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/k0sproject/k0sctl/version.Environment=production"
     "-X=github.com/carlmjohnson/versioninfo.Version=v${version}" # Doesn't work currently: https://github.com/carlmjohnson/versioninfo/discussions/12
     "-X=github.com/carlmjohnson/versioninfo.Revision=v${version}"
@@ -49,6 +48,9 @@ buildGoModule rec {
     changelog = "https://github.com/k0sproject/k0sctl/releases/tag/v${version}";
     license = licenses.asl20;
     mainProgram = "k0sctl";
-    maintainers = with maintainers; [ nickcao qjoly ];
+    maintainers = with maintainers; [
+      nickcao
+      qjoly
+    ];
   };
 }

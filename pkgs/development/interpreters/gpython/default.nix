@@ -23,8 +23,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.version=${version}"
     "-X=main.commit=${src.rev}"
     "-X=main.date=1970-01-01"

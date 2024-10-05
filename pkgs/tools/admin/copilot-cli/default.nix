@@ -17,8 +17,6 @@ buildGoModule rec {
 
   # follow LINKER_FLAGS in Makefile
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/aws/copilot-cli/internal/pkg/version.Version=v${version}"
     "-X github.com/aws/copilot-cli/internal/pkg/cli.binaryS3BucketPath=https://ecs-cli-v2-release.s3.amazonaws.com"
   ];

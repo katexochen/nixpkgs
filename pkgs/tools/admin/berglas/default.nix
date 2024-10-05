@@ -39,8 +39,6 @@ buildGoModule rec {
   vendorHash = "sha256-BDQJFrFbJGuoDpjGn0T9xWk6huUmDpOTO/JSDIYUKYg=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/GoogleCloudPlatform/berglas/internal/version.Version=${version}"
   ];
 

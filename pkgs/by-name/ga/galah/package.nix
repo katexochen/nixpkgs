@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-+I4K5T6fQcS7KJexFGxpjq5QUX9VnopK8i81veeP6Cw=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "LLM-powered web honeypot using the OpenAI API";
     homepage = "https://github.com/0x4D31/galah";

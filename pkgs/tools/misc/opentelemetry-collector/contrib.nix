@@ -42,8 +42,6 @@ buildGoModule rec {
   doCheck = false;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/open-telemetry/opentelemetry-collector-contrib/internal/version.Version=v${version}"
   ];
 

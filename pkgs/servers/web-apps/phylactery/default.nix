@@ -11,8 +11,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.tests.phylactery = nixosTests.phylactery;
 
   meta = with lib; {

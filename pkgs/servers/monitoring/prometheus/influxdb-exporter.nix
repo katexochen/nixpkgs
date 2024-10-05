@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-47ru0rzLl4/O0UOGqCojH+vqd4TS1S2Hk6zmSzrXriw=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/prometheus/common/version.Version=${version}"
     "-X github.com/prometheus/common/version.Revision=${rev}"
     "-X github.com/prometheus/common/version.Branch=unknown"

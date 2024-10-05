@@ -16,7 +16,6 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/superfly/flyctl/internal/buildinfo.buildDate=1970-01-01T00:00:00Z"
     "-X github.com/superfly/flyctl/internal/buildinfo.buildVersion=${version}"
   ];

@@ -22,8 +22,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/datreeio/datree/cmd.CliVersion=${version}"
   ];
 

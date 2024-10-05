@@ -19,8 +19,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-HI5+02qSQVLy6ZKaFjy1bWtvVk5bqMBg1umu2ic5HuY=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/AdRoll/hologram/";
     description = "Easy, painless AWS credentials on developer laptops";

@@ -44,8 +44,6 @@ buildGoModule rec {
   excludedPackages = "test/integration";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.version=${version}"
     "-X=main.gitDescription=v${version}"
     "-X=main.gitTreeState=clean"

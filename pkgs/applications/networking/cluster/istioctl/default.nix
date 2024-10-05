@@ -22,7 +22,7 @@ buildGoModule rec {
       "istio.io/istio/pkg/version.buildTag=${version}"
       "istio.io/istio/pkg/version.buildHub=docker.io/istio"
     ];
-  in ["-s" "-w" "${lib.concatMapStringsSep " " (attr: "-X ${attr}") attrs}"];
+  in [ "${lib.concatMapStringsSep " " (attr: "-X ${attr}") attrs}"];
 
   subPackages = [ "istioctl/cmd/istioctl" ];
 

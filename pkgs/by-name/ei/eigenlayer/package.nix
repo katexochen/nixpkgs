@@ -17,7 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-7KC99PqAPfGnm7yA4nfAlC7V4NhCEYDyPxY7CdOdwno=";
 
-  ldflags = ["-s" "-w"];
   subPackages = ["cmd/eigenlayer"];
 
   passthru.updateScript = nix-update-script {};

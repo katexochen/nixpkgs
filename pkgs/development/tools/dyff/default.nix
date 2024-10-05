@@ -28,8 +28,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/homeport/dyff/internal/cmd.version=${version}"
   ];
 

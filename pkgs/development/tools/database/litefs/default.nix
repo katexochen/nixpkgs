@@ -20,8 +20,6 @@ buildGoModule rec {
 
   # following https://github.com/superfly/litefs/blob/main/Dockerfile
   ldflags = [
-    "-s"
-    "-w"
     "-X main.Version=${version}"
     "-extldflags=-static"
   ];

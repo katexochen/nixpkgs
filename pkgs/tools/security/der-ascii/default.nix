@@ -12,8 +12,6 @@ buildGoModule rec {
   };
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = ''
       A small human-editable language to emit DER or BER encodings of ASN.1

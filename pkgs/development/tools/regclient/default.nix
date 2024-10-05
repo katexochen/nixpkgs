@@ -25,8 +25,6 @@ buildGoModule rec {
   outputs = [ "out" ] ++ bins;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/regclient/regclient/internal/version.vcsTag=${tag}"
   ];
 

@@ -18,7 +18,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-B2ywdZjp7h7eFYNJ4wXmAdbOxc8ftGqHnLmDvzQASJE=";
 
-  ldflags = [ "-X github.com/docker/compose/v2/internal.Version=${version}" "-s" "-w" ];
+  ldflags = [ "-X github.com/docker/compose/v2/internal.Version=${version}" ];
 
   doCheck = false;
   installPhase = ''

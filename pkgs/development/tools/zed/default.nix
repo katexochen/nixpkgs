@@ -21,8 +21,6 @@ buildGoModule rec {
   subPackages = [ "cmd/zed" "cmd/zq" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/brimdata/zed/cli.version=${version}"
   ];
 

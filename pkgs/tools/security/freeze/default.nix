@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-R8kdFweMhAUjJ8zJ7HdF5+/vllbNmARdhU4hOw4etZo=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   postInstall = lib.optionalString (!stdenv.hostPlatform.isDarwin) ''
     mv $out/bin/Freeze $out/bin/freeze
   '';

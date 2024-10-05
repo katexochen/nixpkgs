@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-UUMulGnqfIshN2WIejZgwrWWlywj5TpnAQ4A5/d0NCE=";
 
   ldflags = [
-    "-w"
-    "-s"
     "-X github.com/jlesquembre/kubeprompt/pkg/version.Version=${version}"
   ];
 

@@ -33,8 +33,6 @@ buildGoModule rec {
       package_url = "github.com/sethvargo/ratchet";
     in
     [
-      "-s"
-      "-w"
       "-X ${package_url}/internal/version.name=ratchet"
       "-X ${package_url}/internal/version.version=${version}"
       "-X ${package_url}/internal/version.commit=${src.rev}"

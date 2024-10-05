@@ -22,8 +22,6 @@ buildGoModule rec {
   subPackages = [ "cmd/xeol/" ];
 
   ldflags = [
-    "-w"
-    "-s"
     "-X=main.version=${version}"
     "-X=main.gitCommit=${src.rev}"
     "-X=main.buildDate=1970-01-01T00:00:00Z"

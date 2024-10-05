@@ -17,7 +17,7 @@ buildGoModule rec {
 
   subPackages = [ "cmd/pack" ];
 
-  ldflags = [ "-s" "-w" "-X github.com/buildpacks/pack.Version=${version}" ];
+  ldflags = [ "-X github.com/buildpacks/pack.Version=${version}" ];
 
   postInstall = ''
     installShellCompletion --cmd pack \

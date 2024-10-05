@@ -46,8 +46,6 @@ buildGoModule {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X" "github.com/t2bot/matrix-media-repo/common/version.Version=${version}"
   ];
 

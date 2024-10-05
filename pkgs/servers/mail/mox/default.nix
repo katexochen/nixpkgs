@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/mjl-/mox/moxvar.Version=${version}"
   ];
 

@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Tool for adding new lines to files, skipping duplicates";
     mainProgram = "anew";

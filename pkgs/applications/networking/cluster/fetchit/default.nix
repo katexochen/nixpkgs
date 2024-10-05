@@ -36,8 +36,6 @@ buildGoModule rec {
     "-X k8s.io/component-base/version.gitMinor=0"
     "-X k8s.io/component-base/version.gitTreeState=clean"
     "-X k8s.io/component-base/version.gitVersion=v0.0.0"
-    "-s"
-    "-w"
   ];
 
   tags = [

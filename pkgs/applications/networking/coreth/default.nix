@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-41r6tsrHw533ygvS3G2OQA9wsVXVxJi96DVu6stBq3c=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ava-labs/coreth/plugin/evm.Version=${version}"
     "-X github.com/ava-labs/coreth/cmd/abigen.gitCommit=${version}"
     "-X github.com/ava-labs/coreth/cmd/abigen.gitDate=1970-01-01"

@@ -19,8 +19,6 @@ buildGoModule rec {
 
   propagatedBuildInputs = [ libpcap ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Parse and display HTTP traffic from network device or pcap file";
     mainProgram = "httpdump";

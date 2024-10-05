@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-xJtlTyhGyoxefE2pFcLGHMapn9L2F/PKuNt49J41viE=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/pulumi/esc/cmd/esc/cli/version.Version=${src.rev}"
   ];
 

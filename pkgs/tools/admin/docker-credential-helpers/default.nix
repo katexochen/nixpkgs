@@ -18,8 +18,6 @@ buildGoModule rec {
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ libsecret ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/docker/docker-credential-helpers/credentials.Version=${version}"
   ];
 

@@ -12,8 +12,6 @@ buildGoModule rec {
   };
   vendorHash = "sha256-ppplXXqb2DM/AU+B+LefndrBiiTgCRNw6hEupfeWr+o=";
 
-  ldflags = [ "-s" "-w" ];
-
   # Build and install the man pages
   nativeBuildInputs = [ scdoc installShellFiles ];
 

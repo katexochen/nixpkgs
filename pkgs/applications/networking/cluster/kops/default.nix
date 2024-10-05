@@ -21,8 +21,6 @@ let
         subPackages = [ "cmd/kops" ];
 
         ldflags = [
-          "-s"
-          "-w"
           "-X k8s.io/kops.Version=${version}"
           "-X k8s.io/kops.GitVersion=${version}"
         ];

@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-fNcyIP6q54A+TlsN0xliQGONx7H20KNY+d0NxOUSxQc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/hetznercloud/cli/internal/version.Version=${version}"
   ];
 

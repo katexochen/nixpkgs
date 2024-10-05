@@ -15,7 +15,7 @@ buildGoModule rec {
 
   nativeBuildInputs = [ makeBinaryWrapper ];
 
-  ldflags = [ "-s" "-w" "-X main.Commit=-${src.rev}" ];
+  ldflags = [ "-X main.Commit=-${src.rev}" ];
 
   postInstall = ''
     wrapProgram $out/bin/ytarchive --prefix PATH : ${lib.makeBinPath [ ffmpeg-headless ]}

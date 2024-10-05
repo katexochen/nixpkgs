@@ -52,8 +52,6 @@ in buildGoModule rec {
   tags = [ "cgo" "netgo" "ousergo" "static_build" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X 'github.com/caddyserver/caddy/v2.CustomVersion=FrankenPHP ${version} PHP ${phpUnwrapped.version} Caddy'"
     # pie mode is only available with pkgsMusl, it also automatically add -buildmode=pie to $GOFLAGS
   ]  ++ (lib.optional pieBuild [ "-static-pie" ]);

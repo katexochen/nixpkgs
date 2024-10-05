@@ -22,8 +22,6 @@ buildGoModule rec {
   subPackages = [ "cmd/bearer" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/bearer/bearer/cmd/bearer/build.Version=${version}"
   ];
 

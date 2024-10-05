@@ -30,8 +30,6 @@ buildGoModule {
 
   # Pass versioning information via ldflags
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ory/oathkeeper/internal/driver/config.Version=${version}"
     "-X github.com/ory/oathkeeper/internal/driver/config.Commit=${commit}"
   ];

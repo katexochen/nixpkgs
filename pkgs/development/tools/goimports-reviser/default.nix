@@ -20,8 +20,6 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.Tag=${src.rev}"
   ];
 

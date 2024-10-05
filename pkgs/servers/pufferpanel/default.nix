@@ -37,8 +37,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/pufferpanel/pufferpanel/v2.Hash=none"
     "-X=github.com/pufferpanel/pufferpanel/v2.Version=${version}-nixpkgs"
   ];

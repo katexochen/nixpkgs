@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.Version=${version}"
     "-X github.com/cloudflare/cloudflared/cmd/cloudflared/updater.BuiltForPackageManager=nixpkgs"
   ];

@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-T6I8uYUaubcc1dfDu6PbQ9bDDLqGuLGXWnCZhdvkycE=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Convert Ingress resources to Gateway API resources";
     homepage = "https://github.com/kubernetes-sigs/ingress2gateway";

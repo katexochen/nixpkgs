@@ -22,8 +22,6 @@ buildGoModule rec {
     })
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "gif effects CLI. single binary, no dependencies. linux, osx, windows. #1 workplace productivity booster. #yeetgif #eggplant #golang";
     homepage = "https://github.com/sgreben/yeetgif";

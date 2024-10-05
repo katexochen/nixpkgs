@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-s1YkEwFxE1zpUUCgwOAl8i6/9HB2rcGG+4kqnixTit0=";
 
-  ldflags = [ "-s" "-w" ];
-
   checkFlags = [
     # skip flaky test
     "-skip=TestMonotonicSafe"

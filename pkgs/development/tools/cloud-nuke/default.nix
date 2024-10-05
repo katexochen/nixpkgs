@@ -22,8 +22,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.VERSION=${version}"
   ];
 

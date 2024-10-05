@@ -41,11 +41,6 @@ buildGoModule rec {
 
   buildInputs = [ containerd ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     homepage = "https://www.github.com/Roblox/nomad-driver-containerd";
     description = "Containerd task driver for Nomad";

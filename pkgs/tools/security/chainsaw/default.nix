@@ -23,11 +23,6 @@ rustPlatform.buildRustPackage rec {
     darwin.apple_sdk.frameworks.CoreFoundation
   ];
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Rapidly Search and Hunt through Windows Forensic Artefacts";
     homepage = "https://github.com/WithSecureLabs/chainsaw";

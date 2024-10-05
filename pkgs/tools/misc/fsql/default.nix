@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-+laTnx6Xkrv3QQel5opqYQSuFmo54UMI2A653xbBWzQ=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Search through your filesystem with SQL-esque queries";
     homepage = "https://github.com/kshvmdn/fsql";

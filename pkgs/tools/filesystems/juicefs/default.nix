@@ -19,8 +19,6 @@ buildGoModule rec {
   excludedPackages = [ "sdk/java/libjfs" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/juicedata/juicefs/pkg/version.version=${version}"
   ];
 

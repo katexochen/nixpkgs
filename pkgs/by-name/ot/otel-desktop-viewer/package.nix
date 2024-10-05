@@ -23,8 +23,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-pH16DCYeW8mdnkkRi0zqioovZu9slVc3gAdhMYu2y98=";
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.tests.version = testers.testVersion {
     inherit version;
     package = otel-desktop-viewer;

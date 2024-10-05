@@ -24,8 +24,6 @@ buildGoModule {
   doCheck = false;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X gotest.tools/gotestsum/cmd.version=${version}"
   ];
 

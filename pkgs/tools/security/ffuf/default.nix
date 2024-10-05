@@ -26,11 +26,6 @@ buildGoModule rec {
     })
   ];
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Tool for web fuzzing";
     mainProgram = "ffuf";

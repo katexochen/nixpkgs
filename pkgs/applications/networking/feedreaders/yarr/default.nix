@@ -15,7 +15,7 @@ buildGoModule rec {
 
   subPackages = [ "src" ];
 
-  ldflags = [ "-s" "-w" "-X main.Version=${version}" "-X main.GitHash=none" ];
+  ldflags = [ "-X main.Version=${version}" "-X main.GitHash=none" ];
 
   tags = [ "sqlite_foreign_keys" "release" ];
 

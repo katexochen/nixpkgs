@@ -16,7 +16,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/inspektor-gadget/inspektor-gadget/internal/version.version=v${version}"
     "-X main.gadgetimage=ghcr.io/inspektor-gadget/inspektor-gadget:v${version}"
     "-extldflags=-static"

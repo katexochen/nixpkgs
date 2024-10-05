@@ -15,8 +15,6 @@ buildGoModule rec {
 
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/falcosecurity/falcoctl/cmd/version.semVersion=${version}"
   ];
 

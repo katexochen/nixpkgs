@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Single-packet UDP scanner";
     mainProgram = "udpx";

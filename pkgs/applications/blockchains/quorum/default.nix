@@ -18,8 +18,6 @@ buildGoModule rec {
     "cmd/bootnode"
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.tests = { inherit (nixosTests) quorum; };
 
   meta = with lib; {

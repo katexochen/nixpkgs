@@ -16,7 +16,7 @@ buildGoModule rec {
   subPackages = [ "fly" ];
 
   ldflags = [
-    "-s" "-w" "-X github.com/concourse/concourse.Version=${version}"
+    "-X github.com/concourse/concourse.Version=${version}"
   ];
 
   nativeBuildInputs = [ installShellFiles ];

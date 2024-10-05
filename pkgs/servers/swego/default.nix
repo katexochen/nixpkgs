@@ -22,11 +22,6 @@ buildGoModule rec {
     mv $out/bin/src $out/bin/$pname
   '';
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Simple Webserver";
     longDescription = ''

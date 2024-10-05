@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-j6oqYpFcfZy4Lz4C9wbJGI2RdJsAxQxBqcLNWgKk/UU=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/ktock/container2wasm/version.Version=${version}"
   ];
 

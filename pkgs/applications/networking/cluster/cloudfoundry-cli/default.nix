@@ -24,8 +24,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X code.cloudfoundry.org/cli/version.binaryBuildDate=1970-01-01"
     "-X code.cloudfoundry.org/cli/version.binaryVersion=${version}"
   ];

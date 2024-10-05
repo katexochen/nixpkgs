@@ -23,8 +23,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Simple compiled programming language";
     mainProgram = "paco";

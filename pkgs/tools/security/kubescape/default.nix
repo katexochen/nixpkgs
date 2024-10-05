@@ -30,8 +30,6 @@ buildGoModule rec {
   nativeCheckInputs = [ git ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/kubescape/kubescape/v3/core/cautils.BuildNumber=v${version}"
   ];
 

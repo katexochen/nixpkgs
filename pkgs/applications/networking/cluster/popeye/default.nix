@@ -12,7 +12,6 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/derailed/popeye/cmd.version=${version}"
     "-X github.com/derailed/popeye/cmd.commit=${version}"
   ];

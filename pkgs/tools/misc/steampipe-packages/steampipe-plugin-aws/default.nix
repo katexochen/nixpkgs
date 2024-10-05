@@ -19,11 +19,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-4MwISeCx/YbJSeQ5OJFIZf1SnK9aD2Eat6xKI7ZtYLk=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   doCheck = true;
 
   installPhase = ''

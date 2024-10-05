@@ -22,8 +22,6 @@ buildGoModule rec {
   subPackages = [ "apps/cnspec" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=go.mondoo.com/cnspec.Version=${version}"
   ];
 

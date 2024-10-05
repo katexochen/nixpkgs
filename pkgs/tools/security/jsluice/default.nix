@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-u4E+b/vChXArovtaZ4LODaINWit86i5K4GyHLR0JSyU=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool for extracting URLs, paths, secrets, and other data from JavaScript source code";
     homepage = "https://github.com/BishopFox/jsluice";

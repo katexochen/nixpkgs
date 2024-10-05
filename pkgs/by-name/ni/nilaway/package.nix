@@ -18,8 +18,6 @@ buildGoModule rec {
 
   excludedPackages = [ "tools" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Static Analysis tool to detect potential Nil panics in Go code";
     homepage = "https://github.com/uber-go/nilaway";

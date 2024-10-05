@@ -18,8 +18,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/weaviate-server" ];
 
-  ldflags = [ "-w" "-extldflags" "-static" ];
-
   postInstall = ''
     ln -s $out/bin/weaviate-server $out/bin/weaviate
   '';

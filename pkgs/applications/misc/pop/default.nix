@@ -19,7 +19,7 @@ buildGoModule rec {
     installShellFiles
   ];
 
-  ldflags = [ "-s" "-w" "-X=main.Version=${version}" ];
+  ldflags = [ "-X=main.Version=${version}" ];
 
   postInstall = ''
     $out/bin/pop man > pop.1

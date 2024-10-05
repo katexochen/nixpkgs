@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-qcfPW7rz0v63QmQQceQltkCFNBUeQTxVerxDymv7SZo=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/mrusme/canard/main.VERSION=${version}"
   ];
 

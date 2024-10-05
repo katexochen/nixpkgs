@@ -15,7 +15,7 @@ buildGoModule rec {
 
   ldflags =
     let t = "github.com/jckuester/awsrm/internal";
-    in [ "-s" "-w" "-X ${t}.version=${version}" "-X ${t}.commit=${src.rev}" "-X ${t}.date=unknown" ];
+    in [ "-X ${t}.version=${version}" "-X ${t}.commit=${src.rev}" "-X ${t}.date=unknown" ];
 
   doCheck = false;
 

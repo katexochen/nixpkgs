@@ -18,8 +18,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-FiXxplt4w7M0cZz46kdjYuKHailW2cnLOj0jkA9w1RM=";
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     mv $out/bin/{repl,expr}
   '';

@@ -16,10 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-0p4f+KKD04IFAUQG8F3b+2sx9suYemt3wbgSNNOOIlk=";
 
-  ldflags = [
-    "-s" "-w"
-  ];
-
   preConfigure = ''
     # Set the version.
     substituteInPlace main.go --replace '"0.0.0"' '"${version}"'

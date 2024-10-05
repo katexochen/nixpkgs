@@ -18,8 +18,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.tests = {
     version = testers.testVersion {
       package = piknik;

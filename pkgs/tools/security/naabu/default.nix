@@ -27,11 +27,6 @@ buildGoModule rec {
     "cmd/naabu/"
   ];
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Fast SYN/CONNECT port scanner";
     mainProgram = "naabu";

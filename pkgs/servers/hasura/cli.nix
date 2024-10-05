@@ -15,8 +15,6 @@ buildGoModule rec {
 
   ldflags = [
     "-X github.com/hasura/graphql-engine/cli/version.BuildVersion=${version}"
-    "-s"
-    "-w"
   ];
 
   postInstall = ''

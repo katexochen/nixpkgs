@@ -11,7 +11,7 @@ buildGoModule rec {
     sha256 = "sha256-Gm4DIQK8T+dTwB5swdrD+SjGgy/wFQ/fJYdSqNDSy9c=";
   };
 
-  ldflags = [ "-s" "-w" "-X github.com/weaveworks/weave-gitops/cmd/gitops/version.Version=${version}" ];
+  ldflags = [ "-X github.com/weaveworks/weave-gitops/cmd/gitops/version.Version=${version}" ];
 
   vendorHash = "sha256-RiPBlpEQ69fhVf3B0qHQ+zEtPIet/Y/Jp/HfaTrIssE=";
 

@@ -22,7 +22,6 @@ buildGoModule rec {
   doInstallCheck = true;
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/nanovms/ops/lepton.Version=${version}"
   ];
 

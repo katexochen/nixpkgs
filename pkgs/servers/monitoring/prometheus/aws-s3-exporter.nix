@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Exports Prometheus metrics about S3 buckets and objects";
     mainProgram = "s3_exporter";

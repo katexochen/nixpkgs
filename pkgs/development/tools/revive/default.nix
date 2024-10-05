@@ -21,8 +21,6 @@ buildGoModule rec {
   vendorHash = "sha256-btuAXaJL8URkJvzPy+9tci5gOAqSkkNZn3mN2ox1Vfk=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/mgechev/revive/cli.version=${version}"
     "-X github.com/mgechev/revive/cli.builtBy=nix"
   ];

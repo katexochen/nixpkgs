@@ -24,8 +24,6 @@ buildGoModule rec {
     makeWrapper
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   doCheck = false;
 
   preFixup = lib.optionalString withSpeech ''

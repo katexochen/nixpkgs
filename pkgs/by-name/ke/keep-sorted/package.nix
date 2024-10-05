@@ -20,8 +20,6 @@ buildGo123Module rec {
 
   CGO_ENABLED = "0";
 
-  ldflags = [ "-s" ];
-
   checkFlags = [
     # Test tries to find files using git
     "-skip=^TestGoldens"

@@ -22,8 +22,6 @@ buildGoModule rec {
   nativeBuildInputs = [ makeWrapper ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
   ];
 

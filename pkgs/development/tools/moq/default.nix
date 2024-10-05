@@ -16,8 +16,6 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.Version=${version}"
   ];
 

@@ -18,8 +18,6 @@ buildGoModule rec {
   postConfigure = "go generate ./...";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/dshearer/jobber/common.jobberVersion=${version}"
     "-X github.com/dshearer/jobber/common.etcDirPath=${placeholder "out"}/etc"
   ];

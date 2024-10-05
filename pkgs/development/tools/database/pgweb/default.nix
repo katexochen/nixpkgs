@@ -23,8 +23,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-Jpvf6cST3kBvYzCQLoJ1fijUC/hP1ouptd2bQZ1J/Lo=";
 
-  ldflags = [ "-s" "-w" ];
-
   checkFlags =
     let
       skippedTests = [

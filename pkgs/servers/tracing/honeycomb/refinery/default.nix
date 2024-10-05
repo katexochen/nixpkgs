@@ -22,7 +22,7 @@ buildGoModule rec {
 
   excludedPackages = [ "cmd/test_redimem" ];
 
-  ldflags = [ "-s" "-w" "-X main.BuildID=${version}" ];
+  ldflags = [ "-X main.BuildID=${version}" ];
 
   vendorHash = "sha256-0M05JGLdmKivRTN8ZdhAm+JtXTlYAC31wFS82g3NenI=";
 

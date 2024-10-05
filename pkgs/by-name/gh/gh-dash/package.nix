@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-lqmz+6Cr9U5IBoJ5OeSN6HKY/nKSAmszfvifzbxG7NE=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/dlvhdr/gh-dash/v4/cmd.Version=${version}"
   ];
 

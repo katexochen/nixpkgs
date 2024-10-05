@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-naEbalwVRUFW2wRU3gxb/Zeu4oSnO6+bOZimxaySSyA=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Prometheus exporter for Consul metrics";
     mainProgram = "consul_exporter";

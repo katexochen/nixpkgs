@@ -22,8 +22,6 @@ buildGoModule rec {
     lib.optionals stdenv.hostPlatform.isDarwin [Security];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/gptscript-ai/gptscript/pkg/version.Tag=v${version}"
   ];
 

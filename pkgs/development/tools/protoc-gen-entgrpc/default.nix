@@ -15,8 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "entproto/cmd/protoc-gen-entgrpc" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Generator of an implementation of the service interface for ent protobuff";
     mainProgram = "protoc-gen-entgrpc";

@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-w+G5PsWXhKipjYIHtz633sia+Wg9FSFVpcugEl8fp0E=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool used to brute-force URIs, DNS subdomains, Virtual Host names on target web servers";
     mainProgram = "gobuster";

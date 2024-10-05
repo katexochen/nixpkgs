@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Fast, indexed regexp search over large file trees";
     homepage = "https://github.com/google/codesearch";

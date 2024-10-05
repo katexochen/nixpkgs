@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-NmA1rLWSX03zurGZWvXv61TSB9hecEfi7Hx9yi7QL/c=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/LINBIT/virter/cmd.version=${version}"
     "-X github.com/LINBIT/virter/cmd.builddate=builtByNix"
     "-X github.com/LINBIT/virter/cmd.githash=builtByNix"

@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-fHdtqjFmT+8cmy2SxjjBvw5Rct7lA2ksGVmm/9ncbRI=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "CLI utility to recursively crawl webpages";
     homepage = "https://github.com/hueristiq/xcrawl3r";

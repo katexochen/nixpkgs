@@ -23,8 +23,6 @@ buildGoModule rec {
   vendorHash = "sha256-LJpgGeD47Bs+Cq9Z7WWFa49F8/n3exOyxRcd6EkkL2g=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/hyprspace/hyprspace/cli.appVersion=${version}"
   ];
 

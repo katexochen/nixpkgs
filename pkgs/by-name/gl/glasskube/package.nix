@@ -46,8 +46,6 @@ in buildGo123Module rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/glasskube/glasskube/internal/config.Version=${version}"
     "-X github.com/glasskube/glasskube/internal/config.Commit=${src.rev}"
   ];

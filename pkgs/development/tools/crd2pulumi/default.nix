@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-tSQuyGo4YaqKp5C9V/tEobc/4+x5ExPbV3Y4nd8D8jE=";
 
-  ldflags = [ "-s" "-w" "-X github.com/pulumi/crd2pulumi/gen.Version=${src.rev}" ];
+  ldflags = [ "-X github.com/pulumi/crd2pulumi/gen.Version=${src.rev}" ];
 
   subPackages = [ "." ];
 

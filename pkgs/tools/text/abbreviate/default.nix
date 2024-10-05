@@ -21,8 +21,6 @@ buildGoModule rec {
     installShellFiles
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     installShellCompletion --cmd abbreviate \
       --bash <($out/bin/abbreviate completion bash) \

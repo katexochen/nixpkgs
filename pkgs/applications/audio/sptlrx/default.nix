@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-Ll5jUjpx4165BAE86/z95i4xa8fdKlfxqrUc/gDLqJ0=";
 
-  ldflags = [ "-s" "-w" ];
-
   passthru = {
     updateScript = nix-update-script { };
     tests.version = testers.testVersion {

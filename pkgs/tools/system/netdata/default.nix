@@ -257,8 +257,6 @@ stdenv'.mkDerivation (finalAttrs: {
         proxyVendor = true;
 
         ldflags = [
-          "-s"
-          "-w"
           "-X main.version=${finalAttrs.version}"
         ];
 

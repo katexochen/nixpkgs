@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Serve embedded files from jteeuwen/go-bindata";
     mainProgram = "go-bindata-assetfs";

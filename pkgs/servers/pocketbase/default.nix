@@ -24,8 +24,6 @@ buildGoModule rec {
 
   # Upstream build instructions
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/pocketbase/pocketbase.Version=${version}"
   ];
 

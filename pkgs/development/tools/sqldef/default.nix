@@ -15,7 +15,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-reYZUuZTNeNFrbrDQPVXwx+UuBGdEmTdSowbneZc/No=";
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   # The test requires a running database
   doCheck = false;

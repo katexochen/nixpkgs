@@ -21,8 +21,6 @@ buildGoModule rec {
 
   subPackages = [ "cmd/wire" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/google/wire";
     description = "Code generation tool that automates connecting components using dependency injection";

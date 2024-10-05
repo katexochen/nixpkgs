@@ -17,8 +17,6 @@ buildGoModule rec {
     "./cnitool"
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Container Network Interface - networking for Linux containers";
     mainProgram = "cnitool";

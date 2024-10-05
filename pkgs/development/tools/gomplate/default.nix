@@ -17,7 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-UKqSKypAm6gt2JUCZh/DyfWo8uJeMp0M+4FiqwzzHIA=";
 
   ldflags = [
-    "-s"
     "-X github.com/${src.owner}/${pname}/v4/version.Version=${version}"
   ];
 

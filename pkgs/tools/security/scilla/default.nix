@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-tOg4T9yQm1aj5G89lUeRUTxi4YrwpRi5KDcpWw4TimY=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   checkFlags = [
     # requires network access
     "-skip=TestIPToHostname"

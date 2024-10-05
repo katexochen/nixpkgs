@@ -24,7 +24,7 @@ buildGoModule rec {
 
   tags = [ "libpam" ];
 
-  ldflags = [ "-s" "-w" "-X github.com/foxcpp/maddy.Version=${version}" ];
+  ldflags = [ "-X github.com/foxcpp/maddy.Version=${version}" ];
 
   subPackages = [ "cmd/maddy" ];
 

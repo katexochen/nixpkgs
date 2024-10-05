@@ -21,8 +21,6 @@ buildGoModule rec {
   subPackages = [ "cmd/swagger" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/go-swagger/go-swagger/cmd/swagger/commands.Version=${version}"
     "-X github.com/go-swagger/go-swagger/cmd/swagger/commands.Commit=${src.rev}"
   ];

@@ -15,8 +15,6 @@ buildGoModule rec {
 
   patches = [ ./idrac-exporter/config-from-environment.patch ];
 
-  ldflags = [ "-s" "-w" ];
-
   doCheck = true;
 
   passthru.tests = { inherit (nixosTests.prometheus-exporters) idrac; };

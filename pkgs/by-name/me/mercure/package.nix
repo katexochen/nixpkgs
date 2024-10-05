@@ -25,8 +25,6 @@ buildGoModule rec {
   excludedPackages = [ "../cmd/mercure" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X 'github.com/caddyserver/caddy/v2.CustomVersion=Mercure.rocks v${version} Caddy'"
   ];
 

@@ -18,8 +18,6 @@ buildGo123Module rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
     "-X main.commit=v${version}"
     "-X main.date=19700101-00:00:00"

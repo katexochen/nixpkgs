@@ -22,8 +22,6 @@ buildGoModule {
   vendorHash = "sha256-vN5r1OtHT16LeJ6iPmHmXTx9Oo+WALhV4PWqzMiUwSA=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/dependabot/cli/cmd/dependabot/internal/cmd.version=v${version}"
   ];
 

@@ -26,8 +26,6 @@ buildGoModule rec {
   subPackages = [ "." ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/in-toto/witness/cmd.Version=v${version}"
   ];
 

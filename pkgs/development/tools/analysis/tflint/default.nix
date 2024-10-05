@@ -25,8 +25,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   passthru.withPlugins = plugins:
     let
       actualPlugins = plugins tflint-plugins;

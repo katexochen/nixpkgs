@@ -16,8 +16,6 @@ buildGoModule rec {
 
   CGO_ENABLED = 0;
 
-  ldflags = [ "-s" "-w" ];
-
   # Clipboard support on X11 and Wayland
   nativeBuildInputs = [ makeWrapper ];
 

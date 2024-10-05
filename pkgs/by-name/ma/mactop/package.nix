@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-/KecVx4Gp776t8gFSO29E1q9v29nwrKIWZYCpj7IlSo=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = {
     description = "Terminal-based monitoring tool 'top' designed to display real-time metrics for Apple Silicon chips";
     homepage = "https://github.com/context-labs/mactop";

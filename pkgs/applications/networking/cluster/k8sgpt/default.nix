@@ -16,7 +16,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s" "-w"
     "-X main.version=v${version}"
     "-X main.commit=${src.rev}"
     "-X main.date=1970-01-01-00:00:01"

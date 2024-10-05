@@ -23,8 +23,6 @@ buildGoModule rec {
   vendorHash = "sha256-HDmnI+WVv4cUia+IXrBdFBFnrxKMSFjKD6LUZ393sqs=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/kyverno/chainsaw/pkg/version.BuildVersion=v${version}"
     "-X github.com/kyverno/chainsaw/pkg/version.BuildHash=${version}"
     "-X github.com/kyverno/chainsaw/pkg/version.BuildTime=1970-01-01_00:00:00"

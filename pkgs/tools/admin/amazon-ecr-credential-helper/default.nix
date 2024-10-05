@@ -16,8 +16,6 @@ buildGoModule rec {
   modRoot = "./ecr-login";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/awslabs/amazon-ecr-credential-helper/ecr-login/version.Version=${version}"
   ];
 

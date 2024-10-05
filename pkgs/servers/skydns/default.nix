@@ -23,8 +23,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Distributed service for announcement and discovery of services";
     homepage = "https://github.com/skynetservices/skydns";

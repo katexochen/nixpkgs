@@ -25,8 +25,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X codeberg.org/rimgo/rimgo/pages.VersionInfo=${version}"
   ];
 

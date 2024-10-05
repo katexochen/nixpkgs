@@ -44,8 +44,6 @@ buildGoModule rec {
   subPackages = [ "cmd/zincsearch" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/zinclabs/zincsearch/pkg/meta.Version=${version}"
   ];
 

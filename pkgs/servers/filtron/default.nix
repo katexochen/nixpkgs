@@ -26,8 +26,6 @@ buildGoModule rec {
     })
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Reverse HTTP proxy to filter requests by different rules";
     homepage = "https://github.com/asciimoo/filtron";

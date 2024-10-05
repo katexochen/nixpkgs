@@ -34,8 +34,6 @@ buildGoModule {
   nativeBuildInputs = [ makeWrapper jq curl ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.NuvVersion=${version}"
     "-X main.NuvBranch=${branch}"
   ];

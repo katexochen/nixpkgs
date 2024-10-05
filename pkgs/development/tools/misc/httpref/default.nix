@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-9Ei4Lfll79f/+iuO5KesUMaTgkS9nq+1tma/dhOZ7Qw=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Command line, offline, access to HTTP status code, common header, and port references";
     mainProgram = "httpref";

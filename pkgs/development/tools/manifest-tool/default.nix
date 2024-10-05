@@ -29,8 +29,6 @@ buildGoModule rec {
   nativeBuildInputs = [ git ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=${version}"
   ] ++ lib.optionals stdenv.hostPlatform.isStatic [
     "-linkmode=external"

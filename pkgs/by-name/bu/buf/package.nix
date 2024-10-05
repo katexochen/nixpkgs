@@ -28,8 +28,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-s" "-w" ];
-
   nativeCheckInputs = [
     git # Required for TestGitCloner
     protobuf_26 # Required for buftesting.GetProtocFilePaths

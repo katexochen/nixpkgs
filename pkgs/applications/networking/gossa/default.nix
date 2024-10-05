@@ -17,8 +17,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   # Tests require a socket connection to be created.
   doCheck = false;
 

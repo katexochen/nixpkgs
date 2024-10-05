@@ -20,8 +20,6 @@ buildGoModule rec {
 
   subPackages = [ "tool/cmd/kitex" ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     ln -s $out/bin/kitex $out/bin/protoc-gen-kitex
     ln -s $out/bin/kitex $out/bin/thrift-gen-kitex

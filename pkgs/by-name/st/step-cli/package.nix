@@ -20,8 +20,6 @@ buildGoModule {
   };
 
   ldflags = [
-    "-w"
-    "-s"
     "-X=main.Version=${version}"
   ];
 

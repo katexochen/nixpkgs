@@ -28,8 +28,6 @@ buildGoModule rec {
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ Cocoa Virtualization ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.Version=${version}"
   ];
 

@@ -25,8 +25,6 @@ builtins.mapAttrs (pname: attrs: buildGoModule (attrs // rec {
   };
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ivpn/desktop-app/daemon/version._version=${version}"
     "-X github.com/ivpn/desktop-app/daemon/version._time=1970-01-01"
   ];

@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" "-X github.com/tektoncd/cli/pkg/cmd/version.clientVersion=${version}" ];
+  ldflags = [ "-X github.com/tektoncd/cli/pkg/cmd/version.clientVersion=${version}" ];
 
   nativeBuildInputs = [ installShellFiles ];
 

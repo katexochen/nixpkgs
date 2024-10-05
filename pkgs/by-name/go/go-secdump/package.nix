@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-RvbK0ps/5Jg/IAk71WGYEcjM6LrbCSkUueSOUFeELis=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool to remotely dump secrets from the Windows registry";
     homepage = "https://github.com/jfjallid/go-secdump";

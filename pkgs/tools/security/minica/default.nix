@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Simple tool for generating self signed certificates";
     mainProgram = "minica";

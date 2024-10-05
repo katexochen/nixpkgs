@@ -15,7 +15,7 @@ buildGoModule rec {
 
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ Cocoa WebKit ];
 
-  ldflags = [ "-s" "-w" "-X golift.io/version.Version=${version}" ];
+  ldflags = [ "-X golift.io/version.Version=${version}" ];
 
   meta = with lib; {
     description = "Extracts downloads for Radarr, Sonarr, Lidarr - Deletes extracted files after import";

@@ -25,7 +25,7 @@ buildGoModule rec {
       --replace-fail "# AssetsPath = \"/usr/share/pg_tileserv/assets\"" "AssetsPath = \"$out/share/assets\""
   '';
 
-  ldflags = [ "-s" "-w" "-X main.programVersion=${version}" ];
+  ldflags = [ "-X main.programVersion=${version}" ];
 
   postInstall = ''
     mkdir -p $out/share

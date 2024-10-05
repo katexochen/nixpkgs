@@ -16,7 +16,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-p/2UsvxxywQKtk/9wDa5fjS0z6xLLzDONuQ5AtnUonk=";
 
-  ldflags = [ "-s" "-w" "-X github.com/cube2222/octosql/cmd.VERSION=${version}" ];
+  ldflags = [ "-X github.com/cube2222/octosql/cmd.VERSION=${version}" ];
 
   postInstall = ''
     rm -v $out/bin/tester

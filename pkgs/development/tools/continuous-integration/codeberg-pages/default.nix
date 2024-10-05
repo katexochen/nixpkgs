@@ -19,8 +19,6 @@ buildGoModule rec {
     rm server/handler/handler_test.go
   '';
 
-  ldflags = [ "-s" "-w" ];
-
   tags = [ "sqlite" "sqlite_unlock_notify" "netgo" ];
 
   passthru.updateScript = nix-update-script {};

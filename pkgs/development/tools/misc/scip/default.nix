@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-iFlbZvbj30UpgxJdndpLYcUZSTLQAO2MqJGb/6hO8Uc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.Reproducible=true"
   ];
 

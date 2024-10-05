@@ -30,8 +30,6 @@ buildGoModule rec {
       prefix = "github.com/sigstore/k8s-manifest-sigstore/pkg/util";
     in
     [
-      "-s"
-      "-w"
       # https://github.com/sigstore/k8s-manifest-sigstore/blob/e740581a4652dd44eb65495ed071fd0258dcbeb4/Makefile#L22
       "-X ${prefix}.buildDate=1970-01-01T00:00:00Z"
       "-X ${prefix}.gitCommit=v${version}"

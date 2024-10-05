@@ -20,7 +20,7 @@ buildGoModule rec {
 
   doCheck = false;
 
-  ldflags = [ "-s" "-w" "-X main.gitCommit=${version}" ];
+  ldflags = [ "-X main.gitCommit=${version}" ];
 
   meta = with lib; {
     homepage = "https://github.com/buchgr/bazel-remote";

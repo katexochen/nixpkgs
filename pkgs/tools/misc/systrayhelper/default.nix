@@ -20,8 +20,6 @@ buildGoModule rec {
     "-X main.version=v${version}"
     "-X main.commit=${rev}"
     "-X main.date=nix-byrev"
-    "-s"
-    "-w"
   ];
 
   nativeBuildInputs = [ pkg-config libappindicator-gtk3 ];

@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-v5YkRZA8oOKwXa6yFGQ33jKEc742zIrmJ0+w8ggmu/0=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.dataDir=${placeholder "out"}/share/hilbish"
   ];
 

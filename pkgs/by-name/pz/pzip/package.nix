@@ -21,8 +21,6 @@ buildGoModule rec {
     unzip
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Fast concurrent zip archiver and extractor";
     homepage = "https://github.com/ybirader/pzip";

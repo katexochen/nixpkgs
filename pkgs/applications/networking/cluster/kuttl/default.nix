@@ -17,8 +17,6 @@ buildGoModule rec {
   subPackages = [ "cmd/kubectl-kuttl" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/kudobuilder/kuttl/pkg/version.gitVersion=${version}"
   ];
 

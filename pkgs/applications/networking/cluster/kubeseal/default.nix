@@ -15,7 +15,7 @@ buildGoModule rec {
 
   subPackages = [ "cmd/kubeseal" ];
 
-  ldflags = [ "-s" "-w" "-X main.VERSION=${version}" ];
+  ldflags = [ "-X main.VERSION=${version}" ];
 
   meta = with lib; {
     description = "Kubernetes controller and tool for one-way encrypted Secrets";

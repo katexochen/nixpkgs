@@ -29,8 +29,6 @@ buildGoModule rec {
   # options used by upstream:
   # https://github.com/simulot/immich-go/blob/0.13.2/.goreleaser.yaml
   ldflags = [
-    "-s"
-    "-w"
     "-extldflags=-static"
     "-X main.version=${version}"
   ];

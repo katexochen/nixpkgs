@@ -19,7 +19,6 @@ buildGoModule rec {
   doCheck = false;
 
   ldflags = [
-    "-s"
     "-X github.com/nao1215/gup/internal/cmdinfo.Version=v${version}"
   ];
 

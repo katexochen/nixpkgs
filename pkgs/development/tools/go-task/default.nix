@@ -26,8 +26,6 @@ buildGoModule rec {
   subPackages = [ "cmd/task" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/go-task/task/v3/internal/version.version=${version}"
   ];
 

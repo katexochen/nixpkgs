@@ -14,7 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-z5Hs+CkPswWhz+Ya5MyHKA3MZzQkvS7WOxNckElkg6U=";
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/zcash/lightwalletd/common.Version=v${version}"
     "-X github.com/zcash/lightwalletd/common.GitCommit=${src.rev}"
     "-X github.com/zcash/lightwalletd/common.BuildDate=1970-01-01"

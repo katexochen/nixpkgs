@@ -14,8 +14,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-FYdsLcW6FYxSgixZ5US9cBPABOAVwidC3ejUNbs1lbA=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/cbroglie/mustache";
     description = "Mustache template language in Go";

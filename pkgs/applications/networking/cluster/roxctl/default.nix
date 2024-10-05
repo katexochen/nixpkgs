@@ -18,8 +18,6 @@ buildGoModule rec {
   subPackages = [ "roxctl" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/stackrox/rox/pkg/version/internal.MainVersion=${version}"
   ];
 

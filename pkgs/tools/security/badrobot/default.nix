@@ -15,8 +15,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/controlplaneio/badrobot/cmd.version=v${version}"
   ];
 

@@ -13,10 +13,6 @@ buildGoModule {
     sha256 = "sha256-rcUCIUIyBCSuMly7y0GUNQCdJUgsj7Oi6Hpz23uXoJw=";
   };
 
-  ldflags = [
-    "-s" "-w"
-  ];
-
   vendorHash = "sha256-Q8t/NWGeUB1IpxdsxvyvbYh/adtcA4p+7bcCy9YFjsw=";
 
   preCheck = "export HOME=$(mktemp -d)";

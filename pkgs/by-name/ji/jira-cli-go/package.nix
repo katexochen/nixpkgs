@@ -27,8 +27,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/ankitpokhrel/jira-cli/internal/version.GitCommit=${src.rev}"
     "-X github.com/ankitpokhrel/jira-cli/internal/version.SourceDateEpoch=0"
     "-X github.com/ankitpokhrel/jira-cli/internal/version.Version=${version}"

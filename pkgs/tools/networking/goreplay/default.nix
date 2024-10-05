@@ -21,8 +21,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-jDMAtcq3ZowFdky5BdTkVNxq4ltkhklr76nXYJgGALg=";
 
-  ldflags = [ "-s" "-w" ];
-
   buildInputs = [ libpcap ];
 
   doCheck = false;

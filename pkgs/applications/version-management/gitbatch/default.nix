@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-wwpaJO5cXMsvqFXj+qGiIm4zg/SL4YCm2mNnG/qdilw=";
 
-  ldflags = [ "-s" "-w" ];
-
   nativeCheckInputs = [
     git # required by unit tests
   ];

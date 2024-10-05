@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-TZDQCvcwsCa08bBBb8Zs8W0OFDYb+ZWN85+VCelFgyc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=ktbs.dev/mubeng/common.Version=${version}"
   ];
 

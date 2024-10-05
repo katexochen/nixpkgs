@@ -23,8 +23,6 @@ buildGoModule rec {
   subPackages = ".";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/life4/enc/version.GitCommit=${version}"
   ];
 

@@ -27,11 +27,6 @@ buildGoModule rec {
 
   strictDeps = true;
 
-  ldflags = [
-    "-s" # Disable symbole table.
-    "-w" # Disable DWARF generation.
-  ];
-
   # We need to disable updates and other features:
   # That is done with tag `package_manager_enabled`.
   tags = [ "package_manager_enabled" ];

@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-+9zdEIaKQlLcBwFaY5Fe5mpHWQDqfV+j1TPmDkdRjyk=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/wakatime/wakatime-cli/pkg/version.Version=${version}"
   ];
 

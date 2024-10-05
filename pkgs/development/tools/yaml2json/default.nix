@@ -15,8 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/bronze1man/yaml2json";
     description = "Convert yaml to json";

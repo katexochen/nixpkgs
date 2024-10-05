@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-lnyKsipr/f9W9LWLb2lizKGLvIbS3XnSlOH1u1B87OY=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/timescale/promscale/pkg/version.Version=${version}"
     "-X github.com/timescale/promscale/pkg/version.CommitHash=${src.rev}"
   ];

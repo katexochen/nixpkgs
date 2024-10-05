@@ -19,8 +19,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-BZ8IhVPxZTPQXBotFBrxV3dfwvst0te8R84I/urq3gY=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/busser/tfautomv";
     description = "When refactoring a Terraform codebase, you often need to write moved blocks. This can be tedious. Let tfautomv do it for you";

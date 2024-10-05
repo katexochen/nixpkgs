@@ -33,8 +33,6 @@ buildGoModule rec {
     installShellFiles
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     $out/bin/org-stats man > org-stats.1
     installManPage org-stats.1

@@ -16,8 +16,6 @@ buildGoModule rec {
   };
 
   ldflags = [
-    "-s"
-    "-w"
     "-X go.jetpack.io/devbox/internal/build.Version=${version}"
   ];
 

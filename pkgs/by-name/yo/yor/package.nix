@@ -27,11 +27,6 @@ buildGoModule rec {
     EOF
   '';
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Extensible auto-tagger for your IaC files. The ultimate way to link entities in the cloud back to the codified resource which created it";
     homepage = "https://github.com/bridgecrewio/yor";

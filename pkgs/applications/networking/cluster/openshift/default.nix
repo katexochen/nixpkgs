@@ -26,8 +26,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles pkg-config ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/openshift/oc/pkg/version.commitFromGit=${gitCommit}"
     "-X github.com/openshift/oc/pkg/version.versionFromGit=v${version}"
   ];

@@ -26,8 +26,6 @@ buildGoModule rec {
   nativeBuildInputs = [ makeWrapper ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/common-fate/granted/internal/build.Version=v${version}"
     "-X github.com/common-fate/granted/internal/build.Commit=${src.rev}"
     "-X github.com/common-fate/granted/internal/build.Date=1970-01-01-00:00:01"

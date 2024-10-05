@@ -22,8 +22,6 @@ buildGoModule {
     makeBinaryWrapper
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     mkdir -p $out/share
     cp -r static templates $out/share

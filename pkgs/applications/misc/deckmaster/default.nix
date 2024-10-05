@@ -24,11 +24,6 @@ buildGoModule rec {
     makeWrapper
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   # Let the app find Roboto-*.ttf files (hard-coded file names).
   postFixup = ''
     wrapProgram $out/bin/deckmaster \

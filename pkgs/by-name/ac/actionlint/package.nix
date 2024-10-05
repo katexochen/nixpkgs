@@ -46,8 +46,6 @@ buildGoModule {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/rhysd/actionlint.version=${version}"
   ];
 

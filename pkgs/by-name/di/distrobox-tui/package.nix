@@ -17,8 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-F7X3FBM/F0uPxbM3en0sk9a58O/meKnVsASgIlL7FCo=";
 
-  ldflags = [ "-s" ];
-
   meta = with lib; {
     description = "A TUI for DistroBox";
     changelog = "https://github.com/phanirithvij/distrobox-tui/releases/tag/v${version}";

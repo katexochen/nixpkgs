@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-0tX/s5a6PPQuEw3BTs6uW9c5OHqXryzIfDNPnQH5sS8=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "CLI utility to find subdomains from curated passive online sources";
     mainProgram = "xsubfind3r";

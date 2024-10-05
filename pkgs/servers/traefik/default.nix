@@ -20,9 +20,7 @@ buildGo123Module rec {
 
     CODENAME=$(grep -Po "CODENAME \?=\s\K.+$" Makefile)
 
-    ldflags="-s"
-    ldflags+=" -w"
-    ldflags+=" -X github.com/traefik/traefik/v${lib.versions.major version}/pkg/version.Version=${version}"
+    ldflags=" -X github.com/traefik/traefik/v${lib.versions.major version}/pkg/version.Version=${version}"
     ldflags+=" -X github.com/traefik/traefik/v${lib.versions.major version}/pkg/version.Codename=$CODENAME"
   '';
 

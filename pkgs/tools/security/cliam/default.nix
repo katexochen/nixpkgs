@@ -22,8 +22,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/securisec/cliam/cli/version.Version=${version}"
   ];
 

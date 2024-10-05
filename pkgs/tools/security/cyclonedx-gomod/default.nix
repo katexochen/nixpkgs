@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-Sz2NCznyD0tMuho9kr+U35I8bS/WK276nPdt83k1zfU=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   # Tests require network access and cyclonedx executable
   doCheck = false;
 

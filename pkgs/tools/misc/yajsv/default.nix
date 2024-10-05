@@ -16,8 +16,6 @@ buildGoModule {
 
   vendorHash = "sha256-f45climGKl7HxD+1vz2TGqW/d0dqJ0RfvgJoRRM6lUk=";
 
-  ldflags = [ "-s" "-w" ];
-
   doInstallCheck = true;
 
   installCheckPhase = ''

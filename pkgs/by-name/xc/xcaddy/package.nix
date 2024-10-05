@@ -19,8 +19,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/caddyserver/xcaddy/cmd.customVersion=v${version}"
   ];
 

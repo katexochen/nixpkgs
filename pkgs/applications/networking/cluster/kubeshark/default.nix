@@ -14,7 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-fjkuDX6SC23An0zZW0ocoFJ/K6JKsyVUQdxzfHCUFJs=";
 
   ldflags = let t = "github.com/kubeshark/kubeshark"; in [
-   "-s" "-w"
    "-X ${t}/misc.GitCommitHash=${src.rev}"
    "-X ${t}/misc.Branch=master"
    "-X ${t}/misc.BuildTimestamp=0"

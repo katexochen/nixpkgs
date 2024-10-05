@@ -34,8 +34,6 @@ buildGoModule rec {
   nativeBuildInputs = [ pkg-config ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.Version=${version}"
   ];
 

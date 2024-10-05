@@ -20,11 +20,6 @@ buildGoModule rec {
     "cmd/cvemap/"
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Tool to work with CVEs";
     homepage = "https://github.com/projectdiscovery/cvemap";

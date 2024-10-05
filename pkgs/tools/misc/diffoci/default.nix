@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-qb4HvK4UbJbtP/ypeptV/MMbhOu5UZDaGartq/RGpDM=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/reproducible-containers/diffoci/cmd/diffoci/version.Version=v${version}"
   ];
 

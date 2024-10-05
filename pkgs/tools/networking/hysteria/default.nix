@@ -23,8 +23,6 @@ buildGoModule rec {
       cmd = "github.com/apernet/hysteria/app/cmd";
     in
     [
-      "-s"
-      "-w"
       "-X ${cmd}.appVersion=${version}"
       "-X ${cmd}.appType=release"
     ];

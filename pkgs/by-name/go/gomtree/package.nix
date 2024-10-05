@@ -23,7 +23,6 @@ buildGoModule rec {
   subPackages = [ "cmd/gomtree" ];
 
   ldflags = [
-    "-s"
     "-X main.Version=${version}"
   ];
 

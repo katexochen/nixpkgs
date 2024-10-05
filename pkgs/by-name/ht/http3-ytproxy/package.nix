@@ -24,8 +24,6 @@ buildGoModule rec {
 
   buildInputs = [ libwebp ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "YouTube traffic proxy for video playback and images";
     homepage = "https://github.com/TeamPiped/http3-ytproxy";

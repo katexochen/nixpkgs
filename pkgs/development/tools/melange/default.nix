@@ -32,8 +32,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X sigs.k8s.io/release-utils/version.gitVersion=v${version}"
     "-X sigs.k8s.io/release-utils/version.gitTreeState=clean"
   ];

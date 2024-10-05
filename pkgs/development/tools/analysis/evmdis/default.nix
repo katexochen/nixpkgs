@@ -21,8 +21,6 @@ buildGoModule {
     go mod init github.com/Arachnid/evmdis
   '';
 
-  ldflags = [ "-s" ];
-
   meta = with lib; {
     homepage = "https://github.com/Arachnid/evmdis";
     description = "Ethereum EVM disassembler";

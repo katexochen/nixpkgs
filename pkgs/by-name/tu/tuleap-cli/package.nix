@@ -19,11 +19,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   subPackages = [ "." ];
 
   postInstall = ''

@@ -41,8 +41,6 @@ buildGoModule rec {
   nativeBuildInputs = [ makeBinaryWrapper ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/gotenberg/gotenberg/v8/cmd.Version=${version}"
   ];
 

@@ -16,7 +16,6 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-w" "-s"
     "-X github.com/docker/buildx/version.Package=github.com/docker/buildx"
     "-X github.com/docker/buildx/version.Version=v${version}"
   ];

@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Utility to convert JSON to and from HJSON";
     homepage = "https://hjson.github.io/";

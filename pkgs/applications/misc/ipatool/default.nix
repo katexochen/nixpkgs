@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-aVMWXlHMGdbApKLhuZZpaAYY5QpMMgXc/6f9r79/dTw=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/majd/ipatool/v2/cmd.version=${version}"
   ];
 

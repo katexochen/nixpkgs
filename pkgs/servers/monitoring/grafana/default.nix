@@ -103,7 +103,7 @@ buildGo122Module rec {
   '';
 
   ldflags = [
-    "-s" "-w" "-X main.version=${version}"
+    "-X main.version=${version}"
   ];
 
   # Tests start http servers which need to bind to local addresses:

@@ -16,7 +16,7 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   CGO_ENABLED = 0;
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   preCheck = ''
     export HOME="$TMPDIR"

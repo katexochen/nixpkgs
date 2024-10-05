@@ -27,7 +27,7 @@ buildGoModule rec {
 
   tags = lib.optionals enableCmount [ "cmount" ];
 
-  ldflags = [ "-s" "-w" "-X github.com/rclone/rclone/fs.Version=${version}" ];
+  ldflags = [ "-X github.com/rclone/rclone/fs.Version=${version}" ];
 
   postConfigure = lib.optionalString (!stdenv.hostPlatform.isDarwin) ''
     substituteInPlace vendor/github.com/winfsp/cgofuse/fuse/host_cgo.go \

@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-9IT8qTFzn8otWGTBP7ODcT8iBckIJ/3+jkbF1dq6aDw=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = {
     description = "Static vulnerability scanner for GitHub action workflows";
     homepage = "https://github.com/synacktiv/octoscan";

@@ -15,8 +15,6 @@ buildGoModule rec {
   doCheck = false; # Tests require a network connection.
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/nxtrace/NTrace-core/config.Version=v${version}"
   ];
 

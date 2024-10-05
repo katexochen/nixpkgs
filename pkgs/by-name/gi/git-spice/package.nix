@@ -30,8 +30,6 @@ buildGo123Module rec {
   buildInputs = [ git ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main._version=${version}"
   ];
 

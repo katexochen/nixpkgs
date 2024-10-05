@@ -15,7 +15,7 @@ buildGoModule rec {
   };
   vendorHash = "sha256-ASR8Y/L8ub0w36fO+UpJ5ZpijP+YCLVbRtnhzvMNj9U=";
 
-  ldflags = [ "-s" "-w" "-X github.com/opcr-io/policy/pkg/version.ver=${version}" ];
+  ldflags = [ "-X github.com/opcr-io/policy/pkg/version.ver=${version}" ];
 
   subPackages = [ "cmd/policy" ];
   # disable go workspaces

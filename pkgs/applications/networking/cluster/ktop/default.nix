@@ -13,7 +13,7 @@ buildGoModule rec {
   };
 
   vendorHash = "sha256-MLIcTHWo7lsqtAqH8naSvpS013t8KBVPRbch+CfeUNk=";
-  ldflags = [ "-s" "-w" "-X github.com/vladimirvivien/ktop/buildinfo.Version=v${version}" ];
+  ldflags = [ "-X github.com/vladimirvivien/ktop/buildinfo.Version=v${version}" ];
 
   postInstall = ''
     rm $out/bin/hack

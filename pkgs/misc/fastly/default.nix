@@ -43,8 +43,6 @@ buildGoModule rec {
   # Flags as provided by the build automation of the project:
   #   https://github.com/fastly/cli/blob/7844f9f54d56f8326962112b5534e5c40e91bf09/.goreleaser.yml#L14-L18
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/fastly/cli/pkg/revision.AppVersion=v${version}"
     "-X github.com/fastly/cli/pkg/revision.Environment=release"
     "-X github.com/fastly/cli/pkg/revision.GoHostOS=${go.GOHOSTOS}"

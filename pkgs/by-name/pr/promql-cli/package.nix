@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-jhNll04xGaxS6NJTh4spSW9zPrff8jk5OEQiRevPQwU=";
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     mv -v $out/bin/promql-cli $out/bin/promql
   '';

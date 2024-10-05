@@ -18,8 +18,6 @@ buildGoModule rec {
   tags = [ "containers_image_openpgp" "remote" ]
     ++ lib.optional stdenv.hostPlatform.isDarwin "darwin";
 
-  ldflags = [ "-s" "-w" ];
-
   preCheck = ''
     export USER="$(whoami)"
     export HOME="$(mktemp -d)"

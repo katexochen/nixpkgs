@@ -29,8 +29,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   buildInputs = [
     libGL
     libX11

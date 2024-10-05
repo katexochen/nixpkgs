@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-bmPnxFvdKU5zuMsCDboSOxP5f7NnMRwS/gN0sW7eTRA=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/linuxsuren/cobra-extension/version.version=${version}"
   ];
 

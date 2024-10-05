@@ -23,8 +23,6 @@ buildGoModule rec {
 
   CGO_ENABLED = 1;
 
-  ldflags = [ "-s" "-w" ];
-
   nativeBuildInputs = [ makeWrapper ];
 
   checkFlags = [ "-skip=TestDNSProxy_ServeDNS" ];

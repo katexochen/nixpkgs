@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-JSE4k/JgWvYCfTUuf2pj4XCcdJ9+j7fY9aAiCipapIk=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X kraftkit.sh/internal/version.version=${version}"
   ];
 

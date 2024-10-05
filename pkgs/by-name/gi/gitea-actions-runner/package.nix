@@ -21,8 +21,6 @@ buildGo123Module rec {
   vendorHash = "sha256-lYJFySGqkhT89vHDp1FcTiiC7DG4ziQ1DaBHLh/kXQc=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X gitea.com/gitea/act_runner/internal/pkg/ver.version=v${version}"
   ];
 

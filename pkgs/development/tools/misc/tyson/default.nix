@@ -21,8 +21,6 @@ buildGoModule rec {
     installShellFiles
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     installShellCompletion --cmd tyson \
       --bash <($out/bin/tyson completion bash) \

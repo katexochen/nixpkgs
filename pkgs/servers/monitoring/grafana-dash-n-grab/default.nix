@@ -14,8 +14,6 @@ buildGoModule rec {
   vendorHash = "sha256-XJSi+p++1QFfGk57trfIgyv0nWUm38H0n/qbJgV8lEM=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.Version=${version}"
     "-X github.com/esnet/gdg/version.GitCommit=${src.rev}"
   ];

@@ -35,8 +35,6 @@ let
     excludedPackages = [ "./cmd/docgen" "./tests" ];
 
     ldflags = [
-      "-s"
-      "-w"
       "-X github.com/temporalio/cli/temporalcli.Version=${version}"
     ];
 
@@ -79,8 +77,6 @@ let
     nativeBuildInputs = [ installShellFiles ];
 
     excludedPackages = [ "./cmd/copyright" ];
-
-    ldflags = [ "-s" "-w" ];
 
     preCheck = ''
       export HOME="$(mktemp -d)"

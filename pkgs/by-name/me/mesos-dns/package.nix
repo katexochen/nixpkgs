@@ -15,8 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://m3scluster.github.io/mesos-dns/";
     changelog = "https://github.com/m3scluster/mesos-dns/releases/tag/v${version}";

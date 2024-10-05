@@ -14,7 +14,7 @@ buildGoModule rec {
   vendorHash = "sha256-Cg1Op/4okIi2UTtqWnR0N3iMWzrYEaYxmXzvWIibftg=";
 
   ldflags = [
-    "-s" "-w" "-X=github.com/qownnotes/qc/cmd.version=${version}"
+    "-X=github.com/qownnotes/qc/cmd.version=${version}"
   ];
 
   # There are no automated tests

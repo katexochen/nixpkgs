@@ -19,11 +19,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-mS+79EvNCQJeE90WZDLvj2akMWtarVAolAralZHsZuU=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Cloud-native, graph-based asset inventory";
     longDescription = ''

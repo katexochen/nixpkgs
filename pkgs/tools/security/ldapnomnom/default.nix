@@ -16,11 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-Iry9GoKOiXf83YudpmgHQRaP8GV4zokpX2mRAXoxSDQ=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Tool to anonymously bruteforce usernames from Domain controllers";
     homepage = "https://github.com/lkarlslund/ldapnomnom";

@@ -24,8 +24,6 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/dundee/gdu/v${lib.versions.major version}/build.Version=${version}"
   ];
 

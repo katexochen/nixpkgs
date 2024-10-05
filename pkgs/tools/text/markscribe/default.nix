@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-leeP2+W+bnYASls3k0l4jpz1rc1mAkMWUfrY2uBUUdQ=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Your personal markdown scribe with template-engine and Git(Hub) & RSS powers";
     mainProgram = "markscribe";

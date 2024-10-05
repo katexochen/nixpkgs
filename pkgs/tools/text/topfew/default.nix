@@ -21,8 +21,6 @@ buildGoModule rec {
     installShellFiles
   ];
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     installManPage doc/tf.1
   '';

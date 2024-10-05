@@ -21,8 +21,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/crowdsecurity/go-cs-lib/version.Version=v${version}"
     "-X github.com/crowdsecurity/go-cs-lib/version.BuildDate=1970-01-01_00:00:00"
     "-X github.com/crowdsecurity/go-cs-lib/version.Tag=${src.rev}"

@@ -21,8 +21,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-extldflags '-static'"
   ];
 

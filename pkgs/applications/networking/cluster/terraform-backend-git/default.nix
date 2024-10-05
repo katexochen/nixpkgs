@@ -22,8 +22,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/plumber-cd/terraform-backend-git/cmd.Version=${version}"
   ];
 

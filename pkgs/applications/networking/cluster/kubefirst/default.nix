@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-tOCVDp9oClfeBsyZ6gv6HoGPjZByoxxAceV/wxQeBSA=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/konstructio/kubefirst-api/configs.K1Version=v${version}"
   ];
 

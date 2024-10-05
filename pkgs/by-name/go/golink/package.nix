@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-R/o3csZC/M9nm0k5STL7AhbG5J4LtdxqKaVjM/9ggW8=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Private shortlink service for tailnets";
     homepage = "https://github.com/tailscale/golink";

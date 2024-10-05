@@ -19,11 +19,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-+V+/TK60V8NYUDfF5/EgSZg4CLBn6Mt57diiyXm179k=";
 
-  ldflags = [
-    "-w"
-    "-s"
-    "-X main.version=v${version}"
-  ];
+  ldflags = [ "-X main.version=v${version}" ];
 
   subPackages = [ "cmd/kubent" ];
 

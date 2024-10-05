@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-pSajd2wyefHgxMvhDKs+qwre4BMRBv97v/tZOjiT3LE=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Source code linter that can be used to find code that will cause problems with Go's error wrapping scheme";
     homepage = "https://github.com/polyfloyd/go-errorlint";

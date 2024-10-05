@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-8cZCeZ0gqxqbwB0WuEOFmEUNQd3/KcLeN0eLGfWG8BY=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Utility helping to discover large files/folders";
     homepage = "https://github.com/viktomas/godu";

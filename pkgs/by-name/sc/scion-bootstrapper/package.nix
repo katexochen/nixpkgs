@@ -18,8 +18,6 @@ buildGoModule rec {
 
   doCheck = false;
 
-  ldflags = [ "-s" "-w" ];
-
   postInstall = ''
     mv $out/bin/bootstrapper $out/bin/scion-bootstrapper
   '';

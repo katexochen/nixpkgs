@@ -22,7 +22,6 @@ buildGoModule rec {
   vendorHash = "sha256-WE5jE58pCXUvIKo+NAQUNrNzxLkUDIuJp2yBqE+8Ors=";
 
   ldflags = [
-    "-s" "-w"
     "-X github.com/oam-dev/kubevela/version.VelaVersion=${version}"
   ];
 

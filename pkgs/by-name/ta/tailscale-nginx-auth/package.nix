@@ -9,8 +9,6 @@ buildGo123Module {
   subPackages = [ "cmd/nginx-auth" ];
 
   ldflags = [
-    "-w"
-    "-s"
     "-X tailscale.com/version.longStamp=${tailscale.version}"
     "-X tailscale.com/version.shortStamp=${tailscale.version}"
   ];

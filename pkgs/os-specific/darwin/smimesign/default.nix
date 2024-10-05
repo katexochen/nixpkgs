@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-wLqYUICL+gdvRCLNrA0ZNcFI4oV3Oik762q7xF115Lw=";
 
-  ldflags = [ "-s" "-w" "-X main.versionString=v${version}" ];
+  ldflags = [ "-X main.versionString=v${version}" ];
 
   # Fails in sandbox
   doCheck = false;

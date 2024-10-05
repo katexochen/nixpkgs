@@ -15,7 +15,7 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" "-X main.commit=${src.rev}" ];
+  ldflags = [ "-X main.version=${version}" "-X main.commit=${src.rev}" ];
 
   # we need to rename the resulting binary but can't use buildFlags with -o here
   # because these are passed to "go install" which does not recognize -o

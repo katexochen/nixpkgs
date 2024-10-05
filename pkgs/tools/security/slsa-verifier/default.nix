@@ -23,8 +23,6 @@ buildGoModule rec {
   tags = [ "netgo" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X sigs.k8s.io/release-utils/version.gitVersion=${version}"
   ];
 

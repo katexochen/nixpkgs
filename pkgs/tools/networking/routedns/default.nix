@@ -18,8 +18,6 @@ buildGoModule rec {
 
   subPackages = [ "./cmd/routedns" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/folbricht/routedns";
     description = "DNS stub resolver, proxy and router";

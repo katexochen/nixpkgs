@@ -25,8 +25,6 @@ buildGoModule rec {
   CGO_ENABLED = 0;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/werf/trdl/client/pkg/trdl.Version=${src.rev}"
   ];
 

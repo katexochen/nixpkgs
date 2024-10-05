@@ -17,8 +17,6 @@ buildGoModule rec {
   vendorHash = "sha256-iPTyDqaodTFhnGRLEbEFpQjfz9r4DsFdue7fQNwq/pU=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/open-policy-agent/conftest/internal/commands.version=${version}"
   ];
 

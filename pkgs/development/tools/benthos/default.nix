@@ -25,8 +25,6 @@ buildGoModule rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/benthosdev/benthos/v4/internal/cli.Version=${version}"
   ];
 

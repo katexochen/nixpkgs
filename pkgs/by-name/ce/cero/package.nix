@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-VwzjkZLKovmPjvEmANMgZTtkwiM+dyjfTqftvK+muPM=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Scrape domain names from SSL certificates of arbitrary hosts";
     homepage = "https://github.com/glebarez/cero";

@@ -40,8 +40,6 @@ let
         t = "github.com/zyedidia/micro/v2/internal";
       in
       [
-        "-s"
-        "-w"
         "-X ${t}/util.Version=${self.version}"
         "-X ${t}/util.CommitHash=${self.src.rev}"
       ];

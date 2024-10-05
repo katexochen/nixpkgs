@@ -15,8 +15,6 @@ buildGoModule rec {
 
   subPackages = [ "go-bindata" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/kevinburke/go-bindata";
     changelog = "https://github.com/kevinburke/go-bindata/blob/v${version}/CHANGELOG.md";

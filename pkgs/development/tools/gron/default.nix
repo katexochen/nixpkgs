@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-K/QAG9mCIHe7PQhex3TntlGYAK9l0bESWk616N97dBs=";
 
-  ldflags = [ "-s" "-w" "-X main.gronVersion=${version}" ];
+  ldflags = [ "-X main.gronVersion=${version}" ];
 
   meta = with lib; {
     description = "Make JSON greppable!";

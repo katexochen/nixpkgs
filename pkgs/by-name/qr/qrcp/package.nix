@@ -20,7 +20,7 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" "-X github.com/claudiodangelis/qrcp/version.version=${version}" ];
+  ldflags = [ "-X github.com/claudiodangelis/qrcp/version.version=${version}" ];
 
   nativeBuildInputs = [
     installShellFiles

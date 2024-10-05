@@ -21,11 +21,6 @@ buildGoModule rec {
     libpcap
   ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = with lib; {
     description = "Merge multiple pcap files together, gracefully";
     mainProgram = "joincap";

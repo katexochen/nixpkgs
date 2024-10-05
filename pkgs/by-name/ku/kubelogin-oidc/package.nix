@@ -17,8 +17,6 @@ buildGo123Module rec {
 
   subPackages = [ "." ];
   ldflags = [
-    "-s"
-    "-w"
     "-X main.version=v${version}"
   ];
 

@@ -30,7 +30,7 @@ buildGoModule {
 
   subPackages = [ "cmd/tegola" ];
 
-  ldflags = [ "-s" "-w" "-X github.com/go-spatial/tegola/internal/build.Version=${version}" ];
+  ldflags = [ "-X github.com/go-spatial/tegola/internal/build.Version=${version}" ];
 
   preBuild = ''
     rm -rf ui/dist

@@ -20,11 +20,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-FuUkC7iwn/jO3fHjT9nGUXc2X1QuuxPc8DAzVpzhANk=";
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
   meta = {
     description = "JSON schema compilation and validation";
     homepage = "https://github.com/santhosh-tekuri/jsonschema";

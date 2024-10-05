@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-NL5pqcQTjauxLschhj3kCiZLBLagABSCU/zHLcG2anM=";
 
-  ldflags = [ "-s" "-w" ];
-
   # There's a mixture of tests that use networking and several that fail on aarch64
   doCheck = false;
 

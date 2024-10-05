@@ -11,8 +11,6 @@ buildGoModule rec {
   vendorHash = "sha256-eHsTEb4Vff2bfADScLSkZiotSSnT1q0bexlUMaWgqbg=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/pulumi/pulumi/sdk/v3/go/common/version.Version=${version}"
   ];
 

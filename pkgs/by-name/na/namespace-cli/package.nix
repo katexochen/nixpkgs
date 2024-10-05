@@ -19,8 +19,6 @@ buildGoModule rec {
   subPackages = ["cmd/nsc" "cmd/ns" "cmd/docker-credential-nsc"];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X namespacelabs.dev/foundation/internal/cli/version.Tag=v${version}"
   ];
 

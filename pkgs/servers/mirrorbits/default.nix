@@ -33,8 +33,6 @@ buildGoModule rec {
 
   subPackages = [ "." ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "geographical download redirector for distributing files efficiently across a set of mirrors";
     homepage = "https://github.com/etix/mirrorbits";

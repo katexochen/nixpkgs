@@ -17,11 +17,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-ITd3cvZmRBWK3922dDRvNHNH8KzHoVfIQI6S318ibxA=";
 
-  ldflags = [
-    "-w"
-    "-s"
-  ];
-
   meta = with lib; {
     description = "Tool to abuse Exchange services";
     homepage = "https://github.com/sensepost/ruler";

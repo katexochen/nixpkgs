@@ -12,8 +12,6 @@ buildGo123Module {
   ];
 
   ldflags = [
-    "-w"
-    "-s"
     "-X tailscale.com/version.longStamp=${tailscale.version}"
     "-X tailscale.com/version.shortStamp=${tailscale.version}"
   ];

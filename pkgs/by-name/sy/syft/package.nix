@@ -35,8 +35,6 @@ buildGoModule rec {
   subPackages = [ "cmd/syft" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.version=${version}"
     "-X=main.gitDescription=v${version}"
     "-X=main.gitTreeState=clean"

@@ -6,7 +6,6 @@ buildGoModule rec {
 
   ldflags = let t = "sigs.k8s.io/kustomize/api/provenance"; in
     [
-      "-s"
       "-X ${t}.version=${version}"
       "-X ${t}.gitCommit=${src.rev}"
     ];

@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-8VhBflnpsJ5h8S6meDFZKCcS2nz5u4kPE9W710gJG4U=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Command line invoice generator";
     homepage = "https://github.com/maaslalani/invoice";

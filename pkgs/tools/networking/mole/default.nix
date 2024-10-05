@@ -18,8 +18,6 @@ buildGoModule rec {
   vendorHash = "sha256-+y9JiQvDSQS5WQD4mVOMH3Oh9C4C/Kx3kC6q2SgSo+I=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/davrodpin/mole/cmd.version=${version}"
   ];
 

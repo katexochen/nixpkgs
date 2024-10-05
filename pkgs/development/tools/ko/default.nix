@@ -23,7 +23,7 @@ buildGoModule rec {
   # Pin so that we don't build the several other development tools
   subPackages = ".";
 
-  ldflags = [ "-s" "-w" "-X github.com/google/ko/pkg/commands.Version=${version}" ];
+  ldflags = [ "-X github.com/google/ko/pkg/commands.Version=${version}" ];
 
   checkFlags = [
     # requires docker daemon

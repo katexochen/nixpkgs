@@ -17,7 +17,7 @@ buildGoModule rec {
   vendorHash = "sha256-3gi2ysIb5256CdmtX38oIfeDwNCQojK+YB9aEm8H01Q=";
 
   ldflags = [
-    "-s" "-w" "-X 'github.com/transifex/cli/internal/txlib.Version=${version}'"
+    "-X 'github.com/transifex/cli/internal/txlib.Version=${version}'"
   ];
 
   postInstall = ''

@@ -47,7 +47,7 @@ buildGoModule rec {
   ];
 
 
-  ldflags = [ "-s" "-w" "-X main.version=${version}" ];
+  ldflags = [ "-X main.version=${version}" ];
 
   meta = with lib; {
     description = "Tool for exploring each layer in a docker image";

@@ -13,7 +13,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-AUFzxmQOb/h0UgcprY09IVI7Auitn3JTDU/ptKicIAU=";
 
-  ldflags = [ "-s" "-w" "-X=main.Version=${version}" ];
+  ldflags = [ "-X=main.Version=${version}" ];
 
   meta = with lib; {
     description = "Tool to generate images of code and terminal output";

@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-myMUs9urHjYaOQ/UaPYlLZstvClOuvF5xJao4lTP5bY=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = {
     description = "Convert text to JSON using only regular expressions";
     homepage = "https://gitlab.com/tozd/regex2json";

@@ -25,8 +25,6 @@ buildGo122Module rec {
   ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=main.Version=${version}"
     "-X=main.Branch=<release>"
     "-X=main.Revision=${version}"

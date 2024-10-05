@@ -28,8 +28,6 @@ let
     preBuild = ''
       cp ${./staticfiles.go.mod} go.mod
     '';
-
-    ldflags = [ "-s" "-w" ];
   };
 in
 buildGoModule rec {
@@ -63,8 +61,6 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/argoproj/argo-workflows/v3.buildDate=unknown"
     "-X github.com/argoproj/argo-workflows/v3.gitCommit=${src.rev}"
     "-X github.com/argoproj/argo-workflows/v3.gitTag=${src.rev}"

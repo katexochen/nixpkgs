@@ -14,7 +14,7 @@ buildGoModule rec {
   vendorHash = "sha256-hf2I5xHloqcXDlC8frxtCiQx2PlTmKmyd1mrzF2UdDo=";
 
   ldflags = [
-    "-s" "-w" "-X=github.com/knqyf263/pet/cmd.version=${version}"
+    "-X=github.com/knqyf263/pet/cmd.version=${version}"
   ];
 
   doCheck = false;

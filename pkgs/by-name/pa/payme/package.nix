@@ -21,8 +21,6 @@ buildGoModule rec {
   vendorHash = null;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X main.gitRefName=${src.rev}"
   ];
 

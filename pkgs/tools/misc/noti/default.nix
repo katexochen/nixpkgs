@@ -24,8 +24,6 @@ buildGoModule rec {
   buildInputs = lib.optional stdenv.hostPlatform.isDarwin Cocoa;
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/variadico/noti/internal/command.Version=${version}"
   ];
 

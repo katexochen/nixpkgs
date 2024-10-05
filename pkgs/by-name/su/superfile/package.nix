@@ -16,8 +16,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-8WGmksKH0rmfRH6Xxd0ACl1FS7YPphG7hsIB5/o38lQ=";
 
-  ldflags = ["-s" "-w"];
-
   meta = with lib; {
     description = "Pretty fancy and modern terminal file manager";
     homepage = "https://github.com/yorukot/superfile";

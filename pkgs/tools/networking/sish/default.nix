@@ -19,8 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-hlwJE31osz9MgZ0vCx4L6vo4PuGh0NgiPJgDq65fZ4U=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/antoniomika/sish/cmd.Commit=${src.rev}"
     "-X=github.com/antoniomika/sish/cmd.Date=1970-01-01"
     "-X=github.com/antoniomika/sish/cmd.Version=${version}"

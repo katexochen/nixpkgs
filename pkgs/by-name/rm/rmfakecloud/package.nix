@@ -23,7 +23,7 @@ buildGoModule rec {
   '';
 
   ldflags = [
-    "-s" "-w" "-X main.version=v${version}"
+    "-X main.version=v${version}"
   ];
 
   meta = with lib; {

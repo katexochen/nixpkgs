@@ -15,8 +15,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-2VTq8lzGYBKH410/mflloAphWTwFie3mdmz2kLkfuQ0=";
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "CLI for having Okta as the IdP for AWS CLI operations";
     homepage = "https://github.com/okta/okta-aws-cli";

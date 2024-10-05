@@ -20,8 +20,6 @@ buildGoModule rec {
   vendorHash = "sha256-7TxtM0O3wlfq0PF5FGn4i+Ph7dWRIcyLjFgnnKITLGM=";
 
   ldflags = [
-    "-s"
-    "-w"
     "-X=github.com/one2nc/cloudlens/cmd.version=v${version}"
     "-X=github.com/one2nc/cloudlens/cmd.commit=${src.rev}"
     "-X=github.com/one2nc/cloudlens/cmd.date=1970-01-01T00:00:00Z"

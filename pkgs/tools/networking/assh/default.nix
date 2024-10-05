@@ -21,7 +21,7 @@ buildGoModule rec {
   vendorHash = "sha256-L2Uo/jsMtxQClF1UDa7NIUbOm7BflvncNsjqGnCsPKo=";
 
   ldflags = [
-    "-s" "-w" "-X moul.io/assh/v2/pkg/version.Version=${version}"
+    "-X moul.io/assh/v2/pkg/version.Version=${version}"
   ];
 
   nativeBuildInputs = [ makeWrapper ];

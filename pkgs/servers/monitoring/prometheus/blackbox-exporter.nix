@@ -20,8 +20,6 @@ buildGoModule rec {
   passthru.tests = { inherit (nixosTests.prometheus-exporters) blackbox; };
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/prometheus/common/version.Version=${version}"
     "-X github.com/prometheus/common/version.Revision=${rev}"
     "-X github.com/prometheus/common/version.Branch=unknown"

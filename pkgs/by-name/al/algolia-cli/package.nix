@@ -25,8 +25,6 @@ buildGoModule {
   subPackages = [ "cmd/algolia" ];
 
   ldflags = [
-    "-s"
-    "-w"
     "-X github.com/algolia/cli/pkg/version.Version=${version}"
   ];
 

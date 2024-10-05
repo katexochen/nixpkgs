@@ -14,7 +14,7 @@ buildGoModule rec {
   vendorHash = "sha256-FUkGiJ/6G9vSYtAj0v9GT4OINbO3d/OKlJ0YwhONftY=";
 
   ldflags = [
-    "-s" "-w" "-X golang.stackrox.io/kube-linter/internal/version.version=${version}"
+    "-X golang.stackrox.io/kube-linter/internal/version.version=${version}"
   ];
 
   nativeBuildInputs = [ installShellFiles ];

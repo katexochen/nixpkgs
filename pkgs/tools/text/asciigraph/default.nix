@@ -13,8 +13,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     homepage = "https://github.com/guptarohit/asciigraph";
     description = "Lightweight ASCII line graph ╭┈╯ command line app";

@@ -17,8 +17,6 @@ buildGoModule rec {
 
   excludedPackages = [ "./version/gen" ];
 
-  ldflags = [ "-s" "-w" ];
-
   meta = with lib; {
     description = "Agent that runs on AWS EC2 container instances and starts containers on behalf of Amazon ECS";
     homepage = "https://github.com/aws/amazon-ecs-agent";
