@@ -295,6 +295,7 @@ in
 
       for pkg in $(getGoDirs test); do
         buildGoDir test "$pkg"
+        echo "Test results for $pkg: $?"
       done
 
       runHook postCheck
