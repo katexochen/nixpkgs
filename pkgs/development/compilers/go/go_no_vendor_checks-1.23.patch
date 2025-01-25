@@ -11,11 +11,48 @@ index a3105b6b6d..0e10154a70 100644
  					mods = append(mods, vendorPkgModule[path])
  					dirs = append(dirs, dir)
  					roots = append(roots, vendorDir)
+diff --git a/src/cmd/go/internal/modload/load.go b/src/cmd/go/internal/modload/load.go
+index 5b0ecee09a..ac31aa2385 100644
+--- a/src/cmd/go/internal/modload/load.go
++++ b/src/cmd/go/internal/modload/load.go
+@@ -613,7 +613,7 @@ func resolveLocalPackage(ctx context.Context, dir string, rs *Requirements) (str
+ 				}
+ 
+ 				readVendorList(VendorDir())
+-				if _, ok := vendorPkgModule[pkg]; !ok {
++				if _, ok := vendorPkgModule[pkg]; !ok && os.Getenv("GO_NO_VENDOR_CHECKS") != "1" {
+ 					return "", fmt.Errorf("directory %s is not a package listed in vendor/modules.txt", absDir)
+ 				}
+ 				return pkg, nil
+diff --git a/src/cmd/go/internal/modload/search.go b/src/cmd/go/internal/modload/search.go
+index d392b5bf3d..fb17d2564e 100644
+--- a/src/cmd/go/internal/modload/search.go
++++ b/src/cmd/go/internal/modload/search.go
+@@ -110,7 +110,7 @@ func matchPackages(ctx context.Context, m *search.Match, tags map[string]bool, f
+ 				want = false
+ 			}
+ 
+-			if !fi.IsDir() {
++			if !fi.IsDir() && !((fi.Mode()&fs.ModeSymlink != 0) && os.Getenv("GO_NO_VENDOR_CHECKS") == "1") {
+ 				if fi.Mode()&fs.ModeSymlink != 0 && want && strings.Contains(m.Pattern(), "...") {
+ 					if target, err := fsys.Stat(pkgDir); err == nil && target.IsDir() {
+ 						fmt.Fprintf(os.Stderr, "warning: ignoring symlink %s\n", pkgDir)
 diff --git a/src/cmd/go/internal/modload/vendor.go b/src/cmd/go/internal/modload/vendor.go
-index b2cb44100e..05bf3829d5 100644
+index b2cb44100e..39e43241f1 100644
 --- a/src/cmd/go/internal/modload/vendor.go
 +++ b/src/cmd/go/internal/modload/vendor.go
-@@ -159,7 +159,7 @@ func checkVendorConsistency(indexes []*modFileIndex, modFiles []*modfile.File, m
+@@ -134,6 +134,10 @@ func readVendorList(vendorDir string) {
+ 				}
+ 			}
+ 		}
++		fmt.Fprintf(os.Stderr, "vendorList: %v\n", vendorList)
++		fmt.Fprintf(os.Stderr, "vendorPkgModule: %v\n", vendorPkgModule)
++		fmt.Fprintf(os.Stderr, "vendorVersion: %v\n", vendorVersion)
++		fmt.Fprintf(os.Stderr, "vendorMeta: %v\n", vendorMeta)
+ 	})
+ }
+ 
+@@ -159,7 +163,7 @@ func checkVendorConsistency(indexes []*modFileIndex, modFiles []*modfile.File, m
  			panic(fmt.Errorf("not in workspace mode but number of indexes is %v, not 1", len(indexes)))
  		}
  		index := indexes[0]
@@ -24,3 +61,29 @@ index b2cb44100e..05bf3829d5 100644
  			// Go versions before 1.14 did not include enough information in
  			// vendor/modules.txt to check for consistency.
  			// If we know that we're on an earlier version, relax the consistency check.
+diff --git a/src/cmd/go/internal/search/search.go b/src/cmd/go/internal/search/search.go
+index 9f216d5756..f42a9defea 100644
+--- a/src/cmd/go/internal/search/search.go
++++ b/src/cmd/go/internal/search/search.go
+@@ -160,7 +160,7 @@ func (m *Match) MatchPackages() {
+ 				want = false
+ 			}
+ 
+-			if !fi.IsDir() {
++			if !fi.IsDir() && !((fi.Mode()&fs.ModeSymlink != 0) && os.Getenv("GO_NO_VENDOR_CHECKS") == "1") {
+ 				if fi.Mode()&fs.ModeSymlink != 0 && want && strings.Contains(m.pattern, "...") {
+ 					if target, err := fsys.Stat(path); err == nil && target.IsDir() {
+ 						fmt.Fprintf(os.Stderr, "warning: ignoring symlink %s\n", path)
+diff --git a/src/cmd/go/internal/workcmd/use.go b/src/cmd/go/internal/workcmd/use.go
+index 0cdbed6b18..1eabcfde8d 100644
+--- a/src/cmd/go/internal/workcmd/use.go
++++ b/src/cmd/go/internal/workcmd/use.go
+@@ -154,7 +154,7 @@ func workUse(ctx context.Context, gowork string, wf *modfile.WorkFile, args []st
+ 				return err
+ 			}
+ 
+-			if !info.IsDir() {
++			if !info.IsDir() && !((info.Mode()&fs.ModeSymlink != 0) && os.Getenv("GO_NO_VENDOR_CHECKS") == "1") {
+ 				if info.Mode()&fs.ModeSymlink != 0 {
+ 					if target, err := fsys.Stat(path); err == nil && target.IsDir() {
+ 						fmt.Fprintf(os.Stderr, "warning: ignoring symlink %s\n", base.ShortPath(path))
