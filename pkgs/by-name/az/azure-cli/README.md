@@ -33,47 +33,31 @@ Use the following command, use the current version of azure-cli in nixpkgs as `c
 and the name of the extension you want to package as `extension`:
 
 ```sh
-./query-extension-index.sh --cli-version=2.61.0 --extension=azure-devops --download
+nix run .#azure-cli.extensions-tool -- --cli-version 2.61.0 --extension azure-devops --init
 ```
 
 The output should look something like this:
 
-```json
-{
-  "pname": "azure-devops",
-  "description": "Tools for managing Azure DevOps.",
-  "version": "1.0.1",
-  "url": "https://github.com/Azure/azure-devops-cli-extension/releases/download/20240514.1/azure_devops-1.0.1-py2.py3-none-any.whl",
-  "sha256": "f300d0288f017148514ebe6f5912aef10c7a6f29bdc0c916b922edf1d75bc7db",
-  "license": "MIT",
-  "requires": [
-    "distro (==1.3.0)",
-    "distro==1.3.0"
-  ]
-}
-```
-
-Based on this, you can add an attribute to `extensions-manual.nix`:
-
 ```nix
-  azure-devops = mkAzExtension rec {
-    pname = "azure-devops";
-    version = "1.0.0";
-    url = "https://github.com/Azure/azure-devops-cli-extension/releases/download/20240206.1/azure_devops-${version}-py2.py3-none-any.whl";
-    sha256 = "658a2854d8c80f874f9382d421fa45abf6a38d00334737dda006f8dec64cf70a";
-    description = "Tools for managing Azure DevOps";
-    propagatedBuildInputs = with python3Packages; [
-      distro
-    ];
-    meta.maintainers = with lib.maintainers; [ katexochen ];
-  };
+azure-devops = mkAzExtension rec {
+  pname = "azure-devops";
+  version = "1.0.1";
+  url = "https://github.com/Azure/azure-devops-cli-extension/releases/download/20240206.1/azure_devops-${version}-py2.py3-none-any.whl";
+  hash = "sha256-ZYooVNjID4dPk4LUIfpFq/ajjQAzRzfdoAb43sZM9wo=";
+  description = "Tools for managing Azure DevOps";
+  propagatedBuildInputs = with python3Packages; [
+    distro
+  ];
+  meta.maintainers = with lib.maintainers; [ ];
+};
 ```
 
-* The attribute name should be the same as `pname`.
-* Replace the version in `url` with `${version}`.
-* The json output `requires` must be transformed into `propagetedBuildInputs`.
-* If `license` is `"MIT"`, it can be left out in the nix expression, as the builder defaults to that license.
-* Add yourself as maintainer in `meta.maintainers`.
+Copy it and add it to `extensions-manual.nix`, keeping chronological order.
+
+Fill out the `meta.maintainers` list, follow all TODOs in the comments.
+
+Some of the dependencies might not be available in nixpkgs, you'll have to package those, too.
+Extensions have dependencies on non-python packages.
 
 ### Testing extensions
 
