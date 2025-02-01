@@ -6,6 +6,7 @@ import datetime
 import json
 import logging
 import os
+import re
 import subprocess
 import sys
 from collections.abc import Callable
@@ -170,8 +171,63 @@ def _transform_dict_to_obj(o: Dict[str, Any]) -> Ext:
     )
 
 
+def _transform_dict_to_nix(o: Dict[str, Any]) -> str:
+    m = o["metadata"]
+    hash = _convert_hash_digest_from_hex_to_b64_sri(o["sha256Digest"])
+
+    # Replace version in url with '${version}'
+    url = o["downloadUrl"].replace(m["version"], "${version}")
+
+    # Check license
+    license = m.get("license", "")
+    license_str = ""
+    if "mit" in license.lower():
+        license_str = ""
+    else:
+        license_str = f'\n  meta.license = "{license}" # TODO: verify!'
+
+    run_req = m.get("run_requires", [])
+    reqs = ""
+    if run_req:
+        raw_req = run_req[0].get("requires", [])
+        uniq_req = set()
+        for req in raw_req:
+            package_name = re.split(r"\s*[<>=()].*", req)[0].strip()
+            uniq_req.add(package_name)
+        sorted_packages = sorted(uniq_req)
+        reqs = "\n".join(f"    {pkg}" for pkg in sorted_packages)
+
+    return f"""{m["name"]} = mkAzExtension rec {{
+  pname = "{m["name"]}";
+  version = "{m["version"]}";
+  url = "{url}";
+  hash = "{hash}";
+  description = "{m["summary"].rstrip(".")}";
+  propagatedBuildInputs =  with python3Packages; [
+    # TODO: these are generated best-effort, please verify! Some dependencies might need to be packaged.
+{reqs}
+  ];{license_str}
+  meta.maintainers = with lib.maintainers; [ /* TODO: fill */ ];
+}};"""
+
+
 def _get_latest_version(versions: dict) -> dict:
     return max(versions, key=lambda e: parse(e["metadata"]["version"]), default=None)
+
+
+def getExtension(
+    extVersions: dict,
+    cli_version: Version,
+    ext_name: str,
+) -> Optional[str]:
+    versions = filter(_filter_invalid, extVersions)
+    versions = filter(lambda v: _filter_compatible(v, cli_version), versions)
+    latest = _get_latest_version(versions)
+    if not latest:
+        return None
+    if latest["metadata"]["name"] != ext_name:
+        return None
+    return latest
 
 
 def processExtension(
@@ -335,6 +391,11 @@ def main() -> None:
         action=argparse.BooleanOptionalAction,
         help="whether to commit changes to git",
     )
+    parser.add_argument(
+        "--init",
+        action=argparse.BooleanOptionalAction,
+        help="whether to add a new extension",
+    )
     args = parser.parse_args()
     cli_version = parse(args.cli_version)
 
@@ -347,6 +408,20 @@ def main() -> None:
     index = get_extension_index(args.cache_dir)
     assert index["formatVersion"] == "1"  # only support formatVersion 1
     extensions_remote = index["extensions"]
+
+    if args.init:
+        ext = Optional[Ext]
+        for _ext_name, extension in extensions_remote.items():
+            extension = getExtension(extension, cli_version, args.extension)
+            if extension:
+                ext = extension
+                break
+        if not ext:
+            logger.error(f"Extension {args.extension} not found in index")
+            exit(1)
+
+        print(_transform_dict_to_nix(ext))
+        exit(0)
 
     if args.extension:
         logger.info(f"updating extension: {args.extension}")
