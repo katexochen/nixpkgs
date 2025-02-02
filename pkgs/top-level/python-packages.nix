@@ -1171,6 +1171,8 @@ self: super: with self; {
 
   azure-core = callPackage ../development/python-modules/azure-core { };
 
+  azure-core-tracing-opentelemetry = callPackage ../development/python-modules/azure-core-tracing-opentelemetry { };
+
   azure-cosmos = callPackage ../development/python-modules/azure-cosmos { };
 
   azure-cosmosdb-nspkg = callPackage ../development/python-modules/azure-cosmosdb-nspkg { };
@@ -1353,6 +1355,8 @@ self: super: with self; {
 
   azure-mgmt-resource = callPackage ../development/python-modules/azure-mgmt-resource { };
 
+  azure-mgmt-resourcegraph = callPackage ../development/python-modules/azure-mgmt-resourcegraph { };
+
   azure-mgmt-scheduler = callPackage ../development/python-modules/azure-mgmt-scheduler { };
 
   azure-mgmt-search = callPackage ../development/python-modules/azure-mgmt-search { };
@@ -1384,6 +1388,10 @@ self: super: with self; {
   azure-mgmt-web = callPackage ../development/python-modules/azure-mgmt-web { };
 
   azure-monitor-ingestion = callPackage ../development/python-modules/azure-monitor-ingestion { };
+
+  azure-monitor-opentelemetry = callPackage ../development/python-modules/azure-monitor-opentelemetry { };
+
+  azure-monitor-opentelemetry-exporter = callPackage ../development/python-modules/azure-monitor-opentelemetry-exporter { };
 
   azure-monitor-query = callPackage ../development/python-modules/azure-monitor-query { };
 
@@ -4672,6 +4680,8 @@ self: super: with self; {
 
   fivem-api = callPackage ../development/python-modules/fivem-api { };
 
+  fixedint = callPackage ../development/python-modules/fixedint { };
+  
   fixerio = callPackage ../development/python-modules/fixerio { };
 
   fixtures = callPackage ../development/python-modules/fixtures { };
@@ -9867,11 +9877,17 @@ self: super: with self; {
 
   opentelemetry-instrumentation-redis = callPackage ../development/python-modules/opentelemetry-instrumentation-redis { };
 
+  opentelemetry-instrumentation-urllib = callPackage ../development/python-modules/opentelemetry-instrumentation-urllib { };
+
+  opentelemetry-instrumentation-urllib3 = callPackage ../development/python-modules/opentelemetry-instrumentation-urllib3 { };
+
   opentelemetry-instrumentation-wsgi = callPackage ../development/python-modules/opentelemetry-instrumentation-wsgi { };
 
   opentelemetry-propagator-aws-xray = callPackage ../development/python-modules/opentelemetry-propagator-aws-xray { };
 
   opentelemetry-proto = callPackage ../development/python-modules/opentelemetry-proto { };
+
+  opentelemetry-resource-detector-azure = callPackage ../development/python-modules/opentelemetry-resource-detector-azure { };
 
   opentelemetry-semantic-conventions = callPackage ../development/python-modules/opentelemetry-semantic-conventions { };
 

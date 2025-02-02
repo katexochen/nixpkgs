@@ -95,6 +95,35 @@
     meta.maintainers = with lib.maintainers; [ giggio ];
   };
 
+  ml = mkAzExtension rec {
+    pname = "ml";
+    version = "2.34.0";
+    url = "https://azuremlsdktestpypi.blob.core.windows.net/wheels/sdk-cli-v2-public/ml-${version}-py3-none-any.whl";
+    hash = "sha256-61YaomWS3nglhvbNi55ZS+QYsSy71rI4DDTR1bkjuZ4=";
+    description = "Microsoft Azure Command-Line Tools AzureMachineLearningWorkspaces Extension";
+    propagatedBuildInputs = with python3Packages; [
+      azure-common
+      azure-identity
+      azure-mgmt-resource
+      azure-mgmt-resourcegraph
+      azure-monitor-opentelemetry
+      azure-storage-blob
+      azure-storage-file-datalake
+      azure-storage-file-share
+      colorama
+      cryptography
+      docker
+      isodate
+      jsonschema
+      marshmallow
+      pydash
+      pyjwt
+      strictyaml
+      tqdm
+      typing-extensions
+    ];
+  };
+
   rdbms-connect = mkAzExtension rec {
     pname = "rdbms-connect";
     version = "1.0.7";
