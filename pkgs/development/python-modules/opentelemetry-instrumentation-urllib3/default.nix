@@ -34,6 +34,12 @@ buildPythonPackage rec {
     wrapt
   ];
 
+  pythonRelaxDeps = [
+    "opentelemetry-instrumentation"
+    "opentelemetry-semantic-conventions"
+    "opentelemetry-util-http"
+  ];
+
   optional-dependencies = {
     instruments = [
       urllib3

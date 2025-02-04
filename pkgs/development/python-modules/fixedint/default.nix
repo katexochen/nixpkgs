@@ -28,7 +28,7 @@ buildPythonPackage rec {
   meta = {
     description = "Simple fixed-width integers";
     homepage = "https://pypi.org/project/fixedint/";
-    license = lib.licenses.unfree; # FIXME: nix-init did not find a license
+    license = lib.licenses.psfl;
     maintainers = with lib.maintainers; [ ];
   };
 }

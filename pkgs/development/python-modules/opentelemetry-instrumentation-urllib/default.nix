@@ -31,6 +31,12 @@ buildPythonPackage rec {
     opentelemetry-util-http
   ];
 
+  pythonRelaxDeps = [
+    "opentelemetry-instrumentation"
+    "opentelemetry-semantic-conventions"
+    "opentelemetry-util-http"
+  ];
+
   pythonImportsCheck = [
     "opentelemetry_instrumentation_urllib"
   ];
