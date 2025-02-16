@@ -26,7 +26,7 @@ buildPythonPackage rec {
   ];
 
   pythonImportsCheck = [
-    "opentelemetry_resource_detector_azure"
+    "opentelemetry.resource.detector.azure"
   ];
 
   meta = {

@@ -47,7 +47,7 @@ buildPythonPackage rec {
   };
 
   pythonImportsCheck = [
-    "opentelemetry_instrumentation_urllib3"
+    "opentelemetry.instrumentation.urllib3"
   ];
 
   meta = {

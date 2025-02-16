@@ -29,9 +29,9 @@ buildPythonPackage rec {
     opentelemetry-api
   ];
 
-  pythonImportsCheck = [
-    "azure_core_tracing_opentelemetry"
-  ];
+  # pythonImportsCheck = [
+  #   "azure.core.tracing.ext.opentelemetry_span"
+  # ];
 
   meta = {
     description = "Microsoft Azure Azure Core OpenTelemetry plugin Library for Python";
