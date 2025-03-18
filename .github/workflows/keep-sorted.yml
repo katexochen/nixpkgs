@@ -22,6 +22,7 @@ jobs:
 
       - name: Get Nixpkgs revision for nixfmt
         run: |
+      
           # pin to a commit from nixpkgs-unstable to avoid e.g. building nixfmt
           # from staging
           # This should not be a URL, because it would allow PRs to run arbitrary code in CI!
