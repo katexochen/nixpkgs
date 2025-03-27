@@ -1,11 +1,11 @@
 {
   lib,
-  buildGo122Module,
+  buildGoModule,
   fetchFromGitHub,
 }:
-buildGo122Module {
+buildGoModule {
   pname = "honeytrap";
-  version = "unstable-2021-12-20";
+  version = "0-unstable-2021-12-20";
 
   src = fetchFromGitHub {
     owner = "honeytrap";
