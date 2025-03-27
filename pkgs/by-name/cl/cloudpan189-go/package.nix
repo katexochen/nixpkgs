@@ -1,10 +1,10 @@
 {
-  buildGo122Module,
+  buildGo123Module,
   lib,
   fetchFromGitHub,
   versionCheckHook,
 }:
-buildGo122Module rec {
+buildGo123Module rec {
   pname = "cloudpan189-go";
   version = "0.1.3";
   src = fetchFromGitHub {
@@ -47,5 +47,7 @@ buildGo122Module rec {
     description = "CLI for China Telecom 189 Cloud Drive service, implemented in Go";
     homepage = "https://github.com/tickstep/cloudpan189-go";
     license = lib.licenses.asl20;
+    # Does not build on go_1_23, older toolchain got removed as EOL.
+    broken = true;
   };
 }
