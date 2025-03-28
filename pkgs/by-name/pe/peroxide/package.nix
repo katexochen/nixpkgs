@@ -1,11 +1,11 @@
 {
   lib,
-  buildGo122Module,
+  buildGoModule,
   fetchFromGitHub,
   nixosTests,
 }:
 
-buildGo122Module rec {
+buildGoModule rec {
   pname = "peroxide";
   version = "0.5.0";
 
@@ -38,5 +38,9 @@ buildGo122Module rec {
       similar to Hydroxide while reusing as much code from the official bridge
       as possible.
     '';
+    # This doesn't build with a supported Go version. Last version it used to build
+    # for was Go 1.22, which is now EOL. Build fails with:
+    # 'link: golang.org/x/net/internal/socket: invalid reference to syscall.recvmsg'
+    broken = true;
   };
 }
