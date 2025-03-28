@@ -1,5 +1,5 @@
 { lib
-, buildGo122Module
+, buildGoModule
 , fetchFromGitHub
 , fetchYarnDeps
 , fixup-yarn-lock
@@ -13,9 +13,7 @@
 , yarn
 }:
 
-# Breaks with Go 1.23: https://github.com/grafana/agent/issues/6972
-# FIXME: unpin when fixed upstream
-buildGo122Module rec {
+buildGoModule rec {
   pname = "grafana-agent";
   version = "0.44.2";
 
@@ -113,5 +111,9 @@ buildGo122Module rec {
     changelog = "https://github.com/grafana/agent/blob/${src.rev}/CHANGELOG.md";
     maintainers = with lib.maintainers; [ flokli emilylange ];
     mainProgram = "grafana-agent";
+    # Breaks with Go 1.23: https://github.com/grafana/agent/issues/6972
+    # Binary panics at runtime with:
+    # 'panic: pattern "GET /debug/pprof/" (registered at net/http/pprof/pprof.go:100) conflicts with pattern "/debug/pprof/delta_heap"'
+    broken = true;
   };
 }
