@@ -984,7 +984,7 @@ with pkgs;
 
   fwbuilder = libsForQt5.callPackage ../tools/security/fwbuilder { };
 
-  inherit (callPackages ../tools/networking/ivpn/default.nix { buildGoModule = buildGo122Module; }) ivpn ivpn-service;
+  inherit (callPackages ../tools/networking/ivpn/default.nix { }) ivpn ivpn-service;
 
   kanata-with-cmd = kanata.override { withCmd = true; };
 
