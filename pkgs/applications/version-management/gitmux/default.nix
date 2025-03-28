@@ -21,7 +21,12 @@ buildGoModule rec {
   vendorHash = "sha256-PHY020MIuLlC1LqNGyBJRNd7J+SzoHbNMPAil7CKP/M=";
 
   nativeCheckInputs = [ git ];
-  doCheck = true;
+
+  # After bump of Go toolchain to version >1.22, tests fail with:
+  #   vendor/github.com/rogpeppe/go-internal/testscript/exe_go118.go:14:27:
+  #   cannot use nopTestDeps{} (value of struct type nopTestDeps) as testing.testDeps value in argument to testing.MainStart:
+  #   nopTestDeps does not implement testing.testDeps (missing method InitRuntimeCoverage)'.
+  doCheck = false;
 
   ldflags = [ "-X main.version=${version}" ];
 
