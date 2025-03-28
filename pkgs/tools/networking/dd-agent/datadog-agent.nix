@@ -1,7 +1,7 @@
 { lib
 , stdenv
 , cmake
-, buildGo122Module
+, buildGoModule
 , makeWrapper
 , fetchFromGitHub
 , pythonPackages
@@ -38,7 +38,7 @@ let
     cmakeFlags = ["-DBUILD_DEMO=OFF" "-DDISABLE_PYTHON2=ON"];
   };
 
-in buildGo122Module rec {
+in buildGoModule rec {
   pname = "datadog-agent";
   inherit src version;
 
