@@ -3,18 +3,17 @@
   buildGoModule,
   fetchFromGitHub,
   nix-update-script,
-  testers,
-  gofumpt,
+  versionCheckHook,
 }:
 
-buildGoModule rec {
+buildGoModule (finalAttrs: {
   pname = "gofumpt";
   version = "0.7.0";
 
   src = fetchFromGitHub {
     owner = "mvdan";
-    repo = pname;
-    rev = "v${version}";
+    repo = "gofumpt";
+    rev = "v${finalAttrs.version}";
     hash = "sha256-mJM0uKztX0OUQvynnxeKL9yft7X/Eh28ERg8SbZC5Ws=";
   };
 
@@ -24,21 +23,17 @@ buildGoModule rec {
 
   ldflags = [
     "-s"
-    "-X main.version=v${version}"
+    "-X main.version=v${finalAttrs.version}"
   ];
+
+  nativeCheckInputs = [ versionCheckHook ];
 
   checkFlags = [
     # Requires network access (Error: module lookup disabled by GOPROXY=off).
     "-skip=^TestScript/diagnose$"
   ];
 
-  passthru = {
-    updateScript = nix-update-script { };
-    tests.version = testers.testVersion {
-      package = gofumpt;
-      version = "v${version}";
-    };
-  };
+  passthru.updateScript = nix-update-script { };
 
   meta = with lib; {
     description = "Stricter gofmt";
@@ -51,4 +46,4 @@ buildGoModule rec {
     ];
     mainProgram = "gofumpt";
   };
-}
+})
