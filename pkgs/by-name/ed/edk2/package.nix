@@ -32,21 +32,21 @@ let
 
   buildType = if stdenv.hostPlatform.isDarwin then "CLANGPDB" else "GCC5";
 
-  edk2 = stdenv.mkDerivation {
+  edk2 = stdenv.mkDerivation (finalAttrs: {
     pname = "edk2";
     version = "202505";
 
     srcWithVendoring = fetchFromGitHub {
       owner = "tianocore";
       repo = "edk2";
-      tag = "edk2-stable${edk2.version}";
+      tag = "edk2-stable${finalAttrs.version}";
       fetchSubmodules = true;
       hash = "sha256-VuiEqVpG/k7pfy0cOC6XmY+8NBtU/OHdDB9Y52tyNe8=";
     };
 
     src = applyPatches {
-      name = "edk2-${edk2.version}-unvendored-src";
-      src = edk2.srcWithVendoring;
+      name = "edk2-${finalAttrs.version}-unvendored-src";
+      src = finalAttrs.srcWithVendoring;
 
       patches = [
         # pass targetPrefix as an env var
@@ -134,7 +134,7 @@ let
     meta = {
       description = "Intel EFI development kit";
       homepage = "https://github.com/tianocore/tianocore.github.io/wiki/EDK-II/";
-      changelog = "https://github.com/tianocore/edk2/releases/tag/edk2-stable${edk2.version}";
+      changelog = "https://github.com/tianocore/edk2/releases/tag/edk2-stable${finalAttrs.version}";
       license = lib.licenses.bsd2;
       platforms = with lib.platforms; aarch64 ++ arm ++ i686 ++ x86_64 ++ loongarch64 ++ riscv64;
       maintainers = [ lib.maintainers.mjoerg ];
@@ -151,7 +151,7 @@ let
         #!/usr/bin/env nix-shell
         #!nix-shell -i bash -p common-updater-scripts coreutils gnused
         set -eu -o pipefail
-        version="$(list-git-tags --url="${edk2.srcWithVendoring.url}" |
+        version="$(list-git-tags --url="${finalAttrs.srcWithVendoring.url}" |
                    sed -E --quiet 's/^edk2-stable([0-9]{6})$/\1/p' |
                    sort --reverse --numeric-sort |
                    head -n 1)"
@@ -164,12 +164,12 @@ let
       mkDerivation =
         projectDscPath: attrsOrFun:
         stdenv.mkDerivation (
-          finalAttrs:
+          finalAttrsInner:
           let
-            attrs = lib.toFunction attrsOrFun finalAttrs;
+            attrs = lib.toFunction attrsOrFun finalAttrsInner;
           in
           {
-            inherit (edk2) src;
+            inherit (finalAttrs) src;
 
             depsBuildBuild = [ buildPackages.stdenv.cc ] ++ attrs.depsBuildBuild or [ ];
             nativeBuildInputs = [
@@ -210,7 +210,7 @@ let
           ]
         );
     };
-  };
+  });
 
 in
 
