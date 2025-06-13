@@ -10669,6 +10669,7 @@ with pkgs;
 
   OVMF = callPackage ../applications/virtualization/OVMF {
     inherit (python3Packages) pexpect;
+    edk2 = edk2-old;
   };
   OVMFFull = callPackage ../applications/virtualization/OVMF {
     inherit (python3Packages) pexpect;
