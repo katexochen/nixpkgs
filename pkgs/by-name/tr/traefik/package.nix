@@ -1,12 +1,12 @@
 {
   lib,
   fetchzip,
-  buildGo124Module,
+  buildGoModule,
   nixosTests,
   nix-update-script,
 }:
 
-buildGo124Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "traefik";
   version = "3.6.7";
 
