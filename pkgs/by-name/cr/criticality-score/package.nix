@@ -1,11 +1,11 @@
 {
   lib,
-  buildGo124Module,
+  buildGoModule,
   fetchFromGitHub,
   versionCheckHook,
 }:
 
-buildGo124Module rec {
+buildGoModule rec {
   pname = "criticality-score";
   version = "2.0.4";
 
@@ -49,5 +49,6 @@ buildGo124Module rec {
     license = lib.licenses.asl20;
     maintainers = with lib.maintainers; [ wamserma ];
     mainProgram = "criticality_score";
+    broken = true;
   };
 }
