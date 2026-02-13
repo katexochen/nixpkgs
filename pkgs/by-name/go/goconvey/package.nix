@@ -4,10 +4,10 @@
   # Build fails with Go 1.25, with the following error:
   # 'vendor/golang.org/x/tools/internal/tokeninternal/tokeninternal.go:64:9: invalid array length -delta * delta (constant -256 of type int64)'
   # Wait for upstream to update their vendored dependencies before unpinning.
-  buildGo124Module,
+  buildGoModule,
 }:
 
-buildGo124Module {
+buildGoModule {
   pname = "goconvey";
   version = "1.8.1-unstable-2024-03-06";
 
@@ -37,5 +37,6 @@ buildGo124Module {
     homepage = "https://github.com/smartystreets/goconvey";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ vdemeester ];
+    broken = true;
   };
 }
