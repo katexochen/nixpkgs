@@ -5,7 +5,7 @@
   runCommand,
   buildNpmPackage,
   clang,
-  go_1_24,
+  go,
   libsForQt5,
   qt6,
   udevCheckHook,
@@ -81,7 +81,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     clang
-    go_1_24
+    go
     qt6.wrapQtAppsHook
     rcc
     udevCheckHook
@@ -101,5 +101,6 @@ stdenv.mkDerivation rec {
     mainProgram = "bitbox";
     sourceProvenance = [ lib.sourceTypes.fromSource ];
     platforms = [ "x86_64-linux" ];
+    broken = true;
   };
 }
