@@ -10,11 +10,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "man-pages";
-  version = "6.16";
+  version = "6.17";
 
   src = fetchurl {
     url = "mirror://kernel/linux/docs/man-pages/man-pages-${finalAttrs.version}.tar.xz";
-    hash = "sha256-jiR6vXXNgICc/ghpbIG4xwaQWDsEV0lISyQvtDYx16M=";
+    hash = "sha256-0Y8hpgKwl3ilqQlr8b6EQbdzPpmBUEdKzPcD0WX06/Q=";
   };
 
   nativeInstallCheckInputs = [
@@ -46,7 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
   installCheckPhase = ''
     runHook preInstallCheck
 
-    # Check for a few well‐known man pages
+    # Check for a few well-known man pages
     for page in ldd write printf null hosts random ld.so; do
       man -M "$out/share/man" -P cat "$page" >/dev/null
     done
