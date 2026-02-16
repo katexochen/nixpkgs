@@ -6,6 +6,7 @@
   gawk,
   man,
   pcre2,
+  nixosTests,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -65,8 +66,11 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstallCheck
   '';
 
-  passthru.updateScript = directoryListingUpdater {
-    url = "https://www.kernel.org/pub/linux/docs/man-pages/";
+  passthru = {
+    tests = { inherit (nixosTests) man; };
+    updateScript = directoryListingUpdater {
+      url = "https://www.kernel.org/pub/linux/docs/man-pages/";
+    };
   };
 
   meta = {
