@@ -1484,6 +1484,7 @@ in
   sonic-server = runTest ./sonic-server.nix;
   spacecookie = runTest ./spacecookie.nix;
   spark = handleTestOn [ "x86_64-linux" "aarch64-linux" ] ./spark { };
+  speedtest-tracker = runTest ./speedtest-tracker.nix;
   spiped = runTest ./spiped.nix;
   sqlite3-to-mysql = runTest ./sqlite3-to-mysql.nix;
   squid = runTest ./squid.nix;
